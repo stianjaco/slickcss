@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SlickCSS - Examples</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="../dist/css/slick.css" />
+	<link rel="stylesheet" type="text/css" href="example.css" />
+</head>
+<body>
+
+	
+	<header id="header">
+
+		<div class="container">
+
+			<div class="flex align-between valign-center">
+				
+				<div class="branding">
+
+					<h1>SlickCSS</h1>
+					<span>Version 0.0.2</span>
+
+				</div>
+
+				<nav class="navbar">
+					
+					<ul class="ui-ddmenu effect-fade" id="main-menu">
+						<li><a href="#">Grid</a></li>
+						<li><a href="#">Typography</a></li>
+						<li><a href="#">Forms and Tables</a></li>
+						<li><a href="#">UI-Elements</a></li>
+					</ul>
+
+				</nav>
+			
+			</div>
+		
+		</div>
+
+	</header>
+
+
+	<section class="container margin-b-30">
+
+		<h3>Using the Grid</h3>
+		<hr class="thicker bg-accent" />
+		<p>Creating a grid with <strong>SlickCSS</strong> is as simple as it gets. You just need to add a row <code title="Add the class ´row´ to your container">.row</code> and your columns with <code title="Add the class ´col´ to your column">.col</code><br/>
+		By default the grid-system supports up to 12 columns</p>
+		
+		<h5 class="margin-bottom-30">Example:</h5>
+		<div class="row demo">
+			<div class="col-6">
+				<p class="bg-grey padding-10">I'm a column</p>
+			</div>
+			<div class="col-6">
+				<p class="bg-grey padding-10">I'm a column</p>
+			</div>
+		</div>
+		<h5>Code:</h5>
+<pre><code>&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-6&quot;&gt;
+		&lt;p&gt;I'm a column&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;col-6&quot;&gt;
+		&lt;p&gt;I'm a column&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+	
+
+	</section>
+
+	<section class="container margin-b-30">
+		<p>You can also define width of each column based on the viewport by adding viewport prefix and size, like <code>.col-md-6</code></p>
+		
+		<h5 class="margin-bottom-30">Example:</h5>
+		<div class="row demo animate">
+			<div class="col-xs-12 col-sm-6 col-4">
+				<p class="bg-grey padding-10">I'm the first column</p>
+			</div>
+			<div class="col-xs-6 col-sm-6 col-4">
+				<p class="bg-grey padding-10">I'm the second column</p>
+			</div>
+			<div class="col-xs-6 col-sm-12 col-4">
+				<p class="bg-grey padding-10">I'm last :(</p>
+			</div>
+		</div>
+		<h5>Code:</h5>
+<pre><code>&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-xs-12 col-sm-6 col-6&quot;&gt;
+		&lt;p&gt;I'm the first column&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;col-xs-6 col-sm-6 col-4&quot;&gt;
+		&lt;p&gt;I'm the second column&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;col-xs-6 col-sm-12 col-4&quot;&gt;
+		&lt;p&gt;I'm last :(&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+	
+
+	</section>
+
+</body>
+</html>

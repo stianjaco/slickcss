@@ -1,12 +1,11 @@
-dist/
 node_modules/
 src/.sass-cache/
 
 # Dont track these files
 package-lock.json
-app.html
-index.html
-demo.html
+/app.html
+/index.html
+/demo.html
 
 # Logs and databases
 *.log
