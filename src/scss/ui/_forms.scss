@@ -1,0 +1,284 @@
+@import '../config/colors';
+@import '../config/ui';
+@import '../mixins/helpers';
+
+.#{$ui-class-prefix}-form {
+  
+    input[type=text], 
+    input[type=password], 
+    input[type=email], 
+    input[type=url], 
+    input[type=date], 
+    input[type=month], 
+    input[type=time], 
+    input[type=datetime], 
+    input[type=datetime-local], 
+    input[type=week], 
+    input[type=number], 
+    input[type=search], 
+    input[type=tel], 
+    input[type=color], 
+    select, textarea {
+        border: 1px solid map-get($form-input, border);
+        box-shadow: -0 -1px 0 0 map-get($form-input, boxshadow);
+        background: map-get($form-input, background);
+        color: inherit;
+        font: inherit;
+        padding: 6px 8px;
+        margin: 0;
+        height: auto !important;
+        line-height: 1; 
+        max-width: 100%;
+        @include prefix(border-radius, 3px);
+        @include transition(box-shadow .5s ease, background .5s ease);
+        @include prefix(box-sizing, border-box);
+
+        &:focus {
+            outline: 0;
+            background: map-get($form-input-focus, background);
+            border-color: map-get($form-input-focus, border);
+            box-shadow: 0 0 2px 0 map-get($form-input-focus, boxshadow);
+        }
+        &:disabled {
+            outline: 0; 
+            background: map-get($form-input-disabled, background);
+            border-color: map-get($form-input-disabled, border);
+            box-shadow: none;
+            cursor: not-allowed;
+            color: map-get($form-input-disabled, color);
+        }
+
+        @include placeholder() {
+            color: map-get($form-input, placeholder);
+            text-shadow: 1px 1px 0 #fff;
+        }
+    }
+
+    input.error, 
+    select.error, 
+    textarea.error {
+        background: map-get($form-input-error, background);
+        border-color: map-get($form-input-error, border);
+        color: map-get($form-input-error, color);  
+        box-shadow: inset 1px 1px 0 0 map-get($form-input-error, boxshadow);
+
+        &:focus {
+            outline: 0;
+            background: map-get($form-input-error, background);
+            border-color: map-get($form-input-error, border);
+            box-shadow: 0 0 2px 0 map-get($form-input-error, border);
+        }
+    }
+
+    input.success,
+    select.success, 
+    textarea.success {
+        background: map-get($form-input-success, background);
+        border-color: map-get($form-input-success, border);
+        color: map-get($form-input-success, color);  
+        box-shadow: -0 -1px 0 0 map-get($form-input-success, boxshadow);
+
+        &:focus {
+            outline: 0;
+            background: map-get($form-input-success, background);
+            border-color: map-get($form-input-success, border);
+            box-shadow: 0 0 2px 0 map-get($form-input-success, border);
+        }
+    }
+
+    // SELECT
+    .select-wrapper {
+        border: 1px solid map-get($form-input, border);
+        @include prefix(border-radius, 3px);
+        display: inline-block;
+        background-color: map-get($form-input, background);
+        padding: 5px 8px 4px 8px;
+        margin-bottom: 0;
+        max-width: 100%;
+        min-width: 120px;
+        white-space: pre;
+
+        &:focus-within {
+            outline: 0;
+            background: map-get($form-input-focus, background);
+            border-color: map-get($form-input-focus, border);
+            box-shadow: 0 0 2px 0 map-get($form-input-focus, boxshadow);
+        }
+
+        select {
+            display: block;
+            border: 0;
+            color: map-get($form-input, color);
+            background: transparent;
+            box-shadow: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+
+            &:focus {
+                outline: 0;
+                box-shadow: none;
+            }
+            &:disabled {
+                background-color: map-get($form-input-disabled, background);
+                border-color: map-get($form-input-disabled, border);
+                color: map-get($form-input-disabled, color);
+            }
+        }
+    }
+
+    // RADIO's
+    input[type=checkbox], 
+    input[type=radio] {
+        display: inline-block;
+        height: map-get($form-radio-checkbox, size) !important;
+        width: map-get($form-radio-checkbox, size) !important;
+        border: 1px solid map-get($form-radio-checkbox, border);
+        overflow: hidden;
+        margin: -4px 0 0 0;
+        vertical-align: middle;
+        -webkit-appearance: none;
+        outline: 0;
+        background: 0 0;
+        background-color: map-get($form-radio-checkbox, background);
+        padding: 0;
+        min-width: auto;
+
+        &:before {
+            display: block;
+        }
+        &:disabled {
+            border-color: map-get($form-radio-checkbox, borderdisabled);
+        }
+        &:not(:disabled) {
+            cursor: pointer;
+        }
+    }
+
+    input[type=radio] {
+        border-radius: 50%;
+
+        &:checked:before {
+            content: '';
+            width: map-get($form-radio-checkbox, size) - 6px;
+            height: map-get($form-radio-checkbox, size) - 6px;
+            margin: 2px auto 0;
+            border-radius: 50%;
+            background: map-get($form-radio-checkbox, checked);
+            float: none;
+        }
+
+        &:disabled:checked:before {
+            background-color: map-get($form-radio-checkbox, checkeddisabled);
+            float: none;
+        }
+    }
+
+    input[type=checkbox] {
+
+      &:checked {
+        border-color: map-get($form-radio-checkbox, checked);
+      }
+      &:checked:before, 
+      &:indeterminate:before {
+        float: none;
+        width: auto;
+        content: '';
+        display: block;
+        width: 7px;
+        height: 11px;
+        border: solid map-get($form-radio-checkbox, checked);
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        position: relative;
+        top: 0;
+        left: 4px;
+      }
+    }
+
+    
+
+}
+
+
+
+
+
+.#{$ui-class-prefix}-checkbox-toggle {
+
+  display: none !important; 
+
+
+  + label { 
+    margin: 0; 
+    position: relative;
+    display: inline-block !important;
+    height: map-get($form-toggleswitch, height) !important;
+    width: map-get($form-toggleswitch, width) !important;
+    background: map-get($form-toggleswitch, backgroundOff);
+    border-radius: map-get($form-toggleswitch, width) * 2;
+    cursor: pointer;
+    @include transition(all 0.3s ease);
+    @include prefix(user-select, none);
+
+    &:after {
+      position: absolute;
+      left: -2px;
+      top: -4px;
+      display: block;
+      width: map-get($form-toggleswitch, height) + 8px;
+      height:map-get($form-toggleswitch, height) + 8px;
+      border-radius: 100%;
+      background: map-get($form-toggleswitch, handleOff);
+      box-shadow: 0px 3px 3px rgba(0,0,0,0.05);
+      content: '';
+      @include transition(all 0.3s ease);
+    }
+    &:active:after {
+      transform: scale(1.15, 0.85);
+    }
+
+  }
+  
+
+  &:checked + label {
+    background: map-get($form-toggleswitch, backgroundOn);
+    &:after {
+      left: 20px;
+      background: map-get($form-toggleswitch, handleOn);
+    }
+  }
+
+  &:disabled + label {
+    background: #E6E6E6;
+    pointer-events: none;
+    &:after {
+      background: #D0D0D0;
+    }
+  }
+
+  // SMALL VARIANT 
+  &.is-small {
+    + label {
+    height: 16px !important;
+    width: 30px !important;
+    border-radius: 30px * 2;
+    
+      &:after {
+        left: 2px;
+        top: 2px;
+        width: 13px;
+        height: 12px;
+      }
+
+      
+    } 
+    &:checked + label {
+      &:after {
+        left: 14px;
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,21 @@
+dist/
+node_modules/
+src/.sass-cache/
+
+# Dont track these files
+package-lock.json
+app.html
+index.html
+demo.html
+
+# Logs and databases
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

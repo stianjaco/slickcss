@@ -1,0 +1,40 @@
+// COLOR CONFIGURATION
+$color-list: (
+	primary: #00d1b2,
+	secondary: #3273dc,
+	accent: #fa735d,
+	danger: #e44433,
+	warning: #f1c40f,
+	info: #45aaf2,
+	success: #2ecd6f,
+	attention: #00d1b2,
+	light: #f8f9fa,
+	light-grey: #fafafa,
+	grey: #e8e8e8,
+	dark-grey: #9e9e9e,
+	dark: #343434,
+	white: #fff,
+	black: #000, 
+	red: #fb6d60,
+	blue: #2fa1ef,
+	green: #2ecd6f,
+	yellow: #ffcd03, 
+	orange: #ff9e07,
+	purple: #9b57b5,
+	pink: #ff969d,
+	brown: #a28570, 
+	mint: #abf0d2, 
+	navy: #4854b3,
+	lime: #c4ec49,
+) !default;
+
+// ALIAS
+$color-primary: map-get($color-list, primary) !default;
+$color-secondary: map-get($color-list, secondary) !default;
+$color-accent: map-get($color-list, accent) !default;
+
+$color-danger: map-get($color-list, danger) !default;
+$color-warning: map-get($color-list, warning) !default;
+$color-info: map-get($color-list, info) !default;
+$color-success: map-get($color-list, success) !default;
+$color-attention: map-get($color-list, attention) !default;

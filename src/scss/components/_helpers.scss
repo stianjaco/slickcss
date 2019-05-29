@@ -1,0 +1,54 @@
+@import '../config/colors';
+@import '../mixins/helpers';
+
+
+// FLOATS 
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+// WIDTHS
+@for $i from 1 through 100 {
+  .width-#{$i} {
+    width: percentage($i/100);
+  }
+}
+// PADDING AND MARGINS
+$pd: t r l b;
+$pdfull: top right left bottom;
+@for $i from 1 through 100 {
+  .padding-#{$i} {
+      padding: #{$i}px;
+    }
+    .margin-#{$i} {
+      margin: #{$i}px;
+    }
+  @each $padd in $pd {
+    $c: $padd;
+    $d: nth($pdfull, index($pd, $c));
+      .padding-#{$c}-#{$i} {
+        padding-#{$d}: #{$i}px;
+      }
+      .margin-#{$c}-#{$i} {
+        margin-#{$d}: #{$i}px;
+      }
+    }
+}
+
+
+// COLORS
+@each $colorName, $color in $color-list {
+  .bg-#{""+$colorName+""} {
+    background-color: $color;
+  }
+  .text-#{""+$colorName+""} {
+    color: $color;
+  }
+}

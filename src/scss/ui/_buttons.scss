@@ -1,0 +1,306 @@
+@import '../config/colors';
+@import '../config/ui';
+@import '../mixins/helpers';
+
+
+.#{$ui-class-prefix}-button, 
+a.#{$ui-class-prefix}-button, 
+a.#{$ui-class-prefix}-button:link, 
+a.#{$ui-class-prefix}-button:visited,
+button.#{$ui-class-prefix}-button, 
+input[type='button'].#{$ui-class-prefix}-button,
+input[type='submit'].#{$ui-class-prefix}-button,
+input[type='reset'].#{$ui-class-prefix}-button {
+	position:relative;
+	white-space: nowrap;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+	*vertical-align: auto;
+	zoom: 1;
+	*display: inline;
+	padding: $btn-padding;
+	text-decoration: none;
+	font-weight: normal;
+	margin: 0 4px 0 0;
+	font-family: $btn-font;
+	@include font-size($btn-base-size);
+	line-height: 1.2em;
+	letter-spacing: $btn-letter-spacing;
+	color: $btn-normal-color;
+	background-color: $btn-normal-bg;
+	@include prefix(backface-visibility, hidden);
+	@include transition(background 0.2s ease-out, color 0.2s ease-out, border 0.2s ease-out, box-shadow 0.16s ease); 
+	border: none;
+	cursor: pointer;
+	text-align:center;
+	-ms-touch-action: manipulation;
+  	touch-action: manipulation;
+  	-webkit-filter: blur(0);
+	-webkit-touch-callout: none;
+	@include prefix(user-select, none);
+	@include prefix(box-sizing, border-box);
+
+	&:hover {
+	  background-color: $btn-normal-hover-bg;
+	  color: $btn-normal-hover-color;
+	  text-decoration: none !important;
+  	}
+  	&:active {
+		text-shadow: 1px 1px 0 rgba(0,0,0,.1);
+    	@include prefix(transform, scale(.98));
+    	outline: none;
+    	text-decoration: none;
+  	}
+  	&:focus {
+  		outline: none;
+  	}
+  	&:last-of-type { 
+		margin-right: 0; 
+	}
+
+	&.icon-pos-right i,
+	&.icon-pos-right svg {
+		margin-left: .4em;
+	}
+	&.icon-pos-left i,
+	&.icon-pos-left svg {
+		margin-right: .4em;
+	}
+
+	> i, > svg, > .fa-wrapper {
+		color: inherit;
+	}
+
+	// BUTTON SIZES 
+	&.size-xs {
+		padding: .5em 1em;
+		@include font-size($btn-base-size/1.6);
+	}
+	&.size-sm {
+		@include font-size($btn-base-size/1.3);
+	}
+	&.size-md {
+		@include font-size($btn-base-size*1.4);
+	}
+	&.size-lg {
+		@include font-size($btn-base-size*1.8);
+	}
+	&.size-xl {
+		@include font-size($btn-base-size*2.3);
+	}
+	&.is-full {
+		padding-left: 0; 
+		padding-right: 0; 
+		width:100%;
+
+		&:active {
+    		@include prefix(transform, scale(.998));
+  		}
+	}
+	&.is-half { 
+		padding-right: 0; 
+		padding-left: 0; 
+		width:50%; 
+
+		&:active {
+    		@include prefix(transform, scale(.995));
+  		}
+	}
+	&.is-narrow { 
+		padding-left: .8em; 
+		padding-right: .8em;
+	}
+	&.is-wide { 
+		padding-left: 3em; 
+		padding-right: 3em;
+	}
+	&.is-wider { 
+		padding-left: 5em; 
+		padding-right: 5em;
+	}
+
+	// BUTTON STYLES 
+	&.rounded {
+		@include prefix(border-radius, 4px);
+		&.size-xs {  @include prefix(border-radius, 3px); }
+	}
+	&.pill {
+		@include prefix(border-radius, 2em);
+	}
+	&.ghost {
+		background-color: transparent;
+		color: $btn-normal-bg;
+		border: 1px solid $btn-normal-bg;
+		box-shadow: none;
+
+		&:active {
+			text-shadow: none;
+		}
+		&:hover {
+			background-color: $btn-normal-bg;
+			color:$btn-normal-color;
+		}
+		&-inverted {
+			background-color: $btn-normal-bg;
+			color: $btn-normal-color;
+			border: 1px solid transparent;
+
+			&:active {
+				text-shadow: none;
+			}
+
+			&:hover {
+				background-color: transparent;
+				color: $btn-normal-bg;
+				border: 1px solid $btn-normal-bg;
+			}
+		}
+	}
+
+	&.circle {
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+		width: 100%;
+		height: 0;
+		padding-bottom: 100%;
+		overflow: hidden;
+		text-align: center;
+		@include prefix(border-radius, 50%);
+
+		> em, > i { 
+			font-style: normal; 
+			display: inline-block;
+			width: 100%;
+			padding-top: 50%;
+			padding-bottom: 50%;
+			text-align: center;
+			text-decoration: none;
+			line-height: 2em;
+			margin-top: -1em;
+		}
+		
+		&.icon-pos-right {
+			> i, > svg, > .fa-wrapper i {
+				margin-left: 0;
+			}
+		}
+
+		&.icon-pos-left {
+			> i, > svg, > .fa-wrapper i {
+				margin-right: 0;
+			}
+		}
+	}
+	&.material {
+		box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 2px rgba(0,0,0,.2);
+		overflow:hidden; 
+
+	  	&:hover {
+			box-shadow: 0 0 4px rgba(0,0,0,.12), 1px 3px 4px rgba(0,0,0,.2);
+	  	}
+
+	  	&:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: block;
+			width: 0;
+			padding-top: 0;
+			background-color: rgba(236, 240, 241, .3);
+			@include prefix(border-radius, 100%);
+			@include prefix(transform, translate(-50%, -50%));
+		}
+
+		&:active:before {
+			width: 120%;
+			padding-top: 120%;
+			@include transition(width .2s ease-out, padding-top .2s ease-out); 
+		}
+	}
+	
+
+
+
+	@each $colorName, $colorValue in $color-list {
+
+		&.#{""+$colorName+""} {
+			background-color: $colorValue;
+			color: findColorInvert($colorValue);
+
+			&:hover {
+				background-color: lighten($colorValue,3%);
+				color: findColorInvert($colorValue);
+			}
+
+			&.ghost {
+				background-color: transparent;
+				border-color: $colorValue;
+				color: $colorValue;
+
+				&:hover {
+					background-color: $colorValue;
+					color: findColorInvert($colorValue);
+				}
+
+				&-inverted {
+					background-color: $colorValue;
+					color: findColorInvert($colorValue);
+					box-shadow: none;
+
+					&:hover {
+						background-color: transparent;
+						color: $colorValue;
+						border-color: $colorValue;
+					}
+				}
+			}
+		}
+
+	}
+
+	&.disabled,&:disabled,&[disabled] {
+		background-color: $btn-disabled-bg;
+		color: $btn-disabled-color;
+		text-shadow: 1px 1px 0 rgba(255,255,255,.5);
+		cursor: not-allowed;
+		pointer-events: none;
+		
+		&:active {
+			text-shadow: 1px 1px 0 rgba(255,255,255,.5);
+			@include prefix(transform, scale(1));
+		}
+
+		&.ghost {
+			border-color: $btn-disabled-border-color;
+
+			&:hover {
+				background-color: $btn-disabled-bg;
+				color: $btn-disabled-color;
+			}
+		}
+	}
+
+	.inner-button {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+    	-ms-flex-align: center;
+        align-items: center;
+	}
+	
+}
+
+.btn-wrapper {
+	white-space: nowrap;
+	display: -moz-inline-stack;
+	display: inline-block;
+	&:after { 
+		content: ""; 
+		display: table; 
+		clear: both; 
+	}
+}

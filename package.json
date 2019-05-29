@@ -1,0 +1,20 @@
+{
+  "name": "slickcss",
+  "version": "0.0.2",
+  "description": "SlickCSS is a simple and flexible css-framework for rapid prototyping and weblayouts.",
+  "main": "index.js",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "grunt build",
+    "watch": "grunt"
+  },
+  "keywords": [],
+  "author": "Stian Jacobsen / Dropcode",
+  "license": "ISC"
+}

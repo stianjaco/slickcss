@@ -1,0 +1,178 @@
+@import '../config/typography';
+@import '../config/breakpoints';
+@import '../mixins/helpers';
+
+// Headers
+@for $i from 6*-1 through -1 {
+  $fs: ($font-size+(5*$font-step)) - (($font-step*abs($i))-$font-step);
+  h#{abs($i)}, .header-#{abs($i)} {
+    @include font-size($fs);
+    @include line-height($fs*0.48);
+    margin: .6em 0;
+  }
+}
+
+h4,h5 {
+	font-weight: normal;
+}
+
+.align-right {
+	text-align: right; 
+}
+.align-left {
+	text-align: left;
+}
+.align-center {
+	text-align: center;
+}
+.align-justify {
+	text-align: justify;
+}
+.rtl {
+	direction: rtl;
+}
+.ltr {
+	direction: ltr;
+}
+
+@each $bp in $breakpoints-prefix {
+	$curr: $bp;
+		
+	@include breakpoint($curr) {
+		.align-right-#{$curr} {
+			text-align: right; 
+		}
+		.align-left-#{$curr} {
+			text-align: left;
+		}
+		.align-center-#{$curr} {
+			text-align: center;
+		}
+		.align-justify-#{$curr} {
+			text-align: justify;
+		}
+		.rtl-#{$curr} {
+			direction: rtl;
+		}
+		.ltr-#{$curr}  {
+			direction: ltr;
+		}
+	}
+}
+
+.capitalized { 
+	text-transform: capitalized; 
+}
+.lowercase { 
+	text-transform: lowercase; 
+}
+.uppercase { 
+	text-transform: uppercase; 
+}
+.italic {
+	font-style: italic;
+}
+.deleted {
+	text-decoration: line-through;
+	text-decoration-color: $color-danger;
+}
+.added {
+	border-bottom: 1px dashed $color-success;
+	color: $color-success;
+}
+.highlighted {
+	background-color: map-get($color-list, yellow);
+	padding: 2px;
+}
+
+.screenreader {
+  display: none;
+  @media speech {
+  	display: block;
+  }
+}
+
+// LISTS
+ul {
+	&.list-inside {
+		list-style-position: inside;
+	}
+	&.list-disc {
+		list-style-type: disc;
+	}
+	&.list-circle {
+		list-style-type: circle;
+	}
+	&.list-square {
+		list-style-type: square;
+	}
+	&.list-none {
+		list-style-type: none;
+	}
+	&.list-unformated {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+	&.horizontal {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		@include flexbox;
+		@include align-items(center);
+		max-width: 100%;
+
+		&.aligned { @include justify-content(space-between); }
+	    &.justify { @include justify-content(space-around); }
+	    &.center { @include justify-content(center); }
+	    &.right { @include justify-content(flex-end);}
+	    &.left { @include justify-content(flex-start);}
+
+		> li {
+			display: block;
+	    	flex: 0 1 auto;
+	    	margin-right: .5em;
+	    	&:last-child {
+	    		margin-right: 0;
+	    	}
+		}
+	}
+}
+
+hr {
+	border: none;
+	padding: 0;
+	height: 1px;
+	margin: 1em 0;
+	background-color: map-get($color-list, grey);
+
+	&.thicker {
+		height: 2px;
+	}
+	&.thick {
+		height: 4px;
+	}
+}
+
+pre, code {
+	@include prefix(border-radius, 5px);
+    border: 1px solid map-get($color-list, grey);
+    background: map-get($color-list, light-grey);
+    @include font-size(12px);
+    font-family: $font-monospace;
+    padding: 8px 12px;
+}
+
+code {
+   padding: 2px;
+}
+
+pre code {
+    @include prefix(border-radius, 0px);
+    border: none;
+    padding: 0;
+}
+
+code[title] {
+	cursor: help;
+}

@@ -1,0 +1,29 @@
+// Calculate font-size
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+// Calculate line-height
+@mixin line-height($size) {
+  line-height: calculateEm($size);
+}
+
+// Clear floats
+@mixin clearfix() {
+  &:after {
+    display: table; 
+    content: "";
+    clear: both;
+  }
+}
+
+// Background Image Cover 
+@mixin bgcover($image) {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-image: url($image);
+}
+
