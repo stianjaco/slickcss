@@ -52,3 +52,18 @@ $pdfull: top right left bottom;
     color: $color;
   }
 }
+
+@each $bp in $breakpoints-prefix {
+  .hide-on-#{$bp} {
+    @include breakpoint($bp) { display: none !important; }
+  }
+  .show-on-#{$bp} {
+    display: none;
+    @include breakpoint_min($bp) { display: block; }
+  }
+  .only-on-#{$bp} {
+    display: none;
+    @include breakpoint_between($bp) { display: block; }
+  }
+  
+}

@@ -1,6 +1,6 @@
 {
   "name": "slickcss",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "SlickCSS is a simple and flexible css-framework for rapid prototyping and weblayouts.",
   "main": "index.js",
   "devDependencies": {
@@ -16,5 +16,8 @@
   },
   "keywords": [],
   "author": "Stian Jacobsen / Dropcode",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "imagesloaded": "^4.1.4"
+  }
 }

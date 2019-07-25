@@ -91,7 +91,11 @@
             padding-left: $grid-gutter-xl;
             padding-bottom: $grid-gutter-xl*1.5;
         }
-    }
+	}
+	
+	&:last-of-type [class^="col-"] {
+		padding-bottom: 0 !important;
+	}
 
     // MODIFIERS
     &.columns {
@@ -299,17 +303,3 @@
     }
 }
 
-@each $bp in $breakpoints-prefix {
-  .hide-on-#{$bp} {
-    @include breakpoint($bp) { display: none !important; }
-  }
-  .show-on-#{$bp} {
-    display: none;
-    @include breakpoint_min($bp) { display: block; }
-  }
-  .only-on-#{$bp} {
-    display: none;
-    @include breakpoint_between($bp) { display: block; }
-  }
-  
-}
