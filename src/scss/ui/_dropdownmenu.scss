@@ -489,3 +489,87 @@
 
 
 }
+
+// --
+// DROPDOWN 
+// -------------------
+.dropdown { 
+    display: inline-block;
+    position: relative;
+
+    .dropdown-trigger {}
+
+    .dropdown-menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background: map-get($ddmenu, background);
+        background-clip: padding-box;
+        border: 1px solid map-get($ddmenu, borderColor);
+        border-radius: 2px;
+        position: absolute;
+        top: auto;
+        left: 0;
+		display: none;
+		z-index: 999;
+		
+		&.is-dark {
+			background-color: invert(map-get($ddmenu, background));
+			border-color: invert(map-get($ddmenu, borderColor));
+
+			li.divider {
+				border-color: invert(map-get($ddmenu, divider));
+			}
+			a {
+				&:hover {
+                    background-color: invert(map-get($ddmenu, hoverColor));
+                }
+                &:active {
+                    background-color: invert(map-get($ddmenu, activeColor));
+                    color:invert(map-get($ddmenu, activeTextColor));
+                }
+			}
+		}
+
+        li {
+            display: block;
+            white-space: nowrap;
+            margin: 0;
+            padding: 0;
+            width:100%;
+            min-width: 146px;
+
+            &.divider {
+                height: 0;
+                margin: 0;
+                overflow: hidden;
+                border-top: 1px solid map-get($ddmenu, divider);
+            }
+
+            a {
+                display: block;
+                padding: 6px 14px;
+                background-color: transparent;
+                text-decoration: none; 
+
+                &:hover {
+                    background-color: map-get($ddmenu, hoverColor);
+                }
+                &:active {
+                    background-color: map-get($ddmenu, activeColor);
+                    color: map-get($ddmenu, activeTextColor);
+                }
+            }
+
+            &:first-child > a {
+                border-radius: 2px 2px 0 0;
+            }
+            &:last-child > a {
+                border-radius: 0 0 2px 2px;
+            }
+
+        }
+      }
+      &.menu-is-open .dropdown-menu { display: block; }
+
+  }

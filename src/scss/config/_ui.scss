@@ -82,3 +82,13 @@ $dropdown-menu: (
 	transition: 200ms,
 	break: map-get($breakpoint-list, sm)
 );
+
+// DROPDOWN "CONTEXT" MENU
+$ddmenu: (
+	background: #fff,
+	borderColor: rgba(0,0,0,.15),
+	hoverColor: #f8f9fa,
+	activeColor: map-get($color-list, primary),
+	activeTextColor: #fff,
+	divider: #e9ecef
+);

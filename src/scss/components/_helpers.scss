@@ -46,10 +46,10 @@ $pdfull: top right left bottom;
 // COLORS
 @each $colorName, $color in $color-list {
   .bg-#{""+$colorName+""} {
-    background-color: $color;
+    background-color: $color !important;
   }
   .text-#{""+$colorName+""} {
-    color: $color;
+    color: $color !important;
   }
 }
 
