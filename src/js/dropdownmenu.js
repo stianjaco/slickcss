@@ -9,7 +9,8 @@ for( let x=0; x<ddmenus.length; x++) {
         let isopen = document.querySelectorAll(".dropdown.menu-is-open");
         // Hide anyone that is open
         for(let i=0; i < isopen.length; i++ ) {
-            isopen[i].classList.remove('menu-is-open');
+            if( isopen[i] !== wrapper ) 
+                isopen[i].classList.remove('menu-is-open');
         }
         // Toggle current
         if( wrapper.classList.contains('menu-is-open') ) {
