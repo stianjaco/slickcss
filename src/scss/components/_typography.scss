@@ -16,16 +16,35 @@ h4,h5 {
 	font-weight: normal;
 }
 
-.align-right {
+.display-1,.display-2,.display-3,.display-4 {
+	font-weight: normal;
+	margin: 0;
+	line-height: 1.3em;
+}
+
+.display-1 {
+	@include font-size(80px);
+}
+.display-2 {
+	@include font-size(64px);
+}
+.display-3 {
+	@include font-size(52px);
+}
+.display-4 {
+	@include font-size(46px);
+}
+
+.text-align-right {
 	text-align: right; 
 }
-.align-left {
+.text-align-left {
 	text-align: left;
 }
-.align-center {
+.text-align-center {
 	text-align: center;
 }
-.align-justify {
+.text-align-justify {
 	text-align: justify;
 }
 .rtl {
@@ -39,16 +58,16 @@ h4,h5 {
 	$curr: $bp;
 		
 	@include breakpoint($curr) {
-		.align-right-#{$curr} {
+		.text-align-right-#{$curr} {
 			text-align: right; 
 		}
-		.align-left-#{$curr} {
+		.text-align-left-#{$curr} {
 			text-align: left;
 		}
-		.align-center-#{$curr} {
+		.text-align-center-#{$curr} {
 			text-align: center;
 		}
-		.align-justify-#{$curr} {
+		.text-align-justify-#{$curr} {
 			text-align: justify;
 		}
 		.rtl-#{$curr} {
@@ -114,7 +133,7 @@ ul {
 		padding: 0;
 		list-style-type: none;
 	}
-	&.horizontal {
+	&.horizontal, &.list-horizontal {
 		list-style-type: none;
 		padding: 0;
 		margin: 0;

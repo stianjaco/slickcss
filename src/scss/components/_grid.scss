@@ -92,8 +92,9 @@
             padding-bottom: $grid-gutter-xl*1.5;
         }
 	}
-	
-	&:last-of-type [class^="col-"] {
+
+	&:last-of-type:not(:only-of-type) > [class^="col-"],
+	&:last-of-type:not(:only-of-type) > .col {
 		padding-bottom: 0 !important;
 	}
 
@@ -248,7 +249,7 @@
 		padding: 0 $grid-gutter $grid-gutter $grid-gutter;
 	}
 
-	[class^="col-"], .col {
+	[class^="col-"], .col, .column {
 		@extend %col-base-style;
 
 		&.small {
@@ -302,4 +303,19 @@
 		
     }
 }
+
+@each $bp in $breakpoints-prefix {
+	.hide-on-#{$bp} {
+	  @include breakpoint($bp) { display: none !important; }
+	}
+	.show-on-#{$bp} {
+	  display: none;
+	  @include breakpoint_min($bp) { display: block; }
+	}
+	.only-on-#{$bp} {
+	  display: none;
+	  @include breakpoint_between($bp) { display: block; }
+	}
+	
+  }
 

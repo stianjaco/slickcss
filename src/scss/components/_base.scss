@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
   @include font-size($font-size);
+  color: $text-color;
 }
 body { 
 	font-size: 1rem;
@@ -67,4 +68,9 @@ caption {
 p,li {
   &:first-of-type { margin-top: 0; }
   &:last-of-type { margin-bottom: 0; }
+}
+img {
+vertical-align: middle;
+max-width: 100%;
+border-style: none;
 }

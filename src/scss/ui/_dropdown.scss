@@ -1,0 +1,174 @@
+// --
+// DROPDOWN 
+// Usage: 
+// <div class="dropdown">
+// <button class="dropdown-trigger">Open</button>
+// <ul class="dropdown-menu"> .. </ul>
+// </div>
+// -------------------
+
+$dropdownconfig: (
+    'background': #fff,
+    'color': #000,
+    'hover': lighten($color-grey,10%),
+    'hover-color': #000,
+    'border-color': rgba(0,0,0,.05),
+    'border-radius': 3px,
+    'shadow': 0 6px 12px rgba(0,0,0,0.18),
+    'sub-shadow': 1px 6px 10px -6px rgba(0,0,0,0.18),
+    'divider': $color-grey,
+    'padding': 6px 14px 
+
+) !default;
+.dropdown { 
+
+    display: inline-block;
+    position: relative;
+
+    &.menu-is-open .dropdown-menu { display: block; }
+
+    .dropdown-menu, .dropdown-menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid map-get($dropdownconfig, border-color);
+        @include prefix(border-radius, map-get($dropdownconfig, border-radius));
+        @include prefix(box-shadow, map-get($dropdownconfig, shadow));
+        position: absolute;
+        top: auto;
+        left: 0;
+        display: none;
+        white-space: nowrap;
+		z-index: 1000;
+        min-width: 148px;
+
+		&.pin-right {
+			left: auto;
+			right: 0;
+		}
+		&.pin-left {
+			left: 0;
+			right: auto;
+        }
+
+        ul.pin-left {
+            left: -100%;
+            right: auto;
+        }
+        
+        li {
+            display: block;
+            //white-space: nowrap;
+            margin: 0;
+            padding: 0;
+            width:100%;
+            position: relative;
+
+            &.divider {
+                height: 0;
+                margin: 0;
+                overflow: hidden;
+                border-top: 1px solid map-get($dropdownconfig, divider);
+            }
+
+            a {
+                @include flexbox;
+                @include justify-content(space-between);
+                @include align-items(center);
+                padding: 6px 14px;
+                background-color: transparent;
+                text-decoration: none; 
+                color: map-get($dropdownconfig, color);
+
+                &:hover, &:active, &:focus {
+                    outline: none;
+                    background-color: map-get($dropdownconfig, hover);
+                    color: map-get($dropdownconfig, hover-color);
+                }
+            }
+
+            &.caret-right > a:after,
+            &.caret-left > a:after,
+            &.caret-down > a:after,
+            &.caret-up > a:after {
+                display: inline-block;
+                width: 0;
+                height: 0;
+                margin-left: 10px;
+                vertical-align: 4px;
+                content: " ";
+            }
+
+            &.caret-right > a:after {
+                border-left: 5px solid;
+                border-bottom: 5px solid transparent;
+                border-right: 0;
+                border-top: 5px solid transparent;
+            }
+            &.caret-left a:after {
+                border-right: 5px solid;
+                border-bottom: 5px solid transparent;
+                border-left: 0;
+                border-top: 5px solid transparent;
+            }
+            &.caret-down a:after {
+                border-top: 5px solid;
+                border-right: 5px solid transparent;
+                border-bottom: 0;
+                border-left: 5px solid transparent;
+            }
+            &.caret-up a:after {
+                border-bottom: 5px solid;
+                border-left: 5px solid transparent;
+                border-top: 0;
+                border-right: 5px solid transparent;
+            }
+
+            &:first-child > a {
+                @include prefix(border-radius, map-get($dropdownconfig, border-radius) map-get($dropdownconfig, border-radius) 0 0);
+                //border-radius: 2px 2px 0 0;
+            }
+            &:last-child > a {
+                @include prefix(border-radius, 0 0 map-get($dropdownconfig, border-radius) map-get($dropdownconfig, border-radius) );
+                //border-radius: 0 0 2px 2px;
+            }
+
+            &:hover > ul {
+                display: block;
+            }
+
+            ul {
+                position: absolute;
+                left: 100%;
+                top: 0;
+                @include prefix(box-shadow, map-get($dropdownconfig, sub-shadow));
+            }
+        }
+
+        
+
+      }
+
+    // Colors
+    @each $colorName, $colorValue in $color-list {
+
+        $colorInverted: findColorInvert($colorValue);
+        $colorLighter: lighten($colorValue,30%);
+
+        &.#{""+$colorName+""} .dropdown-menu li {
+            a {
+                color: $colorValue;
+                &:hover, &:active, &:focus {
+                    //background-color: $colorLighter;
+                    background-color: $colorValue;
+                    color: $colorInverted;
+                }
+            }
+        }
+
+    }
+      
+
+  }

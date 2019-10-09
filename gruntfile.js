@@ -44,7 +44,19 @@ module.exports = function( grunt ) {
 				files: {
 					"dist/js/dropdownmenu.js": "src/js/dropdownmenu.js",
 					"dist/js/slickmasonry.js": "src/js/slickmasonry.js",
+					//"dist/js/tabs.js": "src/js/tabs.js",
 				},
+			},
+			tabs: {
+				options:{
+					transform: [['babelify', { presets: "es2015" }]],
+	                browserifyOptions: {
+						debug: true,
+						standalone: 'slickTabs'
+	                }
+				},
+				src: ['src/js/tabs.js'],
+				dest: 'dist/js/tabs.js'
 			}
 		},
 		// Minify and compress
@@ -57,6 +69,7 @@ module.exports = function( grunt ) {
 					{
 						'dist/js/dropdownmenu.min.js' : ['dist/js/dropdownmenu.js'],
 						'dist/js/slickmasonry.min.js' : ['dist/js/slickmasonry.js'],
+						'dist/js/tabs.min.js' : ['dist/js/slickmasonry.js'],
 					}
 				]
 			}

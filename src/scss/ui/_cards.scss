@@ -1,0 +1,35 @@
+.#{$ui-class-prefix}-card {
+
+    min-height: 100%;
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(stretch);
+
+    background-clip: border-box;
+    word-wrap: break-word;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    @include prefix(border-radius, 4px);
+    
+    > *:not(:first-child):not(:last-child) {
+        @include flex-grow(1);
+    }
+    > :first-child, > :last-child, {
+        @include flex-shrink(0);
+    }
+    
+    .card-header, .card-footer, .card-body {
+        background-color: #fff;
+        padding: 10px 15px;
+    }
+    .card-header {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    }
+    .card-body {
+        padding: 15px 15px;
+    }
+    .card-footer {
+        border-top: 1px solid rgba(0, 0, 0, 0.125);
+    }
+}
+

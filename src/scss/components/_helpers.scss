@@ -51,19 +51,57 @@ $pdfull: top right left bottom;
   .text-#{""+$colorName+""} {
     color: $color !important;
   }
+  .text-on-#{""+$colorName+""} {
+    color: findColorInvert($color) !important;
+  }
 }
 
-@each $bp in $breakpoints-prefix {
-  .hide-on-#{$bp} {
-    @include breakpoint($bp) { display: none !important; }
+
+// Shadows
+.shadow, .shadow-more, .shadow-less {
+  @include transition(all 0.2s ease);
+}
+
+.shadow {
+  @include prefix(box-shadow, 0 2px 6px -1px rgba(0, 0, 0, 0.14) );
+  &:hover {
+    @include prefix(box-shadow, 0 4px 6px -1px rgba(0, 0, 0, 0.14) );
   }
-  .show-on-#{$bp} {
-    display: none;
-    @include breakpoint_min($bp) { display: block; }
+}
+
+.shadow-more {
+  @include prefix(box-shadow, 0 4px 8px 0 rgba(0, 0, 0, 0.2) );
+  &:hover {
+    @include prefix(box-shadow, 0 8px 10px 0 rgba(0, 0, 0, 0.2) );
   }
-  .only-on-#{$bp} {
-    display: none;
-    @include breakpoint_between($bp) { display: block; }
+}
+
+.shadow-less {
+  @include prefix(box-shadow, 0 2px 2px -1px rgba(0, 0, 0, 0.1) );
+  &:hover {
+    @include prefix(box-shadow, 0 3px 3px -1px rgba(0, 0, 0, 0.13) );
   }
-  
+}
+
+
+.shadow-none {
+  @include prefix(box-shadow, none !important);
+}
+
+.img-rounded {
+  border-radius: 5px
+}
+
+.img-circle {
+  border-radius: 50%
+}
+
+.img-cover {
+  -o-object-fit: cover;
+  object-fit: cover
+}
+
+.img-contain {
+  -o-object-fit: contain;
+  object-fit: contain
 }

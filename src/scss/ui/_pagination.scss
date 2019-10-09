@@ -1,0 +1,59 @@
+
+$pagination-background: #fff !default;
+$pagination-border-color: $color-grey !default;
+$pagination-hover-background: lighten($color-grey, 10%) !default;
+
+%ui-pagination {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    @include inline-flex;
+    @include align-items(center);
+    @include align-content(center);
+
+    background-color: $pagination-background;
+    border: 1px solid $pagination-border-color;
+    @include prefix(border-radius, 4px);
+
+    > li {
+        border-right: 1px solid $pagination-border-color;
+        @include prefix(user-select, none);
+        &:last-child { border-right: 0; }
+        > a {
+            padding: 6px 12px;
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+            overflow: hidden;
+            color: $color-primary;
+            &:hover {
+                clip-path: inset(0%);
+                background-color: $pagination-hover-background;
+            }
+        }
+        &.current-page > a,
+        a:active {
+                background-color: $color-primary;
+                color: findColorInvert($color-primary);
+        }
+        &.disabled-page {}
+    }
+}
+
+ul.#{$ui-class-prefix}-pagination {
+    @extend %ui-pagination;
+
+    @each $colorName, $colorValue in $color-list {
+
+    &.#{""+$colorName+""} > li a {
+        color: $colorValue;
+    }
+    &.#{""+$colorName+""} > li.current-page > a,
+    &.#{""+$colorName+""} > li a:active {
+        background-color: $colorValue;
+        color: findColorInvert($colorValue);
+    }
+
+    }
+}

@@ -12,7 +12,9 @@
 	@include flexbox;
 	@include flex-direction(row);
 	@include flex-wrap(wrap);
-
+	&.vertical {
+		@include flex-direction(column);
+	}
 	&.centerize {
 		@include flex-direction(column);
 		@include justify-content(center);

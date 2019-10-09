@@ -2,15 +2,7 @@
 @import '../config/ui';
 @import '../mixins/helpers';
 
-
-.#{$ui-class-prefix}-button, 
-a.#{$ui-class-prefix}-button, 
-a.#{$ui-class-prefix}-button:link, 
-a.#{$ui-class-prefix}-button:visited,
-button.#{$ui-class-prefix}-button, 
-input[type='button'].#{$ui-class-prefix}-button,
-input[type='submit'].#{$ui-class-prefix}-button,
-input[type='reset'].#{$ui-class-prefix}-button {
+%ui-button {
 	position:relative;
 	white-space: nowrap;
 	display: -moz-inline-stack;
@@ -42,22 +34,63 @@ input[type='reset'].#{$ui-class-prefix}-button {
 	@include prefix(box-sizing, border-box);
 
 	&:hover {
-	  background-color: $btn-normal-hover-bg;
-	  color: $btn-normal-hover-color;
-	  text-decoration: none !important;
-  	}
-  	&:active {
-		text-shadow: 1px 1px 0 rgba(0,0,0,.1);
-    	@include prefix(transform, scale(.98));
-    	outline: none;
-    	text-decoration: none;
-  	}
-  	&:focus {
-  		outline: none;
-  	}
-  	&:last-of-type { 
+		background-color: $btn-normal-hover-bg;
+		color: $btn-normal-hover-color;
+		text-decoration: none !important;
+	}
+	&:active {
+		//text-shadow: 1px 1px 0 rgba(0,0,0,.1);
+		@include prefix(transform, scale(.98));
+		outline: none;
+		text-decoration: none;
+	}
+	&:focus {
+		outline: none;
+	}
+	&:last-of-type { 
 		margin-right: 0; 
 	}
+}
+
+.#{$ui-class-prefix}-button-group {
+	@include flexbox;
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
+	@include align-items(center);
+}
+
+.#{$ui-class-prefix}-button, 
+a.#{$ui-class-prefix}-button, 
+a.#{$ui-class-prefix}-button:link, 
+a.#{$ui-class-prefix}-button:visited,
+button.#{$ui-class-prefix}-button, 
+input[type='button'].#{$ui-class-prefix}-button,
+input[type='submit'].#{$ui-class-prefix}-button,
+input[type='reset'].#{$ui-class-prefix}-button {
+
+	@extend %ui-button;
+	
+
+	.#{$ui-class-prefix}-button-group & {
+		margin-right: 0;
+		@include prefix(border-radius, 0);
+
+		&:active {
+			box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+			@include prefix(transform, scale(1));
+		}
+
+		&:last-child {
+			@include prefix(border-top-right-radius, 3px);
+			@include prefix(border-bottom-right-radius, 3px);
+		}
+		&:first-child {
+			@include prefix(border-top-left-radius, 3px);
+			@include prefix(border-bottom-left-radius, 3px);
+		}
+	}
+
+	
 
 	&.icon-pos-right i,
 	&.icon-pos-right svg {
@@ -158,6 +191,14 @@ input[type='reset'].#{$ui-class-prefix}-button {
 		}
 	}
 
+	&.silent {
+		background-color: transparent;
+		color: #000;
+		@include transition( background .2s ease); 
+		box-shadow: none !important;
+		border: none !important;
+	}
+
 	&.circle {
 		padding: 0;
 		margin: 0;
@@ -226,13 +267,31 @@ input[type='reset'].#{$ui-class-prefix}-button {
 
 	@each $colorName, $colorValue in $color-list {
 
+		$colorInverted: findColorInvert($colorValue);
+		$colorLighter: lighten($colorValue,5%);
+		$colorDarker: darken($colorValue,5%);
+
 		&.#{""+$colorName+""} {
+
 			background-color: $colorValue;
-			color: findColorInvert($colorValue);
+			color: $colorInverted;
 
 			&:hover {
-				background-color: lighten($colorValue,3%);
-				color: findColorInvert($colorValue);
+				background-color: $colorLighter;
+				color: $colorInverted;
+			}
+			&:active {
+				box-shadow: 0 0 0 2px rgba($colorDarker, 0.2)!important;
+			}
+
+			&.silent {
+				background-color: transparent;
+				border-color: transparent;
+				color: $colorValue;
+				&:hover {
+					background-color: lighten($colorValue, 40%);
+					color: $colorValue;
+				}
 			}
 
 			&.ghost {
@@ -242,12 +301,16 @@ input[type='reset'].#{$ui-class-prefix}-button {
 
 				&:hover {
 					background-color: $colorValue;
-					color: findColorInvert($colorValue);
+					color: $colorInverted;
+				}
+
+				&:active {
+					box-shadow: none !important;
 				}
 
 				&-inverted {
 					background-color: $colorValue;
-					color: findColorInvert($colorValue);
+					color: $colorInverted;
 					box-shadow: none;
 
 					&:hover {
