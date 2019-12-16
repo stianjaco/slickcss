@@ -42,10 +42,21 @@ module.exports = function( grunt ) {
 	                }
 				},
 				files: {
-					"dist/js/dropdownmenu.js": "src/js/dropdownmenu.js",
+					//"dist/js/dropdownmenu.js": "src/js/dropdownmenu.js",
 					"dist/js/slickmasonry.js": "src/js/slickmasonry.js",
 					//"dist/js/tabs.js": "src/js/tabs.js",
 				},
+			},
+			ddmenu: {
+				options:{
+					transform: [['babelify', { presets: "es2015" }]],
+	                browserifyOptions: {
+						debug: true,
+						standalone: 'slickDropDown'
+	                }
+				},
+				src: ['src/js/dropdownmenu.js'],
+				dest: 'dist/js/dropdownmenu.js'
 			},
 			tabs: {
 				options:{

@@ -1,0 +1,92 @@
+@function circle-position($size, $border-size, $coordinate) {
+    $center: ($size / 2) - $border-size - ($border-size / 2);
+    $half-size-border: ($size / 2) - $border-size + ($border-size / 2);
+      // root value sqrt(2)/2 = 0.70710678118
+    $root: 0.70710678118;
+    @if $coordinate == y {
+      @return round($center - ($half-size-border * $root));
+    } @else {
+        @return round($center + ($half-size-border * $root));
+      }
+}
+
+$spinner-color: lighten($color-grey, 10%) !default;
+
+.ui-loader {
+
+    width: 48px;
+    height: 48px;
+    border: 6px solid $spinner-color;
+    border-right-color: transparent;
+    border-radius: 50%;
+    position: relative;
+    animation: loader-rotate 1s linear infinite;
+    display: inline-block;
+
+    &.align-center {
+        margin: 0 auto;
+    }
+    &.align-middle {
+        top: 50%;
+        margin: -48px / 2 auto 0;
+    }
+
+    &::after {
+        content: '';
+        width: 6px;
+        height: 6px;
+        background: $spinner-color;
+        border-radius: 50%;
+        position: absolute;
+        top: circle-position(48px, 6px, y);
+        left: circle-position(48px, 6px, x);
+    }  
+
+    &.size-sm {
+        width:24px;
+        height:24px;
+        border-width: 3px;
+        &::after {
+            width: 3px;
+            height: 3px;
+            top: circle-position(24px, 3px, y);
+            left: circle-position(24px, 3px, x);
+        }
+    }
+    &.size-xs {
+        width:16px;
+        height:16px;
+        border-width: 1px;
+        &::after {
+            width: 1px;
+            height: 1px;
+            top: circle-position(16px, 1px, y);
+            left: circle-position(16px, 1px, x);
+        }
+    }
+
+    @each $colorName, $colorValue in $color-list {
+
+    
+        &.#{""+$colorName+""} {
+            border-top-color: $colorValue;
+            border-left-color: $colorValue;
+            border-bottom-color: $colorValue;
+            &::after {
+                background: $colorValue;
+            }
+        }
+
+      }
+
+}
+
+@keyframes loader-rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+    }

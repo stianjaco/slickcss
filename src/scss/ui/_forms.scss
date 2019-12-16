@@ -4,7 +4,7 @@
 
 $colorDarker: darken($color-primary,5%);
 %ui-form-input {
-  border: 1px solid darken($color-grey,35%);
+  border: 1px solid $color-grey;
   background-color: #fff;
   color: #000;
   padding: 6px 8px;
@@ -24,11 +24,11 @@ $colorDarker: darken($color-primary,5%);
   } 
   &:disabled {
     outline: 0; 
-    background-color: lighten($color-grey, 8%);
+    background-color: lighten($color-grey, 10%);
     border-color: $color-grey;
     box-shadow: none;
     cursor: not-allowed;
-    color: darken($color-grey, 8%);
+    color: darken($color-grey, 10%);
     text-shadow: none !important;      
   }
 
@@ -95,7 +95,7 @@ $colorDarker: darken($color-primary,5%);
 
       &[multiple] {
         background: #fff;
-        min-height: 100px;
+        min-height: 112px;
 
         option {
           padding: 6px 8px;

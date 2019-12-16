@@ -389,7 +389,7 @@ template {
   margin-right: 0;
   margin-left: 0;
 }
-.row.collapsed > [class^="col-"], .row.collapsed > .col {
+.row.collapsed > [class*="col-"], .row.collapsed > .col {
   padding-right: 0;
   padding-left: 0;
   padding-bottom: 0;
@@ -398,7 +398,7 @@ template {
   margin-right: -0.1rem;
   margin-left: -0.1rem;
 }
-.row.gutter-small > [class^="col-"], .row.gutter-small > .col {
+.row.gutter-small > [class*="col-"], .row.gutter-small > .col {
   padding-right: 0.1rem;
   padding-left: 0.1rem;
   padding-bottom: 0.2rem;
@@ -407,7 +407,7 @@ template {
   margin-right: -0.3rem;
   margin-left: -0.3rem;
 }
-.row.gutter-normal > [class^="col-"], .row.gutter-normal > .col {
+.row.gutter-normal > [class*="col-"], .row.gutter-normal > .col {
   padding-right: 0.3rem;
   padding-left: 0.3rem;
   padding-bottom: 0.45rem;
@@ -416,7 +416,7 @@ template {
   margin-right: -0.6rem;
   margin-left: -0.6rem;
 }
-.row.gutter-medium > [class^="col-"], .row.gutter-medium > .col {
+.row.gutter-medium > [class*="col-"], .row.gutter-medium > .col {
   padding-right: 0.6rem;
   padding-left: 0.6rem;
   padding-bottom: 0.9rem;
@@ -425,7 +425,7 @@ template {
   margin-right: -1rem;
   margin-left: -1rem;
 }
-.row.gutter-large > [class^="col-"], .row.gutter-large > .col {
+.row.gutter-large > [class*="col-"], .row.gutter-large > .col {
   padding-right: 1rem;
   padding-left: 1rem;
   padding-bottom: 1.5rem;
@@ -434,12 +434,12 @@ template {
   margin-right: -1.5rem;
   margin-left: -1.5rem;
 }
-.row.gutter-xlarge > [class^="col-"], .row.gutter-xlarge > .col {
+.row.gutter-xlarge > [class*="col-"], .row.gutter-xlarge > .col {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   padding-bottom: 2.25rem;
 }
-.row:last-of-type:not(:only-of-type) > [class^="col-"], .row:last-of-type:not(:only-of-type) > .col {
+.row:last-of-type:not(:only-of-type) > [class*="col-"], .row:last-of-type:not(:only-of-type) > .col {
   padding-bottom: 0 !important;
 }
 .row.columns {
@@ -526,7 +526,7 @@ template {
     margin-right: 0;
     margin-left: 0;
   }
-  .row.collapsed-xs > [class^="col-"], .row.collapsed-xs > .col {
+  .row.collapsed-xs > [class*="col-"], .row.collapsed-xs > .col {
     padding-right: 0;
     padding-left: 0;
     padding-bottom: 0;
@@ -535,7 +535,7 @@ template {
     margin-right: -0.1rem;
     margin-left: -0.1rem;
   }
-  .row.gutter-small-xs > [class^="col-"], .row.gutter-small-xs > .col {
+  .row.gutter-small-xs > [class*="col-"], .row.gutter-small-xs > .col {
     padding-right: 0.1rem;
     padding-left: 0.1rem;
     padding-bottom: 0.2rem;
@@ -544,7 +544,7 @@ template {
     margin-right: -0.6rem;
     margin-left: -0.6rem;
   }
-  .row.gutter-medium-xs > [class^="col-"], .row.gutter-medium-xs > .col {
+  .row.gutter-medium-xs > [class*="col-"], .row.gutter-medium-xs > .col {
     padding-right: 0.6rem;
     padding-left: 0.6rem;
     padding-bottom: 0.9rem;
@@ -553,7 +553,7 @@ template {
     margin-right: -1rem;
     margin-left: -1rem;
   }
-  .row.gutter-large-xs > [class^="col-"], .row.gutter-large-xs > .col {
+  .row.gutter-large-xs > [class*="col-"], .row.gutter-large-xs > .col {
     padding-right: 1rem;
     padding-left: 1rem;
     padding-bottom: 1.5rem;
@@ -562,7 +562,7 @@ template {
     margin-right: -1.5rem;
     margin-left: -1.5rem;
   }
-  .row.gutter-xlarge-xs > [class^="col-"], .row.gutter-xlarge-xs > .col {
+  .row.gutter-xlarge-xs > [class*="col-"], .row.gutter-xlarge-xs > .col {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     padding-bottom: 2.25rem;
@@ -652,7 +652,7 @@ template {
     margin-right: 0;
     margin-left: 0;
   }
-  .row.collapsed-sm > [class^="col-"], .row.collapsed-sm > .col {
+  .row.collapsed-sm > [class*="col-"], .row.collapsed-sm > .col {
     padding-right: 0;
     padding-left: 0;
     padding-bottom: 0;
@@ -661,7 +661,7 @@ template {
     margin-right: -0.1rem;
     margin-left: -0.1rem;
   }
-  .row.gutter-small-sm > [class^="col-"], .row.gutter-small-sm > .col {
+  .row.gutter-small-sm > [class*="col-"], .row.gutter-small-sm > .col {
     padding-right: 0.1rem;
     padding-left: 0.1rem;
     padding-bottom: 0.2rem;
@@ -670,7 +670,7 @@ template {
     margin-right: -0.6rem;
     margin-left: -0.6rem;
   }
-  .row.gutter-medium-sm > [class^="col-"], .row.gutter-medium-sm > .col {
+  .row.gutter-medium-sm > [class*="col-"], .row.gutter-medium-sm > .col {
     padding-right: 0.6rem;
     padding-left: 0.6rem;
     padding-bottom: 0.9rem;
@@ -679,7 +679,7 @@ template {
     margin-right: -1rem;
     margin-left: -1rem;
   }
-  .row.gutter-large-sm > [class^="col-"], .row.gutter-large-sm > .col {
+  .row.gutter-large-sm > [class*="col-"], .row.gutter-large-sm > .col {
     padding-right: 1rem;
     padding-left: 1rem;
     padding-bottom: 1.5rem;
@@ -688,7 +688,7 @@ template {
     margin-right: -1.5rem;
     margin-left: -1.5rem;
   }
-  .row.gutter-xlarge-sm > [class^="col-"], .row.gutter-xlarge-sm > .col {
+  .row.gutter-xlarge-sm > [class*="col-"], .row.gutter-xlarge-sm > .col {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     padding-bottom: 2.25rem;
@@ -778,7 +778,7 @@ template {
     margin-right: 0;
     margin-left: 0;
   }
-  .row.collapsed-ls > [class^="col-"], .row.collapsed-ls > .col {
+  .row.collapsed-ls > [class*="col-"], .row.collapsed-ls > .col {
     padding-right: 0;
     padding-left: 0;
     padding-bottom: 0;
@@ -787,7 +787,7 @@ template {
     margin-right: -0.1rem;
     margin-left: -0.1rem;
   }
-  .row.gutter-small-ls > [class^="col-"], .row.gutter-small-ls > .col {
+  .row.gutter-small-ls > [class*="col-"], .row.gutter-small-ls > .col {
     padding-right: 0.1rem;
     padding-left: 0.1rem;
     padding-bottom: 0.2rem;
@@ -796,7 +796,7 @@ template {
     margin-right: -0.6rem;
     margin-left: -0.6rem;
   }
-  .row.gutter-medium-ls > [class^="col-"], .row.gutter-medium-ls > .col {
+  .row.gutter-medium-ls > [class*="col-"], .row.gutter-medium-ls > .col {
     padding-right: 0.6rem;
     padding-left: 0.6rem;
     padding-bottom: 0.9rem;
@@ -805,7 +805,7 @@ template {
     margin-right: -1rem;
     margin-left: -1rem;
   }
-  .row.gutter-large-ls > [class^="col-"], .row.gutter-large-ls > .col {
+  .row.gutter-large-ls > [class*="col-"], .row.gutter-large-ls > .col {
     padding-right: 1rem;
     padding-left: 1rem;
     padding-bottom: 1.5rem;
@@ -814,7 +814,7 @@ template {
     margin-right: -1.5rem;
     margin-left: -1.5rem;
   }
-  .row.gutter-xlarge-ls > [class^="col-"], .row.gutter-xlarge-ls > .col {
+  .row.gutter-xlarge-ls > [class*="col-"], .row.gutter-xlarge-ls > .col {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     padding-bottom: 2.25rem;
@@ -904,7 +904,7 @@ template {
     margin-right: 0;
     margin-left: 0;
   }
-  .row.collapsed-md > [class^="col-"], .row.collapsed-md > .col {
+  .row.collapsed-md > [class*="col-"], .row.collapsed-md > .col {
     padding-right: 0;
     padding-left: 0;
     padding-bottom: 0;
@@ -913,7 +913,7 @@ template {
     margin-right: -0.1rem;
     margin-left: -0.1rem;
   }
-  .row.gutter-small-md > [class^="col-"], .row.gutter-small-md > .col {
+  .row.gutter-small-md > [class*="col-"], .row.gutter-small-md > .col {
     padding-right: 0.1rem;
     padding-left: 0.1rem;
     padding-bottom: 0.2rem;
@@ -922,7 +922,7 @@ template {
     margin-right: -0.6rem;
     margin-left: -0.6rem;
   }
-  .row.gutter-medium-md > [class^="col-"], .row.gutter-medium-md > .col {
+  .row.gutter-medium-md > [class*="col-"], .row.gutter-medium-md > .col {
     padding-right: 0.6rem;
     padding-left: 0.6rem;
     padding-bottom: 0.9rem;
@@ -931,7 +931,7 @@ template {
     margin-right: -1rem;
     margin-left: -1rem;
   }
-  .row.gutter-large-md > [class^="col-"], .row.gutter-large-md > .col {
+  .row.gutter-large-md > [class*="col-"], .row.gutter-large-md > .col {
     padding-right: 1rem;
     padding-left: 1rem;
     padding-bottom: 1.5rem;
@@ -940,7 +940,7 @@ template {
     margin-right: -1.5rem;
     margin-left: -1.5rem;
   }
-  .row.gutter-xlarge-md > [class^="col-"], .row.gutter-xlarge-md > .col {
+  .row.gutter-xlarge-md > [class*="col-"], .row.gutter-xlarge-md > .col {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     padding-bottom: 2.25rem;
@@ -1030,7 +1030,7 @@ template {
     margin-right: 0;
     margin-left: 0;
   }
-  .row.collapsed-lg > [class^="col-"], .row.collapsed-lg > .col {
+  .row.collapsed-lg > [class*="col-"], .row.collapsed-lg > .col {
     padding-right: 0;
     padding-left: 0;
     padding-bottom: 0;
@@ -1039,7 +1039,7 @@ template {
     margin-right: -0.1rem;
     margin-left: -0.1rem;
   }
-  .row.gutter-small-lg > [class^="col-"], .row.gutter-small-lg > .col {
+  .row.gutter-small-lg > [class*="col-"], .row.gutter-small-lg > .col {
     padding-right: 0.1rem;
     padding-left: 0.1rem;
     padding-bottom: 0.2rem;
@@ -1048,7 +1048,7 @@ template {
     margin-right: -0.6rem;
     margin-left: -0.6rem;
   }
-  .row.gutter-medium-lg > [class^="col-"], .row.gutter-medium-lg > .col {
+  .row.gutter-medium-lg > [class*="col-"], .row.gutter-medium-lg > .col {
     padding-right: 0.6rem;
     padding-left: 0.6rem;
     padding-bottom: 0.9rem;
@@ -1057,7 +1057,7 @@ template {
     margin-right: -1rem;
     margin-left: -1rem;
   }
-  .row.gutter-large-lg > [class^="col-"], .row.gutter-large-lg > .col {
+  .row.gutter-large-lg > [class*="col-"], .row.gutter-large-lg > .col {
     padding-right: 1rem;
     padding-left: 1rem;
     padding-bottom: 1.5rem;
@@ -1066,7 +1066,7 @@ template {
     margin-right: -1.5rem;
     margin-left: -1.5rem;
   }
-  .row.gutter-xlarge-lg > [class^="col-"], .row.gutter-xlarge-lg > .col {
+  .row.gutter-xlarge-lg > [class*="col-"], .row.gutter-xlarge-lg > .col {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     padding-bottom: 2.25rem;
@@ -1156,7 +1156,7 @@ template {
     margin-right: 0;
     margin-left: 0;
   }
-  .row.collapsed-xl > [class^="col-"], .row.collapsed-xl > .col {
+  .row.collapsed-xl > [class*="col-"], .row.collapsed-xl > .col {
     padding-right: 0;
     padding-left: 0;
     padding-bottom: 0;
@@ -1165,7 +1165,7 @@ template {
     margin-right: -0.1rem;
     margin-left: -0.1rem;
   }
-  .row.gutter-small-xl > [class^="col-"], .row.gutter-small-xl > .col {
+  .row.gutter-small-xl > [class*="col-"], .row.gutter-small-xl > .col {
     padding-right: 0.1rem;
     padding-left: 0.1rem;
     padding-bottom: 0.2rem;
@@ -1174,7 +1174,7 @@ template {
     margin-right: -0.6rem;
     margin-left: -0.6rem;
   }
-  .row.gutter-medium-xl > [class^="col-"], .row.gutter-medium-xl > .col {
+  .row.gutter-medium-xl > [class*="col-"], .row.gutter-medium-xl > .col {
     padding-right: 0.6rem;
     padding-left: 0.6rem;
     padding-bottom: 0.9rem;
@@ -1183,7 +1183,7 @@ template {
     margin-right: -1rem;
     margin-left: -1rem;
   }
-  .row.gutter-large-xl > [class^="col-"], .row.gutter-large-xl > .col {
+  .row.gutter-large-xl > [class*="col-"], .row.gutter-large-xl > .col {
     padding-right: 1rem;
     padding-left: 1rem;
     padding-bottom: 1.5rem;
@@ -1192,7 +1192,7 @@ template {
     margin-right: -1.5rem;
     margin-left: -1.5rem;
   }
-  .row.gutter-xlarge-xl > [class^="col-"], .row.gutter-xlarge-xl > .col {
+  .row.gutter-xlarge-xl > [class*="col-"], .row.gutter-xlarge-xl > .col {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     padding-bottom: 2.25rem;
@@ -1277,7 +1277,7 @@ template {
     justify-content: space-between;
   }
 }
-.row [class^="col-"], .row .col, .row .column {
+.row [class*="col-"], .row .col, .row .column {
   position: relative;
   max-width: 100%;
   -webkit-box-sizing: border-box;
@@ -1293,7 +1293,7 @@ template {
   flex: 1 0 auto;
   padding: 0 0.3rem 0.3rem 0.3rem;
 }
-.row [class^="col-"].small, .row .col.small, .row .column.small {
+.row [class*="col-"].small, .row .col.small, .row .column.small {
   -webkit-box-flex: 0;
   -webkit-flex: 0 1 auto;
   -moz-box-flex: 0;
@@ -1301,38 +1301,38 @@ template {
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
 }
-.row [class^="col-"].valign-self-top, .row .col.valign-self-top, .row .column.valign-self-top {
+.row [class*="col-"].valign-self-top, .row .col.valign-self-top, .row .column.valign-self-top {
   -webkit-align-self: flex-start;
   -moz-align-self: flex-start;
   -ms-flex-item-align: start;
   align-self: flex-start;
 }
-.row [class^="col-"].valign-self-center, .row .col.valign-self-center, .row .column.valign-self-center {
+.row [class*="col-"].valign-self-center, .row .col.valign-self-center, .row .column.valign-self-center {
   -webkit-align-self: center;
   -moz-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
-.row [class^="col-"].valign-self-bottom, .row .col.valign-self-bottom, .row .column.valign-self-bottom {
+.row [class*="col-"].valign-self-bottom, .row .col.valign-self-bottom, .row .column.valign-self-bottom {
   -webkit-align-self: flex-end;
   -moz-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
 }
 @media all and (max-width: 575px) {
-  .row [class^="col-"].valign-self-xs-top, .row .col.valign-self-xs-top, .row .column.valign-self-xs-top {
+  .row [class*="col-"].valign-self-xs-top, .row .col.valign-self-xs-top, .row .column.valign-self-xs-top {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
-  .row [class^="col-"].valign-self-xs-center, .row .col.valign-self-xs-center, .row .column.valign-self-xs-center {
+  .row [class*="col-"].valign-self-xs-center, .row .col.valign-self-xs-center, .row .column.valign-self-xs-center {
     -webkit-align-self: center;
     -moz-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
   }
-  .row [class^="col-"].valign-self-xs-bottom, .row .col.valign-self-xs-bottom, .row .column.valign-self-xs-bottom {
+  .row [class*="col-"].valign-self-xs-bottom, .row .col.valign-self-xs-bottom, .row .column.valign-self-xs-bottom {
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-flex-item-align: end;
@@ -1340,19 +1340,19 @@ template {
   }
 }
 @media all and (max-width: 768px) {
-  .row [class^="col-"].valign-self-sm-top, .row .col.valign-self-sm-top, .row .column.valign-self-sm-top {
+  .row [class*="col-"].valign-self-sm-top, .row .col.valign-self-sm-top, .row .column.valign-self-sm-top {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
-  .row [class^="col-"].valign-self-sm-center, .row .col.valign-self-sm-center, .row .column.valign-self-sm-center {
+  .row [class*="col-"].valign-self-sm-center, .row .col.valign-self-sm-center, .row .column.valign-self-sm-center {
     -webkit-align-self: center;
     -moz-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
   }
-  .row [class^="col-"].valign-self-sm-bottom, .row .col.valign-self-sm-bottom, .row .column.valign-self-sm-bottom {
+  .row [class*="col-"].valign-self-sm-bottom, .row .col.valign-self-sm-bottom, .row .column.valign-self-sm-bottom {
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-flex-item-align: end;
@@ -1360,19 +1360,19 @@ template {
   }
 }
 @media all and (max-width: 1024px) {
-  .row [class^="col-"].valign-self-ls-top, .row .col.valign-self-ls-top, .row .column.valign-self-ls-top {
+  .row [class*="col-"].valign-self-ls-top, .row .col.valign-self-ls-top, .row .column.valign-self-ls-top {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
-  .row [class^="col-"].valign-self-ls-center, .row .col.valign-self-ls-center, .row .column.valign-self-ls-center {
+  .row [class*="col-"].valign-self-ls-center, .row .col.valign-self-ls-center, .row .column.valign-self-ls-center {
     -webkit-align-self: center;
     -moz-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
   }
-  .row [class^="col-"].valign-self-ls-bottom, .row .col.valign-self-ls-bottom, .row .column.valign-self-ls-bottom {
+  .row [class*="col-"].valign-self-ls-bottom, .row .col.valign-self-ls-bottom, .row .column.valign-self-ls-bottom {
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-flex-item-align: end;
@@ -1380,19 +1380,19 @@ template {
   }
 }
 @media all and (max-width: 1280px) {
-  .row [class^="col-"].valign-self-md-top, .row .col.valign-self-md-top, .row .column.valign-self-md-top {
+  .row [class*="col-"].valign-self-md-top, .row .col.valign-self-md-top, .row .column.valign-self-md-top {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
-  .row [class^="col-"].valign-self-md-center, .row .col.valign-self-md-center, .row .column.valign-self-md-center {
+  .row [class*="col-"].valign-self-md-center, .row .col.valign-self-md-center, .row .column.valign-self-md-center {
     -webkit-align-self: center;
     -moz-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
   }
-  .row [class^="col-"].valign-self-md-bottom, .row .col.valign-self-md-bottom, .row .column.valign-self-md-bottom {
+  .row [class*="col-"].valign-self-md-bottom, .row .col.valign-self-md-bottom, .row .column.valign-self-md-bottom {
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-flex-item-align: end;
@@ -1400,19 +1400,19 @@ template {
   }
 }
 @media all and (max-width: 1440px) {
-  .row [class^="col-"].valign-self-lg-top, .row .col.valign-self-lg-top, .row .column.valign-self-lg-top {
+  .row [class*="col-"].valign-self-lg-top, .row .col.valign-self-lg-top, .row .column.valign-self-lg-top {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
-  .row [class^="col-"].valign-self-lg-center, .row .col.valign-self-lg-center, .row .column.valign-self-lg-center {
+  .row [class*="col-"].valign-self-lg-center, .row .col.valign-self-lg-center, .row .column.valign-self-lg-center {
     -webkit-align-self: center;
     -moz-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
   }
-  .row [class^="col-"].valign-self-lg-bottom, .row .col.valign-self-lg-bottom, .row .column.valign-self-lg-bottom {
+  .row [class*="col-"].valign-self-lg-bottom, .row .col.valign-self-lg-bottom, .row .column.valign-self-lg-bottom {
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-flex-item-align: end;
@@ -1420,26 +1420,26 @@ template {
   }
 }
 @media all and (min-width: 1440px) {
-  .row [class^="col-"].valign-self-xl-top, .row .col.valign-self-xl-top, .row .column.valign-self-xl-top {
+  .row [class*="col-"].valign-self-xl-top, .row .col.valign-self-xl-top, .row .column.valign-self-xl-top {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
-  .row [class^="col-"].valign-self-xl-center, .row .col.valign-self-xl-center, .row .column.valign-self-xl-center {
+  .row [class*="col-"].valign-self-xl-center, .row .col.valign-self-xl-center, .row .column.valign-self-xl-center {
     -webkit-align-self: center;
     -moz-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
   }
-  .row [class^="col-"].valign-self-xl-bottom, .row .col.valign-self-xl-bottom, .row .column.valign-self-xl-bottom {
+  .row [class*="col-"].valign-self-xl-bottom, .row .col.valign-self-xl-bottom, .row .column.valign-self-xl-bottom {
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-flex-item-align: end;
     align-self: flex-end;
   }
 }
-.row.animate [class^="col-"], .row .animate .col {
+.row.animate [class*="col-"], .row .animate .col {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -ms-transition: all 0.2s;
@@ -2473,6 +2473,7 @@ template {
   align-items: flex-end;
 }
 .flex > * {
+  line-height: 1;
   -webkit-box-flex: 0;
   -webkit-flex: 0 1 auto;
   -moz-box-flex: 0;
@@ -3493,6 +3494,18 @@ template {
 }
 .app-container .list-layout.align-center li {
   text-align: center;
+}
+
+.outside-the-box {
+  width: 100vw;
+  max-width: 100vw;
+  position: relative;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+img.outside-the-box {
+  object-fit: cover;
 }
 
 .float-left {

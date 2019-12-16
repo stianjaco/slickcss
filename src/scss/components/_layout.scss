@@ -50,6 +50,7 @@
 	}
 	// Children
 	> * {
+		line-height: 1;
 		@include flex(0 1 auto);
 	}
 	&.align-center > *, &[align~="center"] > * {
@@ -308,4 +309,15 @@ $breakpoints-rev: reverse($breakpoints-prefix);
 
 
 
+}
+
+.outside-the-box {
+	width: 100vw;
+	max-width: 100vw;
+	position: relative;
+	margin-left: calc(-50vw + 50%);
+	margin-right: calc(-50vw + 50%);
+}
+img.outside-the-box { 
+	object-fit: cover;
 }
