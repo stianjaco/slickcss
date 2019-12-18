@@ -38,7 +38,7 @@
 
 	
     // Gutters
-    &.collapsed {
+    &.collapsed, &.gutter-collapsed {
         margin-right:0;
         margin-left:0;
         & > [class*="col-"], & > .col {
@@ -148,7 +148,7 @@
 		@include breakpoint_between($curr) {
 
 			// Gutters
-		    &.collapsed-#{$curr} {
+		    &.collapsed-#{$curr}, &.gutter-collapsed-#{$curr} {
 		        margin-right:0;
 		        margin-left:0;
 		        & > [class*="col-"], & > .col {
