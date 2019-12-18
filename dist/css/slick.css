@@ -9056,8 +9056,8 @@ code[title] {
 .ui-button.ghost, a.ui-button.ghost, a.ui-button:link.ghost, a.ui-button:visited.ghost, button.ui-button.ghost, input[type='button'].ui-button.ghost, input[type='submit'].ui-button.ghost, input[type='reset'].ui-button.ghost {
   background-color: transparent;
   color: #d8dcdf;
-  border: 1px solid #d8dcdf;
-  box-shadow: none;
+  border: none;
+  box-shadow: inset 0 0 0 1px #d8dcdf;
 }
 .ui-button.ghost:active, a.ui-button.ghost:active, a.ui-button:link.ghost:active, a.ui-button:visited.ghost:active, button.ui-button.ghost:active, input[type='button'].ui-button.ghost:active, input[type='submit'].ui-button.ghost:active, input[type='reset'].ui-button.ghost:active {
   text-shadow: none;
@@ -9069,7 +9069,6 @@ code[title] {
 .ui-button.ghost-inverted, a.ui-button.ghost-inverted, a.ui-button:link.ghost-inverted, a.ui-button:visited.ghost-inverted, button.ui-button.ghost-inverted, input[type='button'].ui-button.ghost-inverted, input[type='submit'].ui-button.ghost-inverted, input[type='reset'].ui-button.ghost-inverted {
   background-color: #d8dcdf;
   color: rgba(0, 0, 0, 0.7);
-  border: 1px solid transparent;
 }
 .ui-button.ghost-inverted:active, a.ui-button.ghost-inverted:active, a.ui-button:link.ghost-inverted:active, a.ui-button:visited.ghost-inverted:active, button.ui-button.ghost-inverted:active, input[type='button'].ui-button.ghost-inverted:active, input[type='submit'].ui-button.ghost-inverted:active, input[type='reset'].ui-button.ghost-inverted:active {
   text-shadow: none;
@@ -9077,7 +9076,7 @@ code[title] {
 .ui-button.ghost-inverted:hover, a.ui-button.ghost-inverted:hover, a.ui-button:link.ghost-inverted:hover, a.ui-button:visited.ghost-inverted:hover, button.ui-button.ghost-inverted:hover, input[type='button'].ui-button.ghost-inverted:hover, input[type='submit'].ui-button.ghost-inverted:hover, input[type='reset'].ui-button.ghost-inverted:hover {
   background-color: transparent;
   color: #d8dcdf;
-  border: 1px solid #d8dcdf;
+  box-shadow: inset 0 0 0 1px #d8dcdf;
 }
 .ui-button.silent, a.ui-button.silent, a.ui-button:link.silent, a.ui-button:visited.silent, button.ui-button.silent, input[type='button'].ui-button.silent, input[type='submit'].ui-button.silent, input[type='reset'].ui-button.silent {
   background-color: transparent;
@@ -9180,7 +9179,8 @@ code[title] {
 }
 .ui-button.primary.ghost, a.ui-button.primary.ghost, a.ui-button:link.primary.ghost, a.ui-button:visited.primary.ghost, button.ui-button.primary.ghost, input[type='button'].ui-button.primary.ghost, input[type='submit'].ui-button.primary.ghost, input[type='reset'].ui-button.primary.ghost {
   background-color: transparent;
-  border-color: #3273dc;
+  border: none;
+  box-shadow: inset 0 0 0 1px #3273dc;
   color: #3273dc;
 }
 .ui-button.primary.ghost:hover, a.ui-button.primary.ghost:hover, a.ui-button:link.primary.ghost:hover, a.ui-button:visited.primary.ghost:hover, button.ui-button.primary.ghost:hover, input[type='button'].ui-button.primary.ghost:hover, input[type='submit'].ui-button.primary.ghost:hover, input[type='reset'].ui-button.primary.ghost:hover {
@@ -9188,17 +9188,19 @@ code[title] {
   color: #fff;
 }
 .ui-button.primary.ghost:active, a.ui-button.primary.ghost:active, a.ui-button:link.primary.ghost:active, a.ui-button:visited.primary.ghost:active, button.ui-button.primary.ghost:active, input[type='button'].ui-button.primary.ghost:active, input[type='submit'].ui-button.primary.ghost:active, input[type='reset'].ui-button.primary.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.primary.ghost-inverted, a.ui-button.primary.ghost-inverted, a.ui-button:link.primary.ghost-inverted, a.ui-button:visited.primary.ghost-inverted, button.ui-button.primary.ghost-inverted, input[type='button'].ui-button.primary.ghost-inverted, input[type='submit'].ui-button.primary.ghost-inverted, input[type='reset'].ui-button.primary.ghost-inverted {
   background-color: #3273dc;
   color: #fff;
   box-shadow: none;
+  border: none;
 }
 .ui-button.primary.ghost-inverted:hover, a.ui-button.primary.ghost-inverted:hover, a.ui-button:link.primary.ghost-inverted:hover, a.ui-button:visited.primary.ghost-inverted:hover, button.ui-button.primary.ghost-inverted:hover, input[type='button'].ui-button.primary.ghost-inverted:hover, input[type='submit'].ui-button.primary.ghost-inverted:hover, input[type='reset'].ui-button.primary.ghost-inverted:hover {
   background-color: transparent;
   color: #3273dc;
-  border-color: #3273dc;
+  box-shadow: inset 0 0 0 1px #3273dc;
 }
 .ui-button.secondary, a.ui-button.secondary, a.ui-button:link.secondary, a.ui-button:visited.secondary, button.ui-button.secondary, input[type='button'].ui-button.secondary, input[type='submit'].ui-button.secondary, input[type='reset'].ui-button.secondary {
   background-color: #fa735d;
@@ -9222,7 +9224,8 @@ code[title] {
 }
 .ui-button.secondary.ghost, a.ui-button.secondary.ghost, a.ui-button:link.secondary.ghost, a.ui-button:visited.secondary.ghost, button.ui-button.secondary.ghost, input[type='button'].ui-button.secondary.ghost, input[type='submit'].ui-button.secondary.ghost, input[type='reset'].ui-button.secondary.ghost {
   background-color: transparent;
-  border-color: #fa735d;
+  border: none;
+  box-shadow: inset 0 0 0 1px #fa735d;
   color: #fa735d;
 }
 .ui-button.secondary.ghost:hover, a.ui-button.secondary.ghost:hover, a.ui-button:link.secondary.ghost:hover, a.ui-button:visited.secondary.ghost:hover, button.ui-button.secondary.ghost:hover, input[type='button'].ui-button.secondary.ghost:hover, input[type='submit'].ui-button.secondary.ghost:hover, input[type='reset'].ui-button.secondary.ghost:hover {
@@ -9230,17 +9233,19 @@ code[title] {
   color: #fff;
 }
 .ui-button.secondary.ghost:active, a.ui-button.secondary.ghost:active, a.ui-button:link.secondary.ghost:active, a.ui-button:visited.secondary.ghost:active, button.ui-button.secondary.ghost:active, input[type='button'].ui-button.secondary.ghost:active, input[type='submit'].ui-button.secondary.ghost:active, input[type='reset'].ui-button.secondary.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.secondary.ghost-inverted, a.ui-button.secondary.ghost-inverted, a.ui-button:link.secondary.ghost-inverted, a.ui-button:visited.secondary.ghost-inverted, button.ui-button.secondary.ghost-inverted, input[type='button'].ui-button.secondary.ghost-inverted, input[type='submit'].ui-button.secondary.ghost-inverted, input[type='reset'].ui-button.secondary.ghost-inverted {
   background-color: #fa735d;
   color: #fff;
   box-shadow: none;
+  border: none;
 }
 .ui-button.secondary.ghost-inverted:hover, a.ui-button.secondary.ghost-inverted:hover, a.ui-button:link.secondary.ghost-inverted:hover, a.ui-button:visited.secondary.ghost-inverted:hover, button.ui-button.secondary.ghost-inverted:hover, input[type='button'].ui-button.secondary.ghost-inverted:hover, input[type='submit'].ui-button.secondary.ghost-inverted:hover, input[type='reset'].ui-button.secondary.ghost-inverted:hover {
   background-color: transparent;
   color: #fa735d;
-  border-color: #fa735d;
+  box-shadow: inset 0 0 0 1px #fa735d;
 }
 .ui-button.danger, a.ui-button.danger, a.ui-button:link.danger, a.ui-button:visited.danger, button.ui-button.danger, input[type='button'].ui-button.danger, input[type='submit'].ui-button.danger, input[type='reset'].ui-button.danger {
   background-color: #e44433;
@@ -9264,7 +9269,8 @@ code[title] {
 }
 .ui-button.danger.ghost, a.ui-button.danger.ghost, a.ui-button:link.danger.ghost, a.ui-button:visited.danger.ghost, button.ui-button.danger.ghost, input[type='button'].ui-button.danger.ghost, input[type='submit'].ui-button.danger.ghost, input[type='reset'].ui-button.danger.ghost {
   background-color: transparent;
-  border-color: #e44433;
+  border: none;
+  box-shadow: inset 0 0 0 1px #e44433;
   color: #e44433;
 }
 .ui-button.danger.ghost:hover, a.ui-button.danger.ghost:hover, a.ui-button:link.danger.ghost:hover, a.ui-button:visited.danger.ghost:hover, button.ui-button.danger.ghost:hover, input[type='button'].ui-button.danger.ghost:hover, input[type='submit'].ui-button.danger.ghost:hover, input[type='reset'].ui-button.danger.ghost:hover {
@@ -9272,17 +9278,19 @@ code[title] {
   color: #fff;
 }
 .ui-button.danger.ghost:active, a.ui-button.danger.ghost:active, a.ui-button:link.danger.ghost:active, a.ui-button:visited.danger.ghost:active, button.ui-button.danger.ghost:active, input[type='button'].ui-button.danger.ghost:active, input[type='submit'].ui-button.danger.ghost:active, input[type='reset'].ui-button.danger.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.danger.ghost-inverted, a.ui-button.danger.ghost-inverted, a.ui-button:link.danger.ghost-inverted, a.ui-button:visited.danger.ghost-inverted, button.ui-button.danger.ghost-inverted, input[type='button'].ui-button.danger.ghost-inverted, input[type='submit'].ui-button.danger.ghost-inverted, input[type='reset'].ui-button.danger.ghost-inverted {
   background-color: #e44433;
   color: #fff;
   box-shadow: none;
+  border: none;
 }
 .ui-button.danger.ghost-inverted:hover, a.ui-button.danger.ghost-inverted:hover, a.ui-button:link.danger.ghost-inverted:hover, a.ui-button:visited.danger.ghost-inverted:hover, button.ui-button.danger.ghost-inverted:hover, input[type='button'].ui-button.danger.ghost-inverted:hover, input[type='submit'].ui-button.danger.ghost-inverted:hover, input[type='reset'].ui-button.danger.ghost-inverted:hover {
   background-color: transparent;
   color: #e44433;
-  border-color: #e44433;
+  box-shadow: inset 0 0 0 1px #e44433;
 }
 .ui-button.warning, a.ui-button.warning, a.ui-button:link.warning, a.ui-button:visited.warning, button.ui-button.warning, input[type='button'].ui-button.warning, input[type='submit'].ui-button.warning, input[type='reset'].ui-button.warning {
   background-color: #f1c40f;
@@ -9306,7 +9314,8 @@ code[title] {
 }
 .ui-button.warning.ghost, a.ui-button.warning.ghost, a.ui-button:link.warning.ghost, a.ui-button:visited.warning.ghost, button.ui-button.warning.ghost, input[type='button'].ui-button.warning.ghost, input[type='submit'].ui-button.warning.ghost, input[type='reset'].ui-button.warning.ghost {
   background-color: transparent;
-  border-color: #f1c40f;
+  border: none;
+  box-shadow: inset 0 0 0 1px #f1c40f;
   color: #f1c40f;
 }
 .ui-button.warning.ghost:hover, a.ui-button.warning.ghost:hover, a.ui-button:link.warning.ghost:hover, a.ui-button:visited.warning.ghost:hover, button.ui-button.warning.ghost:hover, input[type='button'].ui-button.warning.ghost:hover, input[type='submit'].ui-button.warning.ghost:hover, input[type='reset'].ui-button.warning.ghost:hover {
@@ -9314,17 +9323,19 @@ code[title] {
   color: rgba(0, 0, 0, 0.7);
 }
 .ui-button.warning.ghost:active, a.ui-button.warning.ghost:active, a.ui-button:link.warning.ghost:active, a.ui-button:visited.warning.ghost:active, button.ui-button.warning.ghost:active, input[type='button'].ui-button.warning.ghost:active, input[type='submit'].ui-button.warning.ghost:active, input[type='reset'].ui-button.warning.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.warning.ghost-inverted, a.ui-button.warning.ghost-inverted, a.ui-button:link.warning.ghost-inverted, a.ui-button:visited.warning.ghost-inverted, button.ui-button.warning.ghost-inverted, input[type='button'].ui-button.warning.ghost-inverted, input[type='submit'].ui-button.warning.ghost-inverted, input[type='reset'].ui-button.warning.ghost-inverted {
   background-color: #f1c40f;
   color: rgba(0, 0, 0, 0.7);
   box-shadow: none;
+  border: none;
 }
 .ui-button.warning.ghost-inverted:hover, a.ui-button.warning.ghost-inverted:hover, a.ui-button:link.warning.ghost-inverted:hover, a.ui-button:visited.warning.ghost-inverted:hover, button.ui-button.warning.ghost-inverted:hover, input[type='button'].ui-button.warning.ghost-inverted:hover, input[type='submit'].ui-button.warning.ghost-inverted:hover, input[type='reset'].ui-button.warning.ghost-inverted:hover {
   background-color: transparent;
   color: #f1c40f;
-  border-color: #f1c40f;
+  box-shadow: inset 0 0 0 1px #f1c40f;
 }
 .ui-button.info, a.ui-button.info, a.ui-button:link.info, a.ui-button:visited.info, button.ui-button.info, input[type='button'].ui-button.info, input[type='submit'].ui-button.info, input[type='reset'].ui-button.info {
   background-color: #45aaf2;
@@ -9348,7 +9359,8 @@ code[title] {
 }
 .ui-button.info.ghost, a.ui-button.info.ghost, a.ui-button:link.info.ghost, a.ui-button:visited.info.ghost, button.ui-button.info.ghost, input[type='button'].ui-button.info.ghost, input[type='submit'].ui-button.info.ghost, input[type='reset'].ui-button.info.ghost {
   background-color: transparent;
-  border-color: #45aaf2;
+  border: none;
+  box-shadow: inset 0 0 0 1px #45aaf2;
   color: #45aaf2;
 }
 .ui-button.info.ghost:hover, a.ui-button.info.ghost:hover, a.ui-button:link.info.ghost:hover, a.ui-button:visited.info.ghost:hover, button.ui-button.info.ghost:hover, input[type='button'].ui-button.info.ghost:hover, input[type='submit'].ui-button.info.ghost:hover, input[type='reset'].ui-button.info.ghost:hover {
@@ -9356,17 +9368,19 @@ code[title] {
   color: #fff;
 }
 .ui-button.info.ghost:active, a.ui-button.info.ghost:active, a.ui-button:link.info.ghost:active, a.ui-button:visited.info.ghost:active, button.ui-button.info.ghost:active, input[type='button'].ui-button.info.ghost:active, input[type='submit'].ui-button.info.ghost:active, input[type='reset'].ui-button.info.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.info.ghost-inverted, a.ui-button.info.ghost-inverted, a.ui-button:link.info.ghost-inverted, a.ui-button:visited.info.ghost-inverted, button.ui-button.info.ghost-inverted, input[type='button'].ui-button.info.ghost-inverted, input[type='submit'].ui-button.info.ghost-inverted, input[type='reset'].ui-button.info.ghost-inverted {
   background-color: #45aaf2;
   color: #fff;
   box-shadow: none;
+  border: none;
 }
 .ui-button.info.ghost-inverted:hover, a.ui-button.info.ghost-inverted:hover, a.ui-button:link.info.ghost-inverted:hover, a.ui-button:visited.info.ghost-inverted:hover, button.ui-button.info.ghost-inverted:hover, input[type='button'].ui-button.info.ghost-inverted:hover, input[type='submit'].ui-button.info.ghost-inverted:hover, input[type='reset'].ui-button.info.ghost-inverted:hover {
   background-color: transparent;
   color: #45aaf2;
-  border-color: #45aaf2;
+  box-shadow: inset 0 0 0 1px #45aaf2;
 }
 .ui-button.success, a.ui-button.success, a.ui-button:link.success, a.ui-button:visited.success, button.ui-button.success, input[type='button'].ui-button.success, input[type='submit'].ui-button.success, input[type='reset'].ui-button.success {
   background-color: #2ecd6f;
@@ -9390,7 +9404,8 @@ code[title] {
 }
 .ui-button.success.ghost, a.ui-button.success.ghost, a.ui-button:link.success.ghost, a.ui-button:visited.success.ghost, button.ui-button.success.ghost, input[type='button'].ui-button.success.ghost, input[type='submit'].ui-button.success.ghost, input[type='reset'].ui-button.success.ghost {
   background-color: transparent;
-  border-color: #2ecd6f;
+  border: none;
+  box-shadow: inset 0 0 0 1px #2ecd6f;
   color: #2ecd6f;
 }
 .ui-button.success.ghost:hover, a.ui-button.success.ghost:hover, a.ui-button:link.success.ghost:hover, a.ui-button:visited.success.ghost:hover, button.ui-button.success.ghost:hover, input[type='button'].ui-button.success.ghost:hover, input[type='submit'].ui-button.success.ghost:hover, input[type='reset'].ui-button.success.ghost:hover {
@@ -9398,17 +9413,19 @@ code[title] {
   color: #fff;
 }
 .ui-button.success.ghost:active, a.ui-button.success.ghost:active, a.ui-button:link.success.ghost:active, a.ui-button:visited.success.ghost:active, button.ui-button.success.ghost:active, input[type='button'].ui-button.success.ghost:active, input[type='submit'].ui-button.success.ghost:active, input[type='reset'].ui-button.success.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.success.ghost-inverted, a.ui-button.success.ghost-inverted, a.ui-button:link.success.ghost-inverted, a.ui-button:visited.success.ghost-inverted, button.ui-button.success.ghost-inverted, input[type='button'].ui-button.success.ghost-inverted, input[type='submit'].ui-button.success.ghost-inverted, input[type='reset'].ui-button.success.ghost-inverted {
   background-color: #2ecd6f;
   color: #fff;
   box-shadow: none;
+  border: none;
 }
 .ui-button.success.ghost-inverted:hover, a.ui-button.success.ghost-inverted:hover, a.ui-button:link.success.ghost-inverted:hover, a.ui-button:visited.success.ghost-inverted:hover, button.ui-button.success.ghost-inverted:hover, input[type='button'].ui-button.success.ghost-inverted:hover, input[type='submit'].ui-button.success.ghost-inverted:hover, input[type='reset'].ui-button.success.ghost-inverted:hover {
   background-color: transparent;
   color: #2ecd6f;
-  border-color: #2ecd6f;
+  box-shadow: inset 0 0 0 1px #2ecd6f;
 }
 .ui-button.attention, a.ui-button.attention, a.ui-button:link.attention, a.ui-button:visited.attention, button.ui-button.attention, input[type='button'].ui-button.attention, input[type='submit'].ui-button.attention, input[type='reset'].ui-button.attention {
   background-color: #00d1b2;
@@ -9432,7 +9449,8 @@ code[title] {
 }
 .ui-button.attention.ghost, a.ui-button.attention.ghost, a.ui-button:link.attention.ghost, a.ui-button:visited.attention.ghost, button.ui-button.attention.ghost, input[type='button'].ui-button.attention.ghost, input[type='submit'].ui-button.attention.ghost, input[type='reset'].ui-button.attention.ghost {
   background-color: transparent;
-  border-color: #00d1b2;
+  border: none;
+  box-shadow: inset 0 0 0 1px #00d1b2;
   color: #00d1b2;
 }
 .ui-button.attention.ghost:hover, a.ui-button.attention.ghost:hover, a.ui-button:link.attention.ghost:hover, a.ui-button:visited.attention.ghost:hover, button.ui-button.attention.ghost:hover, input[type='button'].ui-button.attention.ghost:hover, input[type='submit'].ui-button.attention.ghost:hover, input[type='reset'].ui-button.attention.ghost:hover {
@@ -9440,17 +9458,19 @@ code[title] {
   color: #fff;
 }
 .ui-button.attention.ghost:active, a.ui-button.attention.ghost:active, a.ui-button:link.attention.ghost:active, a.ui-button:visited.attention.ghost:active, button.ui-button.attention.ghost:active, input[type='button'].ui-button.attention.ghost:active, input[type='submit'].ui-button.attention.ghost:active, input[type='reset'].ui-button.attention.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.attention.ghost-inverted, a.ui-button.attention.ghost-inverted, a.ui-button:link.attention.ghost-inverted, a.ui-button:visited.attention.ghost-inverted, button.ui-button.attention.ghost-inverted, input[type='button'].ui-button.attention.ghost-inverted, input[type='submit'].ui-button.attention.ghost-inverted, input[type='reset'].ui-button.attention.ghost-inverted {
   background-color: #00d1b2;
   color: #fff;
   box-shadow: none;
+  border: none;
 }
 .ui-button.attention.ghost-inverted:hover, a.ui-button.attention.ghost-inverted:hover, a.ui-button:link.attention.ghost-inverted:hover, a.ui-button:visited.attention.ghost-inverted:hover, button.ui-button.attention.ghost-inverted:hover, input[type='button'].ui-button.attention.ghost-inverted:hover, input[type='submit'].ui-button.attention.ghost-inverted:hover, input[type='reset'].ui-button.attention.ghost-inverted:hover {
   background-color: transparent;
   color: #00d1b2;
-  border-color: #00d1b2;
+  box-shadow: inset 0 0 0 1px #00d1b2;
 }
 .ui-button.light, a.ui-button.light, a.ui-button:link.light, a.ui-button:visited.light, button.ui-button.light, input[type='button'].ui-button.light, input[type='submit'].ui-button.light, input[type='reset'].ui-button.light {
   background-color: #f8f9fa;
@@ -9474,7 +9494,8 @@ code[title] {
 }
 .ui-button.light.ghost, a.ui-button.light.ghost, a.ui-button:link.light.ghost, a.ui-button:visited.light.ghost, button.ui-button.light.ghost, input[type='button'].ui-button.light.ghost, input[type='submit'].ui-button.light.ghost, input[type='reset'].ui-button.light.ghost {
   background-color: transparent;
-  border-color: #f8f9fa;
+  border: none;
+  box-shadow: inset 0 0 0 1px #f8f9fa;
   color: #f8f9fa;
 }
 .ui-button.light.ghost:hover, a.ui-button.light.ghost:hover, a.ui-button:link.light.ghost:hover, a.ui-button:visited.light.ghost:hover, button.ui-button.light.ghost:hover, input[type='button'].ui-button.light.ghost:hover, input[type='submit'].ui-button.light.ghost:hover, input[type='reset'].ui-button.light.ghost:hover {
@@ -9482,17 +9503,19 @@ code[title] {
   color: rgba(0, 0, 0, 0.7);
 }
 .ui-button.light.ghost:active, a.ui-button.light.ghost:active, a.ui-button:link.light.ghost:active, a.ui-button:visited.light.ghost:active, button.ui-button.light.ghost:active, input[type='button'].ui-button.light.ghost:active, input[type='submit'].ui-button.light.ghost:active, input[type='reset'].ui-button.light.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.light.ghost-inverted, a.ui-button.light.ghost-inverted, a.ui-button:link.light.ghost-inverted, a.ui-button:visited.light.ghost-inverted, button.ui-button.light.ghost-inverted, input[type='button'].ui-button.light.ghost-inverted, input[type='submit'].ui-button.light.ghost-inverted, input[type='reset'].ui-button.light.ghost-inverted {
   background-color: #f8f9fa;
   color: rgba(0, 0, 0, 0.7);
   box-shadow: none;
+  border: none;
 }
 .ui-button.light.ghost-inverted:hover, a.ui-button.light.ghost-inverted:hover, a.ui-button:link.light.ghost-inverted:hover, a.ui-button:visited.light.ghost-inverted:hover, button.ui-button.light.ghost-inverted:hover, input[type='button'].ui-button.light.ghost-inverted:hover, input[type='submit'].ui-button.light.ghost-inverted:hover, input[type='reset'].ui-button.light.ghost-inverted:hover {
   background-color: transparent;
   color: #f8f9fa;
-  border-color: #f8f9fa;
+  box-shadow: inset 0 0 0 1px #f8f9fa;
 }
 .ui-button.light-grey, a.ui-button.light-grey, a.ui-button:link.light-grey, a.ui-button:visited.light-grey, button.ui-button.light-grey, input[type='button'].ui-button.light-grey, input[type='submit'].ui-button.light-grey, input[type='reset'].ui-button.light-grey {
   background-color: #fafafa;
@@ -9516,7 +9539,8 @@ code[title] {
 }
 .ui-button.light-grey.ghost, a.ui-button.light-grey.ghost, a.ui-button:link.light-grey.ghost, a.ui-button:visited.light-grey.ghost, button.ui-button.light-grey.ghost, input[type='button'].ui-button.light-grey.ghost, input[type='submit'].ui-button.light-grey.ghost, input[type='reset'].ui-button.light-grey.ghost {
   background-color: transparent;
-  border-color: #fafafa;
+  border: none;
+  box-shadow: inset 0 0 0 1px #fafafa;
   color: #fafafa;
 }
 .ui-button.light-grey.ghost:hover, a.ui-button.light-grey.ghost:hover, a.ui-button:link.light-grey.ghost:hover, a.ui-button:visited.light-grey.ghost:hover, button.ui-button.light-grey.ghost:hover, input[type='button'].ui-button.light-grey.ghost:hover, input[type='submit'].ui-button.light-grey.ghost:hover, input[type='reset'].ui-button.light-grey.ghost:hover {
@@ -9524,17 +9548,19 @@ code[title] {
   color: rgba(0, 0, 0, 0.7);
 }
 .ui-button.light-grey.ghost:active, a.ui-button.light-grey.ghost:active, a.ui-button:link.light-grey.ghost:active, a.ui-button:visited.light-grey.ghost:active, button.ui-button.light-grey.ghost:active, input[type='button'].ui-button.light-grey.ghost:active, input[type='submit'].ui-button.light-grey.ghost:active, input[type='reset'].ui-button.light-grey.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.light-grey.ghost-inverted, a.ui-button.light-grey.ghost-inverted, a.ui-button:link.light-grey.ghost-inverted, a.ui-button:visited.light-grey.ghost-inverted, button.ui-button.light-grey.ghost-inverted, input[type='button'].ui-button.light-grey.ghost-inverted, input[type='submit'].ui-button.light-grey.ghost-inverted, input[type='reset'].ui-button.light-grey.ghost-inverted {
   background-color: #fafafa;
   color: rgba(0, 0, 0, 0.7);
   box-shadow: none;
+  border: none;
 }
 .ui-button.light-grey.ghost-inverted:hover, a.ui-button.light-grey.ghost-inverted:hover, a.ui-button:link.light-grey.ghost-inverted:hover, a.ui-button:visited.light-grey.ghost-inverted:hover, button.ui-button.light-grey.ghost-inverted:hover, input[type='button'].ui-button.light-grey.ghost-inverted:hover, input[type='submit'].ui-button.light-grey.ghost-inverted:hover, input[type='reset'].ui-button.light-grey.ghost-inverted:hover {
   background-color: transparent;
   color: #fafafa;
-  border-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #fafafa;
 }
 .ui-button.grey, a.ui-button.grey, a.ui-button:link.grey, a.ui-button:visited.grey, button.ui-button.grey, input[type='button'].ui-button.grey, input[type='submit'].ui-button.grey, input[type='reset'].ui-button.grey {
   background-color: #d8dcdf;
@@ -9558,7 +9584,8 @@ code[title] {
 }
 .ui-button.grey.ghost, a.ui-button.grey.ghost, a.ui-button:link.grey.ghost, a.ui-button:visited.grey.ghost, button.ui-button.grey.ghost, input[type='button'].ui-button.grey.ghost, input[type='submit'].ui-button.grey.ghost, input[type='reset'].ui-button.grey.ghost {
   background-color: transparent;
-  border-color: #d8dcdf;
+  border: none;
+  box-shadow: inset 0 0 0 1px #d8dcdf;
   color: #d8dcdf;
 }
 .ui-button.grey.ghost:hover, a.ui-button.grey.ghost:hover, a.ui-button:link.grey.ghost:hover, a.ui-button:visited.grey.ghost:hover, button.ui-button.grey.ghost:hover, input[type='button'].ui-button.grey.ghost:hover, input[type='submit'].ui-button.grey.ghost:hover, input[type='reset'].ui-button.grey.ghost:hover {
@@ -9566,17 +9593,19 @@ code[title] {
   color: rgba(0, 0, 0, 0.7);
 }
 .ui-button.grey.ghost:active, a.ui-button.grey.ghost:active, a.ui-button:link.grey.ghost:active, a.ui-button:visited.grey.ghost:active, button.ui-button.grey.ghost:active, input[type='button'].ui-button.grey.ghost:active, input[type='submit'].ui-button.grey.ghost:active, input[type='reset'].ui-button.grey.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.grey.ghost-inverted, a.ui-button.grey.ghost-inverted, a.ui-button:link.grey.ghost-inverted, a.ui-button:visited.grey.ghost-inverted, button.ui-button.grey.ghost-inverted, input[type='button'].ui-button.grey.ghost-inverted, input[type='submit'].ui-button.grey.ghost-inverted, input[type='reset'].ui-button.grey.ghost-inverted {
   background-color: #d8dcdf;
   color: rgba(0, 0, 0, 0.7);
   box-shadow: none;
+  border: none;
 }
 .ui-button.grey.ghost-inverted:hover, a.ui-button.grey.ghost-inverted:hover, a.ui-button:link.grey.ghost-inverted:hover, a.ui-button:visited.grey.ghost-inverted:hover, button.ui-button.grey.ghost-inverted:hover, input[type='button'].ui-button.grey.ghost-inverted:hover, input[type='submit'].ui-button.grey.ghost-inverted:hover, input[type='reset'].ui-button.grey.ghost-inverted:hover {
   background-color: transparent;
   color: #d8dcdf;
-  border-color: #d8dcdf;
+  box-shadow: inset 0 0 0 1px #d8dcdf;
 }
 .ui-button.dark-grey, a.ui-button.dark-grey, a.ui-button:link.dark-grey, a.ui-button:visited.dark-grey, button.ui-button.dark-grey, input[type='button'].ui-button.dark-grey, input[type='submit'].ui-button.dark-grey, input[type='reset'].ui-button.dark-grey {
   background-color: #9e9e9e;
@@ -9600,7 +9629,8 @@ code[title] {
 }
 .ui-button.dark-grey.ghost, a.ui-button.dark-grey.ghost, a.ui-button:link.dark-grey.ghost, a.ui-button:visited.dark-grey.ghost, button.ui-button.dark-grey.ghost, input[type='button'].ui-button.dark-grey.ghost, input[type='submit'].ui-button.dark-grey.ghost, input[type='reset'].ui-button.dark-grey.ghost {
   background-color: transparent;
-  border-color: #9e9e9e;
+  border: none;
+  box-shadow: inset 0 0 0 1px #9e9e9e;
   color: #9e9e9e;
 }
 .ui-button.dark-grey.ghost:hover, a.ui-button.dark-grey.ghost:hover, a.ui-button:link.dark-grey.ghost:hover, a.ui-button:visited.dark-grey.ghost:hover, button.ui-button.dark-grey.ghost:hover, input[type='button'].ui-button.dark-grey.ghost:hover, input[type='submit'].ui-button.dark-grey.ghost:hover, input[type='reset'].ui-button.dark-grey.ghost:hover {
@@ -9608,17 +9638,19 @@ code[title] {
   color: #fff;
 }
 .ui-button.dark-grey.ghost:active, a.ui-button.dark-grey.ghost:active, a.ui-button:link.dark-grey.ghost:active, a.ui-button:visited.dark-grey.ghost:active, button.ui-button.dark-grey.ghost:active, input[type='button'].ui-button.dark-grey.ghost:active, input[type='submit'].ui-button.dark-grey.ghost:active, input[type='reset'].ui-button.dark-grey.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.dark-grey.ghost-inverted, a.ui-button.dark-grey.ghost-inverted, a.ui-button:link.dark-grey.ghost-inverted, a.ui-button:visited.dark-grey.ghost-inverted, button.ui-button.dark-grey.ghost-inverted, input[type='button'].ui-button.dark-grey.ghost-inverted, input[type='submit'].ui-button.dark-grey.ghost-inverted, input[type='reset'].ui-button.dark-grey.ghost-inverted {
   background-color: #9e9e9e;
   color: #fff;
   box-shadow: none;
+  border: none;
 }
 .ui-button.dark-grey.ghost-inverted:hover, a.ui-button.dark-grey.ghost-inverted:hover, a.ui-button:link.dark-grey.ghost-inverted:hover, a.ui-button:visited.dark-grey.ghost-inverted:hover, button.ui-button.dark-grey.ghost-inverted:hover, input[type='button'].ui-button.dark-grey.ghost-inverted:hover, input[type='submit'].ui-button.dark-grey.ghost-inverted:hover, input[type='reset'].ui-button.dark-grey.ghost-inverted:hover {
   background-color: transparent;
   color: #9e9e9e;
-  border-color: #9e9e9e;
+  box-shadow: inset 0 0 0 1px #9e9e9e;
 }
 .ui-button.dark, a.ui-button.dark, a.ui-button:link.dark, a.ui-button:visited.dark, button.ui-button.dark, input[type='button'].ui-button.dark, input[type='submit'].ui-button.dark, input[type='reset'].ui-button.dark {
   background-color: #333;
@@ -9642,7 +9674,8 @@ code[title] {
 }
 .ui-button.dark.ghost, a.ui-button.dark.ghost, a.ui-button:link.dark.ghost, a.ui-button:visited.dark.ghost, button.ui-button.dark.ghost, input[type='button'].ui-button.dark.ghost, input[type='submit'].ui-button.dark.ghost, input[type='reset'].ui-button.dark.ghost {
   background-color: transparent;
-  border-color: #333;
+  border: none;
+  box-shadow: inset 0 0 0 1px #333;
   color: #333;
 }
 .ui-button.dark.ghost:hover, a.ui-button.dark.ghost:hover, a.ui-button:link.dark.ghost:hover, a.ui-button:visited.dark.ghost:hover, button.ui-button.dark.ghost:hover, input[type='button'].ui-button.dark.ghost:hover, input[type='submit'].ui-button.dark.ghost:hover, input[type='reset'].ui-button.dark.ghost:hover {
@@ -9650,17 +9683,19 @@ code[title] {
   color: #fff;
 }
 .ui-button.dark.ghost:active, a.ui-button.dark.ghost:active, a.ui-button:link.dark.ghost:active, a.ui-button:visited.dark.ghost:active, button.ui-button.dark.ghost:active, input[type='button'].ui-button.dark.ghost:active, input[type='submit'].ui-button.dark.ghost:active, input[type='reset'].ui-button.dark.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.dark.ghost-inverted, a.ui-button.dark.ghost-inverted, a.ui-button:link.dark.ghost-inverted, a.ui-button:visited.dark.ghost-inverted, button.ui-button.dark.ghost-inverted, input[type='button'].ui-button.dark.ghost-inverted, input[type='submit'].ui-button.dark.ghost-inverted, input[type='reset'].ui-button.dark.ghost-inverted {
   background-color: #333;
   color: #fff;
   box-shadow: none;
+  border: none;
 }
 .ui-button.dark.ghost-inverted:hover, a.ui-button.dark.ghost-inverted:hover, a.ui-button:link.dark.ghost-inverted:hover, a.ui-button:visited.dark.ghost-inverted:hover, button.ui-button.dark.ghost-inverted:hover, input[type='button'].ui-button.dark.ghost-inverted:hover, input[type='submit'].ui-button.dark.ghost-inverted:hover, input[type='reset'].ui-button.dark.ghost-inverted:hover {
   background-color: transparent;
   color: #333;
-  border-color: #333;
+  box-shadow: inset 0 0 0 1px #333;
 }
 .ui-button.white, a.ui-button.white, a.ui-button:link.white, a.ui-button:visited.white, button.ui-button.white, input[type='button'].ui-button.white, input[type='submit'].ui-button.white, input[type='reset'].ui-button.white {
   background-color: #fff;
@@ -9684,7 +9719,8 @@ code[title] {
 }
 .ui-button.white.ghost, a.ui-button.white.ghost, a.ui-button:link.white.ghost, a.ui-button:visited.white.ghost, button.ui-button.white.ghost, input[type='button'].ui-button.white.ghost, input[type='submit'].ui-button.white.ghost, input[type='reset'].ui-button.white.ghost {
   background-color: transparent;
-  border-color: #fff;
+  border: none;
+  box-shadow: inset 0 0 0 1px #fff;
   color: #fff;
 }
 .ui-button.white.ghost:hover, a.ui-button.white.ghost:hover, a.ui-button:link.white.ghost:hover, a.ui-button:visited.white.ghost:hover, button.ui-button.white.ghost:hover, input[type='button'].ui-button.white.ghost:hover, input[type='submit'].ui-button.white.ghost:hover, input[type='reset'].ui-button.white.ghost:hover {
@@ -9692,17 +9728,19 @@ code[title] {
   color: rgba(0, 0, 0, 0.7);
 }
 .ui-button.white.ghost:active, a.ui-button.white.ghost:active, a.ui-button:link.white.ghost:active, a.ui-button:visited.white.ghost:active, button.ui-button.white.ghost:active, input[type='button'].ui-button.white.ghost:active, input[type='submit'].ui-button.white.ghost:active, input[type='reset'].ui-button.white.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.white.ghost-inverted, a.ui-button.white.ghost-inverted, a.ui-button:link.white.ghost-inverted, a.ui-button:visited.white.ghost-inverted, button.ui-button.white.ghost-inverted, input[type='button'].ui-button.white.ghost-inverted, input[type='submit'].ui-button.white.ghost-inverted, input[type='reset'].ui-button.white.ghost-inverted {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.7);
   box-shadow: none;
+  border: none;
 }
 .ui-button.white.ghost-inverted:hover, a.ui-button.white.ghost-inverted:hover, a.ui-button:link.white.ghost-inverted:hover, a.ui-button:visited.white.ghost-inverted:hover, button.ui-button.white.ghost-inverted:hover, input[type='button'].ui-button.white.ghost-inverted:hover, input[type='submit'].ui-button.white.ghost-inverted:hover, input[type='reset'].ui-button.white.ghost-inverted:hover {
   background-color: transparent;
   color: #fff;
-  border-color: #fff;
+  box-shadow: inset 0 0 0 1px #fff;
 }
 .ui-button.black, a.ui-button.black, a.ui-button:link.black, a.ui-button:visited.black, button.ui-button.black, input[type='button'].ui-button.black, input[type='submit'].ui-button.black, input[type='reset'].ui-button.black {
   background-color: #000;
@@ -9726,7 +9764,8 @@ code[title] {
 }
 .ui-button.black.ghost, a.ui-button.black.ghost, a.ui-button:link.black.ghost, a.ui-button:visited.black.ghost, button.ui-button.black.ghost, input[type='button'].ui-button.black.ghost, input[type='submit'].ui-button.black.ghost, input[type='reset'].ui-button.black.ghost {
   background-color: transparent;
-  border-color: #000;
+  border: none;
+  box-shadow: inset 0 0 0 1px #000;
   color: #000;
 }
 .ui-button.black.ghost:hover, a.ui-button.black.ghost:hover, a.ui-button:link.black.ghost:hover, a.ui-button:visited.black.ghost:hover, button.ui-button.black.ghost:hover, input[type='button'].ui-button.black.ghost:hover, input[type='submit'].ui-button.black.ghost:hover, input[type='reset'].ui-button.black.ghost:hover {
@@ -9734,17 +9773,19 @@ code[title] {
   color: #fff;
 }
 .ui-button.black.ghost:active, a.ui-button.black.ghost:active, a.ui-button:link.black.ghost:active, a.ui-button:visited.black.ghost:active, button.ui-button.black.ghost:active, input[type='button'].ui-button.black.ghost:active, input[type='submit'].ui-button.black.ghost:active, input[type='reset'].ui-button.black.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.black.ghost-inverted, a.ui-button.black.ghost-inverted, a.ui-button:link.black.ghost-inverted, a.ui-button:visited.black.ghost-inverted, button.ui-button.black.ghost-inverted, input[type='button'].ui-button.black.ghost-inverted, input[type='submit'].ui-button.black.ghost-inverted, input[type='reset'].ui-button.black.ghost-inverted {
   background-color: #000;
   color: #fff;
   box-shadow: none;
+  border: none;
 }
 .ui-button.black.ghost-inverted:hover, a.ui-button.black.ghost-inverted:hover, a.ui-button:link.black.ghost-inverted:hover, a.ui-button:visited.black.ghost-inverted:hover, button.ui-button.black.ghost-inverted:hover, input[type='button'].ui-button.black.ghost-inverted:hover, input[type='submit'].ui-button.black.ghost-inverted:hover, input[type='reset'].ui-button.black.ghost-inverted:hover {
   background-color: transparent;
   color: #000;
-  border-color: #000;
+  box-shadow: inset 0 0 0 1px #000;
 }
 .ui-button.red, a.ui-button.red, a.ui-button:link.red, a.ui-button:visited.red, button.ui-button.red, input[type='button'].ui-button.red, input[type='submit'].ui-button.red, input[type='reset'].ui-button.red {
   background-color: #fb6d60;
@@ -9768,7 +9809,8 @@ code[title] {
 }
 .ui-button.red.ghost, a.ui-button.red.ghost, a.ui-button:link.red.ghost, a.ui-button:visited.red.ghost, button.ui-button.red.ghost, input[type='button'].ui-button.red.ghost, input[type='submit'].ui-button.red.ghost, input[type='reset'].ui-button.red.ghost {
   background-color: transparent;
-  border-color: #fb6d60;
+  border: none;
+  box-shadow: inset 0 0 0 1px #fb6d60;
   color: #fb6d60;
 }
 .ui-button.red.ghost:hover, a.ui-button.red.ghost:hover, a.ui-button:link.red.ghost:hover, a.ui-button:visited.red.ghost:hover, button.ui-button.red.ghost:hover, input[type='button'].ui-button.red.ghost:hover, input[type='submit'].ui-button.red.ghost:hover, input[type='reset'].ui-button.red.ghost:hover {
@@ -9776,17 +9818,19 @@ code[title] {
   color: #fff;
 }
 .ui-button.red.ghost:active, a.ui-button.red.ghost:active, a.ui-button:link.red.ghost:active, a.ui-button:visited.red.ghost:active, button.ui-button.red.ghost:active, input[type='button'].ui-button.red.ghost:active, input[type='submit'].ui-button.red.ghost:active, input[type='reset'].ui-button.red.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.red.ghost-inverted, a.ui-button.red.ghost-inverted, a.ui-button:link.red.ghost-inverted, a.ui-button:visited.red.ghost-inverted, button.ui-button.red.ghost-inverted, input[type='button'].ui-button.red.ghost-inverted, input[type='submit'].ui-button.red.ghost-inverted, input[type='reset'].ui-button.red.ghost-inverted {
   background-color: #fb6d60;
   color: #fff;
   box-shadow: none;
+  border: none;
 }
 .ui-button.red.ghost-inverted:hover, a.ui-button.red.ghost-inverted:hover, a.ui-button:link.red.ghost-inverted:hover, a.ui-button:visited.red.ghost-inverted:hover, button.ui-button.red.ghost-inverted:hover, input[type='button'].ui-button.red.ghost-inverted:hover, input[type='submit'].ui-button.red.ghost-inverted:hover, input[type='reset'].ui-button.red.ghost-inverted:hover {
   background-color: transparent;
   color: #fb6d60;
-  border-color: #fb6d60;
+  box-shadow: inset 0 0 0 1px #fb6d60;
 }
 .ui-button.blue, a.ui-button.blue, a.ui-button:link.blue, a.ui-button:visited.blue, button.ui-button.blue, input[type='button'].ui-button.blue, input[type='submit'].ui-button.blue, input[type='reset'].ui-button.blue {
   background-color: #2fa1ef;
@@ -9810,7 +9854,8 @@ code[title] {
 }
 .ui-button.blue.ghost, a.ui-button.blue.ghost, a.ui-button:link.blue.ghost, a.ui-button:visited.blue.ghost, button.ui-button.blue.ghost, input[type='button'].ui-button.blue.ghost, input[type='submit'].ui-button.blue.ghost, input[type='reset'].ui-button.blue.ghost {
   background-color: transparent;
-  border-color: #2fa1ef;
+  border: none;
+  box-shadow: inset 0 0 0 1px #2fa1ef;
   color: #2fa1ef;
 }
 .ui-button.blue.ghost:hover, a.ui-button.blue.ghost:hover, a.ui-button:link.blue.ghost:hover, a.ui-button:visited.blue.ghost:hover, button.ui-button.blue.ghost:hover, input[type='button'].ui-button.blue.ghost:hover, input[type='submit'].ui-button.blue.ghost:hover, input[type='reset'].ui-button.blue.ghost:hover {
@@ -9818,17 +9863,19 @@ code[title] {
   color: #fff;
 }
 .ui-button.blue.ghost:active, a.ui-button.blue.ghost:active, a.ui-button:link.blue.ghost:active, a.ui-button:visited.blue.ghost:active, button.ui-button.blue.ghost:active, input[type='button'].ui-button.blue.ghost:active, input[type='submit'].ui-button.blue.ghost:active, input[type='reset'].ui-button.blue.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.blue.ghost-inverted, a.ui-button.blue.ghost-inverted, a.ui-button:link.blue.ghost-inverted, a.ui-button:visited.blue.ghost-inverted, button.ui-button.blue.ghost-inverted, input[type='button'].ui-button.blue.ghost-inverted, input[type='submit'].ui-button.blue.ghost-inverted, input[type='reset'].ui-button.blue.ghost-inverted {
   background-color: #2fa1ef;
   color: #fff;
   box-shadow: none;
+  border: none;
 }
 .ui-button.blue.ghost-inverted:hover, a.ui-button.blue.ghost-inverted:hover, a.ui-button:link.blue.ghost-inverted:hover, a.ui-button:visited.blue.ghost-inverted:hover, button.ui-button.blue.ghost-inverted:hover, input[type='button'].ui-button.blue.ghost-inverted:hover, input[type='submit'].ui-button.blue.ghost-inverted:hover, input[type='reset'].ui-button.blue.ghost-inverted:hover {
   background-color: transparent;
   color: #2fa1ef;
-  border-color: #2fa1ef;
+  box-shadow: inset 0 0 0 1px #2fa1ef;
 }
 .ui-button.green, a.ui-button.green, a.ui-button:link.green, a.ui-button:visited.green, button.ui-button.green, input[type='button'].ui-button.green, input[type='submit'].ui-button.green, input[type='reset'].ui-button.green {
   background-color: #2ecd6f;
@@ -9852,7 +9899,8 @@ code[title] {
 }
 .ui-button.green.ghost, a.ui-button.green.ghost, a.ui-button:link.green.ghost, a.ui-button:visited.green.ghost, button.ui-button.green.ghost, input[type='button'].ui-button.green.ghost, input[type='submit'].ui-button.green.ghost, input[type='reset'].ui-button.green.ghost {
   background-color: transparent;
-  border-color: #2ecd6f;
+  border: none;
+  box-shadow: inset 0 0 0 1px #2ecd6f;
   color: #2ecd6f;
 }
 .ui-button.green.ghost:hover, a.ui-button.green.ghost:hover, a.ui-button:link.green.ghost:hover, a.ui-button:visited.green.ghost:hover, button.ui-button.green.ghost:hover, input[type='button'].ui-button.green.ghost:hover, input[type='submit'].ui-button.green.ghost:hover, input[type='reset'].ui-button.green.ghost:hover {
@@ -9860,17 +9908,19 @@ code[title] {
   color: #fff;
 }
 .ui-button.green.ghost:active, a.ui-button.green.ghost:active, a.ui-button:link.green.ghost:active, a.ui-button:visited.green.ghost:active, button.ui-button.green.ghost:active, input[type='button'].ui-button.green.ghost:active, input[type='submit'].ui-button.green.ghost:active, input[type='reset'].ui-button.green.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.green.ghost-inverted, a.ui-button.green.ghost-inverted, a.ui-button:link.green.ghost-inverted, a.ui-button:visited.green.ghost-inverted, button.ui-button.green.ghost-inverted, input[type='button'].ui-button.green.ghost-inverted, input[type='submit'].ui-button.green.ghost-inverted, input[type='reset'].ui-button.green.ghost-inverted {
   background-color: #2ecd6f;
   color: #fff;
   box-shadow: none;
+  border: none;
 }
 .ui-button.green.ghost-inverted:hover, a.ui-button.green.ghost-inverted:hover, a.ui-button:link.green.ghost-inverted:hover, a.ui-button:visited.green.ghost-inverted:hover, button.ui-button.green.ghost-inverted:hover, input[type='button'].ui-button.green.ghost-inverted:hover, input[type='submit'].ui-button.green.ghost-inverted:hover, input[type='reset'].ui-button.green.ghost-inverted:hover {
   background-color: transparent;
   color: #2ecd6f;
-  border-color: #2ecd6f;
+  box-shadow: inset 0 0 0 1px #2ecd6f;
 }
 .ui-button.yellow, a.ui-button.yellow, a.ui-button:link.yellow, a.ui-button:visited.yellow, button.ui-button.yellow, input[type='button'].ui-button.yellow, input[type='submit'].ui-button.yellow, input[type='reset'].ui-button.yellow {
   background-color: #ffcd03;
@@ -9894,7 +9944,8 @@ code[title] {
 }
 .ui-button.yellow.ghost, a.ui-button.yellow.ghost, a.ui-button:link.yellow.ghost, a.ui-button:visited.yellow.ghost, button.ui-button.yellow.ghost, input[type='button'].ui-button.yellow.ghost, input[type='submit'].ui-button.yellow.ghost, input[type='reset'].ui-button.yellow.ghost {
   background-color: transparent;
-  border-color: #ffcd03;
+  border: none;
+  box-shadow: inset 0 0 0 1px #ffcd03;
   color: #ffcd03;
 }
 .ui-button.yellow.ghost:hover, a.ui-button.yellow.ghost:hover, a.ui-button:link.yellow.ghost:hover, a.ui-button:visited.yellow.ghost:hover, button.ui-button.yellow.ghost:hover, input[type='button'].ui-button.yellow.ghost:hover, input[type='submit'].ui-button.yellow.ghost:hover, input[type='reset'].ui-button.yellow.ghost:hover {
@@ -9902,17 +9953,19 @@ code[title] {
   color: rgba(0, 0, 0, 0.7);
 }
 .ui-button.yellow.ghost:active, a.ui-button.yellow.ghost:active, a.ui-button:link.yellow.ghost:active, a.ui-button:visited.yellow.ghost:active, button.ui-button.yellow.ghost:active, input[type='button'].ui-button.yellow.ghost:active, input[type='submit'].ui-button.yellow.ghost:active, input[type='reset'].ui-button.yellow.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.yellow.ghost-inverted, a.ui-button.yellow.ghost-inverted, a.ui-button:link.yellow.ghost-inverted, a.ui-button:visited.yellow.ghost-inverted, button.ui-button.yellow.ghost-inverted, input[type='button'].ui-button.yellow.ghost-inverted, input[type='submit'].ui-button.yellow.ghost-inverted, input[type='reset'].ui-button.yellow.ghost-inverted {
   background-color: #ffcd03;
   color: rgba(0, 0, 0, 0.7);
   box-shadow: none;
+  border: none;
 }
 .ui-button.yellow.ghost-inverted:hover, a.ui-button.yellow.ghost-inverted:hover, a.ui-button:link.yellow.ghost-inverted:hover, a.ui-button:visited.yellow.ghost-inverted:hover, button.ui-button.yellow.ghost-inverted:hover, input[type='button'].ui-button.yellow.ghost-inverted:hover, input[type='submit'].ui-button.yellow.ghost-inverted:hover, input[type='reset'].ui-button.yellow.ghost-inverted:hover {
   background-color: transparent;
   color: #ffcd03;
-  border-color: #ffcd03;
+  box-shadow: inset 0 0 0 1px #ffcd03;
 }
 .ui-button.orange, a.ui-button.orange, a.ui-button:link.orange, a.ui-button:visited.orange, button.ui-button.orange, input[type='button'].ui-button.orange, input[type='submit'].ui-button.orange, input[type='reset'].ui-button.orange {
   background-color: #ff9e07;
@@ -9936,7 +9989,8 @@ code[title] {
 }
 .ui-button.orange.ghost, a.ui-button.orange.ghost, a.ui-button:link.orange.ghost, a.ui-button:visited.orange.ghost, button.ui-button.orange.ghost, input[type='button'].ui-button.orange.ghost, input[type='submit'].ui-button.orange.ghost, input[type='reset'].ui-button.orange.ghost {
   background-color: transparent;
-  border-color: #ff9e07;
+  border: none;
+  box-shadow: inset 0 0 0 1px #ff9e07;
   color: #ff9e07;
 }
 .ui-button.orange.ghost:hover, a.ui-button.orange.ghost:hover, a.ui-button:link.orange.ghost:hover, a.ui-button:visited.orange.ghost:hover, button.ui-button.orange.ghost:hover, input[type='button'].ui-button.orange.ghost:hover, input[type='submit'].ui-button.orange.ghost:hover, input[type='reset'].ui-button.orange.ghost:hover {
@@ -9944,17 +9998,19 @@ code[title] {
   color: #fff;
 }
 .ui-button.orange.ghost:active, a.ui-button.orange.ghost:active, a.ui-button:link.orange.ghost:active, a.ui-button:visited.orange.ghost:active, button.ui-button.orange.ghost:active, input[type='button'].ui-button.orange.ghost:active, input[type='submit'].ui-button.orange.ghost:active, input[type='reset'].ui-button.orange.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.orange.ghost-inverted, a.ui-button.orange.ghost-inverted, a.ui-button:link.orange.ghost-inverted, a.ui-button:visited.orange.ghost-inverted, button.ui-button.orange.ghost-inverted, input[type='button'].ui-button.orange.ghost-inverted, input[type='submit'].ui-button.orange.ghost-inverted, input[type='reset'].ui-button.orange.ghost-inverted {
   background-color: #ff9e07;
   color: #fff;
   box-shadow: none;
+  border: none;
 }
 .ui-button.orange.ghost-inverted:hover, a.ui-button.orange.ghost-inverted:hover, a.ui-button:link.orange.ghost-inverted:hover, a.ui-button:visited.orange.ghost-inverted:hover, button.ui-button.orange.ghost-inverted:hover, input[type='button'].ui-button.orange.ghost-inverted:hover, input[type='submit'].ui-button.orange.ghost-inverted:hover, input[type='reset'].ui-button.orange.ghost-inverted:hover {
   background-color: transparent;
   color: #ff9e07;
-  border-color: #ff9e07;
+  box-shadow: inset 0 0 0 1px #ff9e07;
 }
 .ui-button.purple, a.ui-button.purple, a.ui-button:link.purple, a.ui-button:visited.purple, button.ui-button.purple, input[type='button'].ui-button.purple, input[type='submit'].ui-button.purple, input[type='reset'].ui-button.purple {
   background-color: #9b57b5;
@@ -9978,7 +10034,8 @@ code[title] {
 }
 .ui-button.purple.ghost, a.ui-button.purple.ghost, a.ui-button:link.purple.ghost, a.ui-button:visited.purple.ghost, button.ui-button.purple.ghost, input[type='button'].ui-button.purple.ghost, input[type='submit'].ui-button.purple.ghost, input[type='reset'].ui-button.purple.ghost {
   background-color: transparent;
-  border-color: #9b57b5;
+  border: none;
+  box-shadow: inset 0 0 0 1px #9b57b5;
   color: #9b57b5;
 }
 .ui-button.purple.ghost:hover, a.ui-button.purple.ghost:hover, a.ui-button:link.purple.ghost:hover, a.ui-button:visited.purple.ghost:hover, button.ui-button.purple.ghost:hover, input[type='button'].ui-button.purple.ghost:hover, input[type='submit'].ui-button.purple.ghost:hover, input[type='reset'].ui-button.purple.ghost:hover {
@@ -9986,17 +10043,19 @@ code[title] {
   color: #fff;
 }
 .ui-button.purple.ghost:active, a.ui-button.purple.ghost:active, a.ui-button:link.purple.ghost:active, a.ui-button:visited.purple.ghost:active, button.ui-button.purple.ghost:active, input[type='button'].ui-button.purple.ghost:active, input[type='submit'].ui-button.purple.ghost:active, input[type='reset'].ui-button.purple.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.purple.ghost-inverted, a.ui-button.purple.ghost-inverted, a.ui-button:link.purple.ghost-inverted, a.ui-button:visited.purple.ghost-inverted, button.ui-button.purple.ghost-inverted, input[type='button'].ui-button.purple.ghost-inverted, input[type='submit'].ui-button.purple.ghost-inverted, input[type='reset'].ui-button.purple.ghost-inverted {
   background-color: #9b57b5;
   color: #fff;
   box-shadow: none;
+  border: none;
 }
 .ui-button.purple.ghost-inverted:hover, a.ui-button.purple.ghost-inverted:hover, a.ui-button:link.purple.ghost-inverted:hover, a.ui-button:visited.purple.ghost-inverted:hover, button.ui-button.purple.ghost-inverted:hover, input[type='button'].ui-button.purple.ghost-inverted:hover, input[type='submit'].ui-button.purple.ghost-inverted:hover, input[type='reset'].ui-button.purple.ghost-inverted:hover {
   background-color: transparent;
   color: #9b57b5;
-  border-color: #9b57b5;
+  box-shadow: inset 0 0 0 1px #9b57b5;
 }
 .ui-button.pink, a.ui-button.pink, a.ui-button:link.pink, a.ui-button:visited.pink, button.ui-button.pink, input[type='button'].ui-button.pink, input[type='submit'].ui-button.pink, input[type='reset'].ui-button.pink {
   background-color: #ff969d;
@@ -10020,7 +10079,8 @@ code[title] {
 }
 .ui-button.pink.ghost, a.ui-button.pink.ghost, a.ui-button:link.pink.ghost, a.ui-button:visited.pink.ghost, button.ui-button.pink.ghost, input[type='button'].ui-button.pink.ghost, input[type='submit'].ui-button.pink.ghost, input[type='reset'].ui-button.pink.ghost {
   background-color: transparent;
-  border-color: #ff969d;
+  border: none;
+  box-shadow: inset 0 0 0 1px #ff969d;
   color: #ff969d;
 }
 .ui-button.pink.ghost:hover, a.ui-button.pink.ghost:hover, a.ui-button:link.pink.ghost:hover, a.ui-button:visited.pink.ghost:hover, button.ui-button.pink.ghost:hover, input[type='button'].ui-button.pink.ghost:hover, input[type='submit'].ui-button.pink.ghost:hover, input[type='reset'].ui-button.pink.ghost:hover {
@@ -10028,17 +10088,19 @@ code[title] {
   color: #fff;
 }
 .ui-button.pink.ghost:active, a.ui-button.pink.ghost:active, a.ui-button:link.pink.ghost:active, a.ui-button:visited.pink.ghost:active, button.ui-button.pink.ghost:active, input[type='button'].ui-button.pink.ghost:active, input[type='submit'].ui-button.pink.ghost:active, input[type='reset'].ui-button.pink.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.pink.ghost-inverted, a.ui-button.pink.ghost-inverted, a.ui-button:link.pink.ghost-inverted, a.ui-button:visited.pink.ghost-inverted, button.ui-button.pink.ghost-inverted, input[type='button'].ui-button.pink.ghost-inverted, input[type='submit'].ui-button.pink.ghost-inverted, input[type='reset'].ui-button.pink.ghost-inverted {
   background-color: #ff969d;
   color: #fff;
   box-shadow: none;
+  border: none;
 }
 .ui-button.pink.ghost-inverted:hover, a.ui-button.pink.ghost-inverted:hover, a.ui-button:link.pink.ghost-inverted:hover, a.ui-button:visited.pink.ghost-inverted:hover, button.ui-button.pink.ghost-inverted:hover, input[type='button'].ui-button.pink.ghost-inverted:hover, input[type='submit'].ui-button.pink.ghost-inverted:hover, input[type='reset'].ui-button.pink.ghost-inverted:hover {
   background-color: transparent;
   color: #ff969d;
-  border-color: #ff969d;
+  box-shadow: inset 0 0 0 1px #ff969d;
 }
 .ui-button.brown, a.ui-button.brown, a.ui-button:link.brown, a.ui-button:visited.brown, button.ui-button.brown, input[type='button'].ui-button.brown, input[type='submit'].ui-button.brown, input[type='reset'].ui-button.brown {
   background-color: #a28570;
@@ -10062,7 +10124,8 @@ code[title] {
 }
 .ui-button.brown.ghost, a.ui-button.brown.ghost, a.ui-button:link.brown.ghost, a.ui-button:visited.brown.ghost, button.ui-button.brown.ghost, input[type='button'].ui-button.brown.ghost, input[type='submit'].ui-button.brown.ghost, input[type='reset'].ui-button.brown.ghost {
   background-color: transparent;
-  border-color: #a28570;
+  border: none;
+  box-shadow: inset 0 0 0 1px #a28570;
   color: #a28570;
 }
 .ui-button.brown.ghost:hover, a.ui-button.brown.ghost:hover, a.ui-button:link.brown.ghost:hover, a.ui-button:visited.brown.ghost:hover, button.ui-button.brown.ghost:hover, input[type='button'].ui-button.brown.ghost:hover, input[type='submit'].ui-button.brown.ghost:hover, input[type='reset'].ui-button.brown.ghost:hover {
@@ -10070,17 +10133,19 @@ code[title] {
   color: #fff;
 }
 .ui-button.brown.ghost:active, a.ui-button.brown.ghost:active, a.ui-button:link.brown.ghost:active, a.ui-button:visited.brown.ghost:active, button.ui-button.brown.ghost:active, input[type='button'].ui-button.brown.ghost:active, input[type='submit'].ui-button.brown.ghost:active, input[type='reset'].ui-button.brown.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.brown.ghost-inverted, a.ui-button.brown.ghost-inverted, a.ui-button:link.brown.ghost-inverted, a.ui-button:visited.brown.ghost-inverted, button.ui-button.brown.ghost-inverted, input[type='button'].ui-button.brown.ghost-inverted, input[type='submit'].ui-button.brown.ghost-inverted, input[type='reset'].ui-button.brown.ghost-inverted {
   background-color: #a28570;
   color: #fff;
   box-shadow: none;
+  border: none;
 }
 .ui-button.brown.ghost-inverted:hover, a.ui-button.brown.ghost-inverted:hover, a.ui-button:link.brown.ghost-inverted:hover, a.ui-button:visited.brown.ghost-inverted:hover, button.ui-button.brown.ghost-inverted:hover, input[type='button'].ui-button.brown.ghost-inverted:hover, input[type='submit'].ui-button.brown.ghost-inverted:hover, input[type='reset'].ui-button.brown.ghost-inverted:hover {
   background-color: transparent;
   color: #a28570;
-  border-color: #a28570;
+  box-shadow: inset 0 0 0 1px #a28570;
 }
 .ui-button.mint, a.ui-button.mint, a.ui-button:link.mint, a.ui-button:visited.mint, button.ui-button.mint, input[type='button'].ui-button.mint, input[type='submit'].ui-button.mint, input[type='reset'].ui-button.mint {
   background-color: #abf0d2;
@@ -10104,7 +10169,8 @@ code[title] {
 }
 .ui-button.mint.ghost, a.ui-button.mint.ghost, a.ui-button:link.mint.ghost, a.ui-button:visited.mint.ghost, button.ui-button.mint.ghost, input[type='button'].ui-button.mint.ghost, input[type='submit'].ui-button.mint.ghost, input[type='reset'].ui-button.mint.ghost {
   background-color: transparent;
-  border-color: #abf0d2;
+  border: none;
+  box-shadow: inset 0 0 0 1px #abf0d2;
   color: #abf0d2;
 }
 .ui-button.mint.ghost:hover, a.ui-button.mint.ghost:hover, a.ui-button:link.mint.ghost:hover, a.ui-button:visited.mint.ghost:hover, button.ui-button.mint.ghost:hover, input[type='button'].ui-button.mint.ghost:hover, input[type='submit'].ui-button.mint.ghost:hover, input[type='reset'].ui-button.mint.ghost:hover {
@@ -10112,17 +10178,19 @@ code[title] {
   color: rgba(0, 0, 0, 0.7);
 }
 .ui-button.mint.ghost:active, a.ui-button.mint.ghost:active, a.ui-button:link.mint.ghost:active, a.ui-button:visited.mint.ghost:active, button.ui-button.mint.ghost:active, input[type='button'].ui-button.mint.ghost:active, input[type='submit'].ui-button.mint.ghost:active, input[type='reset'].ui-button.mint.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.mint.ghost-inverted, a.ui-button.mint.ghost-inverted, a.ui-button:link.mint.ghost-inverted, a.ui-button:visited.mint.ghost-inverted, button.ui-button.mint.ghost-inverted, input[type='button'].ui-button.mint.ghost-inverted, input[type='submit'].ui-button.mint.ghost-inverted, input[type='reset'].ui-button.mint.ghost-inverted {
   background-color: #abf0d2;
   color: rgba(0, 0, 0, 0.7);
   box-shadow: none;
+  border: none;
 }
 .ui-button.mint.ghost-inverted:hover, a.ui-button.mint.ghost-inverted:hover, a.ui-button:link.mint.ghost-inverted:hover, a.ui-button:visited.mint.ghost-inverted:hover, button.ui-button.mint.ghost-inverted:hover, input[type='button'].ui-button.mint.ghost-inverted:hover, input[type='submit'].ui-button.mint.ghost-inverted:hover, input[type='reset'].ui-button.mint.ghost-inverted:hover {
   background-color: transparent;
   color: #abf0d2;
-  border-color: #abf0d2;
+  box-shadow: inset 0 0 0 1px #abf0d2;
 }
 .ui-button.navy, a.ui-button.navy, a.ui-button:link.navy, a.ui-button:visited.navy, button.ui-button.navy, input[type='button'].ui-button.navy, input[type='submit'].ui-button.navy, input[type='reset'].ui-button.navy {
   background-color: #4854b3;
@@ -10146,7 +10214,8 @@ code[title] {
 }
 .ui-button.navy.ghost, a.ui-button.navy.ghost, a.ui-button:link.navy.ghost, a.ui-button:visited.navy.ghost, button.ui-button.navy.ghost, input[type='button'].ui-button.navy.ghost, input[type='submit'].ui-button.navy.ghost, input[type='reset'].ui-button.navy.ghost {
   background-color: transparent;
-  border-color: #4854b3;
+  border: none;
+  box-shadow: inset 0 0 0 1px #4854b3;
   color: #4854b3;
 }
 .ui-button.navy.ghost:hover, a.ui-button.navy.ghost:hover, a.ui-button:link.navy.ghost:hover, a.ui-button:visited.navy.ghost:hover, button.ui-button.navy.ghost:hover, input[type='button'].ui-button.navy.ghost:hover, input[type='submit'].ui-button.navy.ghost:hover, input[type='reset'].ui-button.navy.ghost:hover {
@@ -10154,17 +10223,19 @@ code[title] {
   color: #fff;
 }
 .ui-button.navy.ghost:active, a.ui-button.navy.ghost:active, a.ui-button:link.navy.ghost:active, a.ui-button:visited.navy.ghost:active, button.ui-button.navy.ghost:active, input[type='button'].ui-button.navy.ghost:active, input[type='submit'].ui-button.navy.ghost:active, input[type='reset'].ui-button.navy.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.navy.ghost-inverted, a.ui-button.navy.ghost-inverted, a.ui-button:link.navy.ghost-inverted, a.ui-button:visited.navy.ghost-inverted, button.ui-button.navy.ghost-inverted, input[type='button'].ui-button.navy.ghost-inverted, input[type='submit'].ui-button.navy.ghost-inverted, input[type='reset'].ui-button.navy.ghost-inverted {
   background-color: #4854b3;
   color: #fff;
   box-shadow: none;
+  border: none;
 }
 .ui-button.navy.ghost-inverted:hover, a.ui-button.navy.ghost-inverted:hover, a.ui-button:link.navy.ghost-inverted:hover, a.ui-button:visited.navy.ghost-inverted:hover, button.ui-button.navy.ghost-inverted:hover, input[type='button'].ui-button.navy.ghost-inverted:hover, input[type='submit'].ui-button.navy.ghost-inverted:hover, input[type='reset'].ui-button.navy.ghost-inverted:hover {
   background-color: transparent;
   color: #4854b3;
-  border-color: #4854b3;
+  box-shadow: inset 0 0 0 1px #4854b3;
 }
 .ui-button.lime, a.ui-button.lime, a.ui-button:link.lime, a.ui-button:visited.lime, button.ui-button.lime, input[type='button'].ui-button.lime, input[type='submit'].ui-button.lime, input[type='reset'].ui-button.lime {
   background-color: #c4ec49;
@@ -10188,7 +10259,8 @@ code[title] {
 }
 .ui-button.lime.ghost, a.ui-button.lime.ghost, a.ui-button:link.lime.ghost, a.ui-button:visited.lime.ghost, button.ui-button.lime.ghost, input[type='button'].ui-button.lime.ghost, input[type='submit'].ui-button.lime.ghost, input[type='reset'].ui-button.lime.ghost {
   background-color: transparent;
-  border-color: #c4ec49;
+  border: none;
+  box-shadow: inset 0 0 0 1px #c4ec49;
   color: #c4ec49;
 }
 .ui-button.lime.ghost:hover, a.ui-button.lime.ghost:hover, a.ui-button:link.lime.ghost:hover, a.ui-button:visited.lime.ghost:hover, button.ui-button.lime.ghost:hover, input[type='button'].ui-button.lime.ghost:hover, input[type='submit'].ui-button.lime.ghost:hover, input[type='reset'].ui-button.lime.ghost:hover {
@@ -10196,17 +10268,19 @@ code[title] {
   color: rgba(0, 0, 0, 0.7);
 }
 .ui-button.lime.ghost:active, a.ui-button.lime.ghost:active, a.ui-button:link.lime.ghost:active, a.ui-button:visited.lime.ghost:active, button.ui-button.lime.ghost:active, input[type='button'].ui-button.lime.ghost:active, input[type='submit'].ui-button.lime.ghost:active, input[type='reset'].ui-button.lime.ghost:active {
-  box-shadow: none !important;
+  box-shadow: none;
+  border: none;
 }
 .ui-button.lime.ghost-inverted, a.ui-button.lime.ghost-inverted, a.ui-button:link.lime.ghost-inverted, a.ui-button:visited.lime.ghost-inverted, button.ui-button.lime.ghost-inverted, input[type='button'].ui-button.lime.ghost-inverted, input[type='submit'].ui-button.lime.ghost-inverted, input[type='reset'].ui-button.lime.ghost-inverted {
   background-color: #c4ec49;
   color: rgba(0, 0, 0, 0.7);
   box-shadow: none;
+  border: none;
 }
 .ui-button.lime.ghost-inverted:hover, a.ui-button.lime.ghost-inverted:hover, a.ui-button:link.lime.ghost-inverted:hover, a.ui-button:visited.lime.ghost-inverted:hover, button.ui-button.lime.ghost-inverted:hover, input[type='button'].ui-button.lime.ghost-inverted:hover, input[type='submit'].ui-button.lime.ghost-inverted:hover, input[type='reset'].ui-button.lime.ghost-inverted:hover {
   background-color: transparent;
   color: #c4ec49;
-  border-color: #c4ec49;
+  box-shadow: inset 0 0 0 1px #c4ec49;
 }
 .ui-button.disabled, .ui-button:disabled, .ui-button[disabled], a.ui-button.disabled, a.ui-button:disabled, a.ui-button[disabled], a.ui-button:link.disabled, a.ui-button:link:disabled, a.ui-button:link[disabled], a.ui-button:visited.disabled, a.ui-button:visited:disabled, a.ui-button:visited[disabled], button.ui-button.disabled, button.ui-button:disabled, button.ui-button[disabled], input[type='button'].ui-button.disabled, input[type='button'].ui-button:disabled, input[type='button'].ui-button[disabled], input[type='submit'].ui-button.disabled, input[type='submit'].ui-button:disabled, input[type='submit'].ui-button[disabled], input[type='reset'].ui-button.disabled, input[type='reset'].ui-button:disabled, input[type='reset'].ui-button[disabled] {
   background-color: #f1f1f1;
