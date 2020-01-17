@@ -152,6 +152,53 @@
 			
 		</div>
 	</section>
+	
+	<section class="container margin-b-30 ui-form" id="form-new">
+		<form>
+			
+			<div class="form-group width-50">
+				<label>My fancy label:</label>
+				<div class="input-field fill">
+					<input type="text" name="justainput" placeholder="something" />
+					<p class="help-text">Please provide your name here..</p>
+				</div>
+			</div>
+
+			<div class="form-group width-50">
+					
+					<div class="input-field fill floating-label">
+						<label for="justainputex">Placeholder text</label>
+						<input type="text" name="justainputex" placeholder="Placeholder text" />
+						
+						<p class="help-text">Please provide your name here..</p>
+					</div>
+				</div>
+				
+					
+			<div class="flex align-between">
+			
+					<div class="form-group width-50 width-sm-100 padding-r-10">
+						<label>My super duper really long label that spans multiple lines:</label>
+						<div class="input-field fill">
+							<select name="input2" id="input2" class="danger">
+									<option value="1">Option 1</option>
+									<option value="2">Option 2</option>
+							</select>
+							<p class="help-text text-danger">Oh snap! You selected wrong!</p>
+						</div>
+					</div>
+				
+					<div class="form-group width-50 width-sm-100 vertical padding-l-10">
+						<label>Short:</label>
+						<div class="input-field fill">
+							<input type="text" name="justainput2" placeholder="something other" />
+							<p class="help-text">Please provide your name here..</p>
+						</div>
+					</div>
+				
+			</div>
+		</form>
+	</section>
 
 	<section class="container margin-b-30 ui-form" id="form">
 			<input type="search" name="q" id="search" placeholder="Søk" />
@@ -267,7 +314,8 @@
 											<input type="radio" name="radio1" value="5" />
 									</div>
 								</div>
-							</div>
+						</div>
+						<input type="range" min="1" max="100" step="1" />
 						<div class="row gutter-xl">
 								<div class="col-3 valign-center">
 									<label for="radio1">Toggles:</label>
@@ -282,6 +330,17 @@
 									</div>
 								</div>
 							</div>
+						
+						<div class="flex">
+								<button class="ui-button">Normal</button>
+								<button class="ui-button primary">Primary</button>
+								<button class="ui-button primary rounded">Rounded</button>
+								<button class="ui-button primary pill">Pill</button>
+								<button class="ui-button primary ghost">Ghost</button>
+								<button class="ui-button primary ghost-inverted">Inverted ghost</button>
+								<button class="ui-button primary silent">Silent</button>
+								<button class="ui-button primary material">Silent</button>
+						</div>
 				
 
 	</section>
@@ -374,7 +433,7 @@
 			<a href="#" class="close-notification"></a>
 		</div>
 		<hr class="thicker bg-accent" />
-		<div class="dropdown secondary">
+		<div class="dropdown primary" keep-active="true">
 				<button class="ui-button primary dropdown-trigger">Click Me first</button>
 				<ul class="dropdown-menu">
 					<li><a href="#">Test</a></li>
@@ -511,336 +570,9 @@
 
 	</section>
 
-	<section class="container margin-b-30 ui-form" id="uicompones">
-		<!-- Select image with preview -->
-		<div class="row gutter-large">
-
-			<div class="col-4">
-				<div class="ui-select-image">
-					<input type="hidden" name="NAME" id="selected_image_url" />
-					<input type="hidden" name="SOURCE" id="selected_image_path" />
-					<div class="image-preview">
-						<img src="http://cdn.leoh.io/images/base_zero/image_89.jpg" data-source="" />
-						<!--<a href="#" class="link_select_img">+</a>-->
-					</div>
-				
-					<button class="btn_delete_img" title="Remove image">&#10005;</button>
-					<button class="btn_select_img">Select image</button>
-				</div>
-			</div>
-
-			<div class="col-4">
-					<div class="ui-select-gallery">
-						<div class="image-list">
-							<div class="image-item">
-								<input type="hidden" name="NAME" id="selected_image_url" />
-								<input type="hidden" name="SOURCE" id="selected_image_path" />
-								<img src="http://cdn.leoh.io/images/base_zero/image_72.jpg" data-source="" />
-								<button class="btn_delete_img" title="Remove image">&#10005;</button>
-							</div>
-							<div class="image-item">
-									<input type="hidden" name="NAME" id="selected_image_url" />
-									<input type="hidden" name="SOURCE" id="selected_image_path" />
-									<img src="http://cdn.leoh.io/images/base_zero/image_28.jpg" data-source="" />
-									<button class="btn_delete_img" title="Remove image">&#10005;</button>
-							</div>
-							<div class="image-item">
-									<input type="hidden" name="NAME" id="selected_image_url" />
-									<input type="hidden" name="SOURCE" id="selected_image_path" />
-									<img src="http://cdn.leoh.io/images/base_zero/image_35.jpg" data-source="" />
-									<button class="btn_delete_img" title="Remove image">&#10005;</button>
-							</div>
-							<div class="image-item">
-									<input type="hidden" name="NAME" id="selected_image_url" />
-									<input type="hidden" name="SOURCE" id="selected_image_path" />
-									<img src="http://cdn.leoh.io/images/base_zero/image_69.jpg" data-source="" />
-									<button class="btn_delete_img" title="Remove image">&#10005;</button>
-							</div>
-							<div class="image-item">
-									<input type="hidden" name="NAME" id="selected_image_url" />
-									<input type="hidden" name="SOURCE" id="selected_image_path" />
-									<img src="http://cdn.leoh.io/images/base_zero/image_72.jpg" data-source="" />
-									<button class="btn_delete_img" title="Remove image">&#10005;</button>
-								</div>
-								<div class="image-item">
-										<input type="hidden" name="NAME" id="selected_image_url" />
-										<input type="hidden" name="SOURCE" id="selected_image_path" />
-										<img src="http://cdn.leoh.io/images/base_zero/image_28.jpg" data-source="" />
-										<button class="btn_delete_img" title="Remove image">&#10005;</button>
-								</div>
-								<div class="image-item">
-										<input type="hidden" name="NAME" id="selected_image_url" />
-										<input type="hidden" name="SOURCE" id="selected_image_path" />
-										<img src="http://cdn.leoh.io/images/base_zero/image_35.jpg" data-source="" />
-										<button class="btn_delete_img" title="Remove image">&#10005;</button>
-								</div>
-								<div class="image-item">
-										<input type="hidden" name="NAME" id="selected_image_url" />
-										<input type="hidden" name="SOURCE" id="selected_image_path" />
-										<img src="http://cdn.leoh.io/images/base_zero/image_69.jpg" data-source="" />
-										<button class="btn_delete_img" title="Remove image">&#10005;</button>
-								</div>
-								<div class="image-item">
-										<input type="hidden" name="NAME" id="selected_image_url" />
-										<input type="hidden" name="SOURCE" id="selected_image_path" />
-										<img src="http://cdn.leoh.io/images/base_zero/image_28.jpg" data-source="" />
-										<button class="btn_delete_img" title="Remove image">&#10005;</button>
-								</div>
-								<div class="image-item">
-										<input type="hidden" name="NAME" id="selected_image_url" />
-										<input type="hidden" name="SOURCE" id="selected_image_path" />
-										<img src="http://cdn.leoh.io/images/base_zero/image_35.jpg" data-source="" />
-										<button class="btn_delete_img" title="Remove image">&#10005;</button>
-								</div>
-								<div class="image-item">
-										<input type="hidden" name="NAME" id="selected_image_url" />
-										<input type="hidden" name="SOURCE" id="selected_image_path" />
-										<img src="http://cdn.leoh.io/images/base_zero/image_69.jpg" data-source="" />
-										<button class="btn_delete_img" title="Remove image">&#10005;</button>
-								</div>
-						</div>
-						<div class="image-list-control">
-							<button class="btn_select_imgs ui-button primary rounded">Select images (11)</button>
-						</div>						
-					</div>
-				</div>
-
-			<div class="col-4">
-				<!-- Select file -->
-		
-				<div class="ui-select-file">
-					<label>Velg fil:</label>
-					<div class="input">
-						<input type="text" readonly="readonly" name="NAME" id="select_file_url" />
-						<button class="btn_select_file ui-button primary rounded">...</button>
-						<input type="hidden" name="SOURCE" id="select_file_path" />
-					</div>
-				</div>
-
-				<div class="ui-select-multiple-files">
-						<label>Velg fil(er):</label>
-						<ul class="files-list">
-							<li class="placeholder-message">Du har ikke valgt noen filer enda..</li>
-							<!--<li>
-								<div class="file-item">
-									<span class="file-name" tile="path/to/someFile.pdf">someFile.pdf</span>
-									<button class="btn_delete_file" title="Remove image">&#10005;</button>
-								</div>
-								<input type="hidden" readonly="readonly" name="NAME" id="select_file_url" />
-								<input type="hidden" name="SOURCE" id="select_file_path" />
-							</li>
-							<li>
-								<div class="file-item">
-									<span class="file-name" tile="path/to/dangeer.exe">dangeer.exe</span>
-									<button class="btn_delete_file" title="Remove image">&#10005;</button>
-								</div>
-								<input type="hidden" readonly="readonly" name="NAME" id="select_file_url" />
-								<input type="hidden" name="SOURCE" id="select_file_path" />
-							</li>
-							<li>
-								<div class="file-item">
-									<span class="file-name" tile="path/to/worldmap.zip">worldmap.zip</span>
-									<button class="btn_delete_file" title="Remove image">&#10005;</button>
-								</div>
-								<input type="hidden" readonly="readonly" name="NAME" id="select_file_url" />
-								<input type="hidden" name="SOURCE" id="select_file_path" />
-							</li>-->
-								
-						</ul>
-						<button class="btn_select_file ui-button primary rounded">Velg filer (0)</button>
-					</div>
-
-			</div>
-		</div>
-		<style type="text/css">
-			.ui-select-image {
-				border: 1px solid #333;
-				position: relative;
-				width: 100%;
-				overflow: hidden;
-				border-radius: 2px;
-			}
-			.ui-select-image .image-preview {
-				
-			}
-			.ui-select-image .image-preview img {
-				object-fit: cover;
-				margin: 0;
-				display: block;
-			}
-
-			.ui-select-image .btn_select_img {
-				width:100%;
-				padding: 12px 0;
-				border: none;
-				background-color: rgba(0,0,0,.6);
-				color: #fff;
-				position: absolute;
-				bottom: 0;
-				left:0;
-				transform: translateY(100%);
-				opacity: 0;
-				transition: all .2s ease-in-out;
-				cursor: pointer;
-			}
-			
-			.ui-select-image .btn_delete_img {
-				position: absolute;
-				right: 12px;
-				top: 12px;
-				width: 32px;
-				height: 32px;
-				line-height: 32px;
-				text-align: center;
-				margin: 0;
-				padding: 0;
-				display: block;
-				border:none;
-				border-radius: 100%;
-				transition: all .2s ease-in-out;
-				opacity: 0;
-				cursor: pointer;
-				
-			}
 
 
-			.ui-select-gallery {
-				border: 1px solid #333;
-				position: relative;
-				width: 100%;
-				overflow: hidden;
-				border-radius: 2px;
-			}
-			.ui-select-gallery .image-list {
-				display: flex;
-				justify-content: flex-start;
-				flex-wrap: wrap;
-				padding-left:5px;
-				padding-bottom:5px;
-				position: relative;
-				max-height: 245px;
-				overflow-y: scroll;
-			}
-			
-
-			.ui-select-gallery .image-list .image-item {
-				flex-basis: 33%;
-				flex-grow: 0;
-				flex-shrink: 1;
-				padding: 5px 5px 0 0;
-				position: relative;
-				height: 80px;
-			}
-			.ui-select-gallery .image-list .image-item:nth-child(3n) {
-				padding-right: 0;
-			}
-			.ui-select-gallery .image-list .image-item img {
-				object-fit: cover;
-				height: 100%;
-				width: 100%;
-			}
-			.ui-select-gallery .image-list .image-item button {
-				position: absolute;
-				top: 5px;
-				right: 5px;
-			}
-
-			.ui-select-gallery .image-list-control {
-				padding: 0 5px 5px 5px;
-			}
-			.ui-select-gallery .btn_select_imgs {
-				width: 100%;
-			}
-
-
-			.ui-select-image:hover .btn_select_img {
-				transform: translateY(0);
-				opacity: 1;
-			}
-			.ui-select-image:hover .btn_delete_img {
-				opacity: 1;
-			}
-
-		</style>
 	
-		
-		<style type="text/css">
-			.ui-select-file label {
-				font-size: .8rem;
-				display: block;
-				letter-spacing: -0.1px;
-				margin: 4px 0 ;
-			}
-			.ui-select-file .input { position: relative; }
-
-			.ui-select-file input[type="text"] {
-				width:100%;
-			}
-			
-			.ui-select-file button {
-				position: absolute;
-				right: 2px;
-				top: 2px;
-				height: calc(100% - 4px);
-				width: 48px;
-				text-align: center;
-				line-height: auto;
-				margin: 0;
-				padding: 0;
-			}
-
-			.ui-select-multiple-files {}
-			.ui-select-multiple-files label {
-				font-size: .8rem;
-				display: block;
-				letter-spacing: -0.1px;
-				margin: 4px 0 ;
-			}
-			.ui-select-multiple-files ul {
-				list-style: none;
-				margin: 0 0 5px 0;
-				padding: 5px;
-				border: 1px solid #d8dcdf;
-				border-radius: 2px;
-			}
-			.ui-select-multiple-files ul li {
-				border: 1px solid #d8dcdf;
-				margin: 0 0 3px 0;
-				padding: 5px 8px;
-				border-radius: 3px;
-				cursor: pointer;
-			}
-			.ui-select-multiple-files ul li .file-item {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-			}
-			.ui-select-multiple-files ul li:hover:not(.placeholder-message) {
-				border-color: #3273dc;
-    			box-shadow: 0 0 0 2px rgba(36, 102, 209, 0.2) !important;
-			}
-			.ui-select-multiple-files ul li .file-item button {
-				border: none;
-    			background-color: transparent;
-    			color: #6b6b6b;
-    			font-size: 14px;
-    			cursor: pointer;
-			}
-			.ui-select-multiple-files ul li .file-item button:hover {
-				color: red;
-			}
-			.ui-select-multiple-files ul li.placeholder-message {
-				border-radius: 2px;
-				padding: 5px 10px;
-				background: #f3f3f3;
-				font-size: .9rem;
-				margin: 0;
-				border: none;
-				
-			}
-		</style>
-	
-	</section>
 
 	<script type="text/javascript" src="../dist/js/dropdownmenu.js"></script>
 	<script type="text/javascript" src="../dist/js/tabs.js"></script>
@@ -848,9 +580,13 @@
 	<script type="text/javascript">
 	//console.log( slickTabs() );
 	// Onload
+
+	new slickDropDown();
+	
 	document.addEventListener("DOMContentLoaded", function() {
 	//let tabs = document.querySelectorAll(".ui-tabs");
 	new slickTabs( document.getElementById('mytablayout') );
+
 	/*
     tabs.forEach( (element,i) => {
         new slickTabs( element, {
@@ -868,5 +604,6 @@
     });*/
 	});
 </script>
+
 </body>
 </html>

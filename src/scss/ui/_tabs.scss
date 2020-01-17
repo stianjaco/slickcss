@@ -21,8 +21,11 @@ $ligtengrey: lighten($color-grey, 12%);
 
             a {
                 padding: .6rem 2.5rem;
-                display: block;
-                text-transform: uppercase;
+                @include flexbox;
+	            @include flex-direction(row);
+	            @include flex-wrap(wrap);
+	            @include align-items(center);
+                //text-transform: uppercase;
                 text-decoration: none;
                 border-bottom: 2px solid transparent;
                 color: #000;
@@ -44,43 +47,81 @@ $ligtengrey: lighten($color-grey, 12%);
 
             
         }
-    }
 
-    &.solid ul.tab-nav {
-        background-color: $ligtengrey;
-        li {
-            a {
-                padding: .8rem 2.5rem;
-            }
-            &.is-active a {
-                background-color: $color-primary;
-                color: findColorInvert($color-primary);
-                border-color: darken($color-primary, 20%);
+        &.silent {
+            background-color: transparent;
+            box-shadow: none;
+            li {
+                a {
+                    padding: .6rem;
+                }
+                &.is-active a {
+                    color: $color-primary;
+                    border-color: $color-primary;
+                }
             }
         }
+
+        &.solid {
+            background-color: $ligtengrey;
+            li {
+                a {
+                    padding: .8rem 2.5rem;
+                }
+                &.is-active a {
+                    background-color: $color-primary;
+                    color: findColorInvert($color-primary);
+                    border-color: darken($color-primary, 20%);
+                }
+            }
+        }
+
     }
+
+   
+
+    
 
     @each $colorName, $colorValue in $color-list {
 
-        &.#{""+$colorName+""} ul.tab-nav li {
-            a:hover, a:active {
-                color: $colorValue;
+        ul.tab-nav.#{""+$colorName+""} {
+            li {
+                a:hover, a:active {
+                    color: $colorValue;
+                }
+                &.is-active a {
+                    border-bottom: 2px solid $colorValue;
+                    color: $colorValue;
+                }
             }
-            &.is-active a {
-                border-bottom: 2px solid $colorValue;
-                color: $colorValue;
+
+            &.solid {
+                li {
+                    a:hover, a:active {
+                        color: $colorValue;
+                    }
+                    &.is-active a {
+                        background-color: $colorValue;
+                        color: findColorInvert($colorValue);
+                        border-color: darken($colorValue, 20%);
+                    }
+                }
+            }
+            &.silent {
+                background-color: transparent;
+                li {
+                    a:hover, a:active {
+                        color: $colorValue;
+                    }
+                    &.is-active a {
+                        background-color: transparent;
+                        color: $colorValue;
+                        border-color: darken($colorValue, 20%);
+                    }
+                }
             }
         }
-        &.#{""+$colorName+""}.solid ul.tab-nav li {
-            a:hover, a:active {
-                color: $colorValue;
-            }
-            &.is-active a {
-                background-color: $colorValue;
-                color: findColorInvert($colorValue);
-                border-color: darken($colorValue, 20%);
-            }
-        }
+
     }
 
     .tab-container {

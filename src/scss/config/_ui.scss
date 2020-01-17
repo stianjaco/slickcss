@@ -1,13 +1,10 @@
-@import '../config/colors';
-@import '../config/breakpoints';
-
 $ui-class-prefix: ui;
 
 // BUTTONS
-$btn-base-size: 16px !default;
+$btn-base-size: $font-size !default;
 $btn-letter-spacing: -0.02rem !default;
-$btn-font: Arial, Sans-serif !default;
-$btn-padding: .8em 1.8em !default;
+$btn-font: $font-primary !default;
+$btn-padding: .8em 1.2em !default;
 
 $btn-normal-bg: map-get($color-list, grey) !default;
 $btn-normal-color: findColorInvert( map-get($color-list, grey) ) !default;
@@ -18,61 +15,6 @@ $btn-disabled-bg: #f1f1f1 !default;
 $btn-disabled-color:#c4c4c4 !default;
 $btn-disabled-border-color: $btn-disabled-bg !default;
 
-// FORMS 
-$form-input: (
-	background: #fcfcfc,
-	color: #000,
-	border: #ececec,
-	boxshadow: #d2d2d2,
-	placeholder: #c1c1c1
-) !default;
-
-$form-input-focus: (
-	background: #fff,
-	color: #000,
-	border: darken(map-get($color-list, primary),5%),
-	boxshadow: map-get($color-list, primary) 
-) !default;
-
-$form-input-disabled: (
-	background: #f2f2f2,
-	color: #c9c9c9,
-	border: #ddd,
-	boxshadow: #efefef 
-) !default;
-
-$form-input-error: (
-	background: #fff,
-	color: #555,
-	border: map-get($color-list, danger),
-	boxshadow: #fff 
-) !default;
-
-$form-input-success: (
-	background: #fff,
-	color: #555,
-	border: map-get($color-list, success),
-	boxshadow: #fff 
-) !default;
-
-$form-radio-checkbox: (
-	size: 16px,
-	background: #fff,
-	border: #aaa,
-	checked: map-get($color-list, primary),
-	borderdisabled: #ddd,
-	checkeddisabled: #aaa
-) !default;
-
-$form-toggleswitch: (
-	height: 16px,
-	width: 42px,
-	backgroundOff: #898989,
-	backgroundOn: lighten(map-get($color-list, primary),25%),
-	handleOff: #aaa,
-	handleOn: map-get($color-list, primary)
-) !default;
-
 // DROPDOWN MENU
 $dropdown-menu: (
 	height: auto,
@@ -81,14 +23,4 @@ $dropdown-menu: (
 	minwidth: 210px,
 	transition: 200ms,
 	break: map-get($breakpoint-list, sm)
-);
-
-// DROPDOWN "CONTEXT" MENU
-$ddmenu: (
-	background: #fff,
-	borderColor: rgba(0,0,0,.15),
-	hoverColor: #f8f9fa,
-	activeColor: map-get($color-list, primary),
-	activeTextColor: #fff,
-	divider: #e9ecef
 );

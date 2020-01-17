@@ -1,16 +1,19 @@
 // 
 // SlickCSS 
-// Version: 0.0.2
+// Version: 0.0.3
 // Author: Stian Jacobsen / Dropcode
 // ------------------------------------------
+@import 'inc';
 
 @import 'vendor/normalize';
 @import 'components/base';
 @import 'components/grid';
-@import 'components/layout';
+@import 'components/flexbox';
+@import 'components/forms';
 @import 'components/helpers';
 @import 'components/typography';
 
+// ui = 202kb
 @import 'ui/buttons';
 @import 'ui/forms';
 @import 'ui/tables';
@@ -24,3 +27,5 @@
 @import 'ui/breadcrumbs';
 @import 'ui/cards';
 @import 'ui/spinner';
+@import 'ui/masonry';
+@import 'ui/app';

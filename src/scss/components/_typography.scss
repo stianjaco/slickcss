@@ -1,19 +1,27 @@
-@import '../config/typography';
-@import '../config/breakpoints';
-@import '../mixins/helpers';
 
-// Headers
-@for $i from 6*-1 through -1 {
-  $fs: ($font-size+(5*$font-step)) - (($font-step*abs($i))-$font-step);
-  h#{abs($i)}, .header-#{abs($i)} {
-    @include font-size($fs);
-    @include line-height($fs*0.48);
-    margin: .6em 0;
-  }
+h1,h2,h3,h4,h5,h6,
+.header-1,.header-2,.header-3,.header-4,.header-5,.header-6 {
+	$lineheight: $font-size * 1.5;
+	margin: .85em 0;
+	line-height: calculateRem($lineheight);
 }
-
-h4,h5 {
-	font-weight: normal;
+h1, .header-1 {
+	@include font-size($font-size * 3.5);
+}
+h2, .header-2 {
+	@include font-size($font-size * 3);
+}
+h3, .header-3 {
+	@include font-size($font-size * 2.5);
+}
+h4, .header-4 {
+	@include font-size($font-size * 2);
+}
+h5, .header-5 {
+	@include font-size($font-size * 1.5);
+}
+h6 {
+	font-size: 1rem;
 }
 
 .display-1,.display-2,.display-3,.display-4 {
@@ -54,30 +62,30 @@ h4,h5 {
 	direction: ltr;
 }
 
-@each $bp in $breakpoints-prefix {
-	$curr: $bp;
-		
-	@include breakpoint($curr) {
-		.text-align-right-#{$curr} {
-			text-align: right; 
-		}
-		.text-align-left-#{$curr} {
-			text-align: left;
-		}
-		.text-align-center-#{$curr} {
-			text-align: center;
-		}
-		.text-align-justify-#{$curr} {
-			text-align: justify;
-		}
-		.rtl-#{$curr} {
-			direction: rtl;
-		}
-		.ltr-#{$curr}  {
-			direction: ltr;
-		}
-	}
-}
+//@each $bp in $breakpoints-prefix {
+//	$curr: $bp;
+//		
+//	@include breakpoint($curr) {
+//		.text-align-right-#{$curr} {
+//			text-align: right; 
+//		}
+//		.text-align-left-#{$curr} {
+//			text-align: left;
+//		}
+//		.text-align-center-#{$curr} {
+//			text-align: center;
+//		}
+//		.text-align-justify-#{$curr} {
+//			text-align: justify;
+//		}
+//		.rtl-#{$curr} {
+//			direction: rtl;
+//		}
+//		.ltr-#{$curr}  {
+//			direction: ltr;
+//		}
+//	}
+//}
 
 .capitalized { 
 	text-transform: capitalized; 
@@ -103,7 +111,6 @@ h4,h5 {
 	background-color: map-get($color-list, yellow);
 	padding: 2px;
 }
-
 .screenreader {
   display: none;
   @media speech {
@@ -133,7 +140,7 @@ ul {
 		padding: 0;
 		list-style-type: none;
 	}
-	&.horizontal, &.list-horizontal {
+	&.list-horizontal {
 		list-style-type: none;
 		padding: 0;
 		margin: 0;

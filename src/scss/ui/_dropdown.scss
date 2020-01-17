@@ -17,7 +17,8 @@ $dropdownconfig: (
     'shadow': 0 6px 12px rgba(0,0,0,0.18),
     'sub-shadow': 1px 6px 10px -6px rgba(0,0,0,0.18),
     'divider': $color-grey,
-    'padding': 6px 14px 
+    'padding': 6px 14px,
+    'min-width': 156px 
 
 ) !default;
 .dropdown { 
@@ -30,7 +31,7 @@ $dropdownconfig: (
     .dropdown-menu, .dropdown-menu ul {
         list-style: none;
         margin: 0;
-        padding: 0;
+        padding: 5px;
         background-color: #fff;
         background-clip: padding-box;
         border: 1px solid map-get($dropdownconfig, border-color);
@@ -42,7 +43,7 @@ $dropdownconfig: (
         display: none;
         white-space: nowrap;
 		z-index: 1000;
-        min-width: 148px;
+        min-width: map-get($dropdownconfig, min-width);
 
 		&.pin-right {
 			left: auto;
@@ -87,6 +88,7 @@ $dropdownconfig: (
                     outline: none;
                     background-color: map-get($dropdownconfig, hover);
                     color: map-get($dropdownconfig, hover-color);
+                    @include prefix(border-radius, map-get($dropdownconfig, border-radius) )
                 }
             }
 
@@ -128,11 +130,11 @@ $dropdownconfig: (
             }
 
             &:first-child > a {
-                @include prefix(border-radius, map-get($dropdownconfig, border-radius) map-get($dropdownconfig, border-radius) 0 0);
+                //@include prefix(border-radius, map-get($dropdownconfig, border-radius) map-get($dropdownconfig, border-radius) 0 0);
                 //border-radius: 2px 2px 0 0;
             }
             &:last-child > a {
-                @include prefix(border-radius, 0 0 map-get($dropdownconfig, border-radius) map-get($dropdownconfig, border-radius) );
+                //@include prefix(border-radius, 0 0 map-get($dropdownconfig, border-radius) map-get($dropdownconfig, border-radius) );
                 //border-radius: 0 0 2px 2px;
             }
 
@@ -155,15 +157,16 @@ $dropdownconfig: (
     // Colors
     @each $colorName, $colorValue in $color-list {
 
-        $colorInverted: findColorInvert($colorValue);
-        $colorLighter: lighten($colorValue,30%);
+        
+        $colorLighter: lighten($colorValue,5%);
+        $colorInverted: findColorInvert($colorLighter);
 
         &.#{""+$colorName+""} .dropdown-menu li {
             a {
                 color: $colorValue;
                 &:hover, &:active, &:focus {
-                    //background-color: $colorLighter;
-                    background-color: $colorValue;
+                    //background-color: rgba($colorValue,.8);
+                    background-color: $colorLighter;
                     color: $colorInverted;
                 }
             }

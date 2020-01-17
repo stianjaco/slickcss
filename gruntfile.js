@@ -57,7 +57,7 @@ module.exports = function( grunt ) {
 				},
 				src: ['src/js/dropdownmenu.js'],
 				dest: 'dist/js/dropdownmenu.js'
-			},
+			}/*,
 			tabs: {
 				options:{
 					transform: [['babelify', { presets: "es2015" }]],
@@ -68,7 +68,7 @@ module.exports = function( grunt ) {
 				},
 				src: ['src/js/tabs.js'],
 				dest: 'dist/js/tabs.js'
-			}
+			}*/
 		},
 		// Minify and compress
 		uglify: {
@@ -79,8 +79,7 @@ module.exports = function( grunt ) {
 				files: [
 					{
 						'dist/js/dropdownmenu.min.js' : ['dist/js/dropdownmenu.js'],
-						'dist/js/slickmasonry.min.js' : ['dist/js/slickmasonry.js'],
-						'dist/js/tabs.min.js' : ['dist/js/slickmasonry.js'],
+						'dist/js/slickmasonry.min.js' : ['dist/js/slickmasonry.js']
 					}
 				]
 			}

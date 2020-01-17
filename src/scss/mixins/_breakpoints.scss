@@ -1,5 +1,3 @@
-@import '../config/breakpoints';
-
 @mixin breakpoint( $min, $max:null ) {
   
   $vp: $breakpoints-prefix;

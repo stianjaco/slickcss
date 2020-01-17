@@ -1,8 +1,5 @@
-@import '../config/colors';
-@import '../config/ui';
-@import '../mixins/helpers';
-
 $colorDarker: darken($color-primary,5%);
+
 %ui-form-input {
   border: 1px solid $color-grey;
   background-color: #fff;
@@ -58,10 +55,6 @@ $colorDarker: darken($color-primary,5%);
         @extend %ui-form-input;      
         min-height: 42px;
         height: 42px;
-
-        
-
-        
     }
     textarea {
       @extend %ui-form-input; 
@@ -161,15 +154,75 @@ $colorDarker: darken($color-primary,5%);
 
       }
     }
-  
+
+    // Range slider
+    $track-w: 100%;
+    $track-h: 6px;
+    $thumb-d: 18px;
+
+    @mixin track() {
+        box-sizing: border-box;
+        border: none;
+        width: $track-w; 
+        height: $track-h;
+        background: lighten($color-grey, 5%);
+    }
+
+    @mixin thumb() {
+        box-sizing: border-box;
+        border: none;
+        width: $thumb-d; 
+        height: $thumb-d;
+        border-radius: 50%;
+        background: lighten($color-primary, 5%);
+        cursor: pointer;
+    }
+
+    [type='range'] {
+        &, &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+        }
+        
+        margin: 0;
+        padding: 0;
+        width: $track-w; 
+        height: $thumb-d;
+        background: transparent;
+        font: 1em/1 arial, sans-serif;
+        
+        &::-webkit-slider-runnable-track {
+            @include track
+        }
+        &::-moz-range-track { @include track }
+        &::-ms-track { @include track }
+        
+        &::-webkit-slider-thumb {
+            margin-top: .5*($track-h - $thumb-d);
+            @include thumb
+        }
+        &::-moz-range-thumb { @include thumb }
+        &::-ms-thumb {
+            margin-top: 0;
+            @include thumb
+        }
+
+        &:focus {
+          outline: none;
+          &::-webkit-slider-thumb {
+            background: $color-primary;
+          }
+        }
+        
+        &::-ms-tooltip { display: none }
+    }
     
 
     // RADIO's
     input[type=checkbox], 
     input[type=radio] {
         display: inline-block;
-        height: 16px ;
-        width: 16px;
+        height: 18px;
+        width: 18px;
         border: 1px solid $color-grey;
         overflow: hidden;
         margin: -4px 0 0 0;
@@ -215,8 +268,8 @@ $colorDarker: darken($color-primary,5%);
         border-width: 0 2px 2px 0;
         transform: rotate(45deg);
         position: relative;
-        top: 0;
-        left: 4px;
+        top: 1px;
+        left: 5px;
       }
       &:disabled {
         border-color: $color-grey;
@@ -245,7 +298,7 @@ $colorDarker: darken($color-primary,5%);
             content: '';
             width: 10px;
             height: 10px;
-            margin: 2px auto 0;
+            margin: 3px auto 0;
             border-radius: 50%;
             background: $color-primary;
             float: none;

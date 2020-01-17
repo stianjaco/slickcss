@@ -1,12 +1,6 @@
-@import '../config/colors';
-@import '../config/ui';
-@import '../mixins/helpers';
-
 %ui-button {
 	position:relative;
 	white-space: nowrap;
-	display: -moz-inline-stack;
-	display: inline-block;
 	vertical-align: middle;
 	*vertical-align: auto;
 	zoom: 1;
@@ -32,6 +26,11 @@
 	-webkit-touch-callout: none;
 	@include prefix(user-select, none);
 	@include prefix(box-sizing, border-box);
+
+	@include inline-flex;
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
+	@include align-items(center);
 
 	&:hover {
 		background-color: $btn-normal-hover-bg;
@@ -92,17 +91,20 @@ input[type='reset'].#{$ui-class-prefix}-button {
 
 	
 
-	&.icon-pos-right i,
-	&.icon-pos-right svg {
-		margin-left: .4em;
+	&.icon-pos-right, &.icon-right {
+		> i, > svg, > .fa-wrapper, > .icon {
+			margin-left: .2em;
+		}
 	}
-	&.icon-pos-left i,
-	&.icon-pos-left svg {
-		margin-right: .4em;
+	&.icon-pos-left, &.icon-left {
+		> i, > svg, > .fa-wrapper, > .icon {
+			margin-right: .2em;
+		}
 	}
 
-	> i, > svg, > .fa-wrapper {
+	> i, > svg, > .fa-wrapper, > .icon {
 		color: inherit;
+		font-size: 1.25em;
 	}
 
 	// BUTTON SIZES 

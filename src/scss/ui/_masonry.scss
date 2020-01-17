@@ -1,0 +1,83 @@
+$masonry-gutter: 8px !default;
+$masonry-height: 250px !default;
+$masonry-minwidth: 150px !default;
+$breakpoints-rev: reverse($breakpoints-prefix);
+
+
+.masonry {
+	@include flexbox;
+	@include flex-flow(column wrap);
+  	margin-left: -$masonry-gutter;
+  	width: 100%;
+
+  	// Default size without spesifications (3,2,1)
+  	.masonry-brick {
+    	overflow: hidden;
+    	margin: 0 0 $masonry-gutter $masonry-gutter;
+    	position: relative;
+    	width: 33.33333%;
+    	
+    	@include breakpoint_between(sm) {
+      		width: 50%;
+    	}
+    	@include breakpoint_between(xs) {
+      		width: 100%;
+    	}
+  	}
+
+  	@for $i from 2 through 6 {
+		&.size-#{$i} {
+			.masonry-brick {
+				width: 100/$i + 0%;
+				@include breakpoint_between(sm) {
+		      		width: 50%;
+		    	}
+		    	@include breakpoint_between(xs) {
+		      		width: 100%;
+		      		
+		    	}
+			}
+		}
+	}
+  
+  	@each $bp in $breakpoints-rev {
+		$curr: $bp;
+		
+		@include breakpoint($curr) {
+			@for $i from 2 through 6 {
+				&.size-#{$i}-#{$bp} {
+					.masonry-brick {
+						width: 100/$i + 0%;
+					}
+				}
+			}
+		}
+		
+    }
+
+}
+
+.masonry_vertical {
+	@include flexbox;
+	@include flex-flow(row wrap);
+  	margin-left: -$masonry-gutter;
+  	width: 100%;
+
+  	// Default size without spesifications (3,2,1)
+  	.masonry-brick {
+  		@include flex(auto);
+		height: $masonry-height;
+  		min-width: $masonry-minwidth;
+    	margin: 0 0 $masonry-gutter $masonry-gutter;
+    	position: relative;
+    	width: 33.33333%;
+    	
+    	@include breakpoint_between(sm) {
+      		width: 50%;
+    	}
+    	@include breakpoint_between(xs) {
+      		width: 100%;
+    	}
+  	}
+
+}

@@ -3,28 +3,18 @@ $color-list: (
 	primary:  #3273dc,
 	secondary: #fa735d,
 	danger: #e44433,
-	warning: #f1c40f,
+	warning: #f1bc0f,
 	info: #45aaf2,
 	success: #2ecd6f,
 	attention: #00d1b2,
-	light: #f8f9fa,
-	light-grey: #fafafa,
-	grey: #d8dcdf,
-	dark-grey: #9e9e9e,
+	grey: #d6d6d6,
 	dark: #333,
 	white: #fff,
 	black: #000, 
 	red: #fb6d60,
 	blue: #2fa1ef,
 	green: #2ecd6f,
-	yellow: #ffcd03, 
-	orange: #ff9e07,
-	purple: #9b57b5,
-	pink: #ff969d,
-	brown: #a28570, 
-	mint: #abf0d2, 
-	navy: #4854b3,
-	lime: #c4ec49,
+	yellow: #ffcd03
 ) !default;
 
 // ALIAS
@@ -32,7 +22,8 @@ $color-primary: map-get($color-list, primary) !default;
 $color-secondary: map-get($color-list, secondary) !default;
 
 $color-grey: map-get($color-list, grey) !default;
-$color-lightgrey: map-get($color-list, light-grey) !default;
+$color-lightgrey: lighten(map-get($color-list, grey),5%) !default;
+$color-darkgrey: darken(map-get($color-list, grey),8%) !default;
 
 $color-danger: map-get($color-list, danger) !default;
 $color-warning: map-get($color-list, warning) !default;

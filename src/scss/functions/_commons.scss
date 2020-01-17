@@ -43,16 +43,16 @@
 
 @function calculateRem($size) {
   $self_base_size: 16px;
-  @if variable-exists(base-size) {
-    $self_base_size: $base-size;
+  @if variable-exists(font-size) {
+    $self_base_size: $font-size;
   }
   $remSize: $size / $self_base_size;
   @return $remSize * 1rem;
 }
 @function calculateEm($size) {
   $self_base_size: 16px;
-  @if variable-exists(base-size) {
-    $self_base_size: $base-size;
+  @if variable-exists(font-size) {
+    $self_base_size: $font-size;
   }
   $emSize: $size / $self_base_size;
   @return $emSize * 1em;
@@ -66,8 +66,8 @@
 
 @function rem-to-px($size) {
   $self_base_size: 16px;
-  @if variable-exists(base-size) {
-    $self_base_size: $base-size;
+  @if variable-exists(font-size) {
+    $self_base_size: $font-size;
   }
 
   $value: parseInt($size) * $self_base_size;

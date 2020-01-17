@@ -1,0 +1,72 @@
+.form-group {
+    @include flexbox;
+    @include justify-content(flex-start);   
+    margin-bottom: .5rem;
+
+    > label, .input-label {
+        @include flexbox;
+        @include justify-content(center);
+        @include flex-direction(column);
+        padding-right: .8em;
+        width: 33%;
+        max-width: 245px;
+        min-width: 80px;
+        @include flex(0 1 auto);
+        height: 42px;
+        line-height: 1.2em;
+    }
+    .input-field {
+        @include flexbox;
+        @include flex(1 1 auto);
+        @include justify-content(center);
+        &.fill {
+            position: relative;
+            @include flex-direction(column);
+
+            input[type=text], 
+            input[type=password], 
+            input[type=email], 
+            input[type=url], 
+            input[type=date], 
+            input[type=month], 
+            input[type=time], 
+            input[type=datetime], 
+            input[type=datetime-local], 
+            input[type=week], 
+            input[type=number], 
+            input[type=search], 
+            input[type=tel], 
+            input[type=color],
+            textarea,
+            select {
+                width: 100%;
+            }
+        }
+    }
+
+    .help-text {
+        display: block;
+        margin: .4rem 0;
+        line-height: 1;
+        @include font-size(13px);
+    }
+
+    // Vertical group
+    &.vertical {
+        @include flex-direction(column);
+        > label, .input-label {
+            margin-bottom: .5rem;
+            height: auto;
+        }
+    }
+    &.valign-top {
+		@include align-items(flex-start);
+	}
+	&.valign-center {
+		@include align-items(center);
+	}
+	&.valign-bottom {
+		@include align-items(flex-end);
+	}
+}
+
