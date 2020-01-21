@@ -45,6 +45,7 @@
 @each $colorName, $color in $color-list {
   .bg-#{""+$colorName+""} {
     background-color: $color !important;
+    color: findColorInvert($color);
   }
   .text-#{""+$colorName+""} {
     color: $color !important;

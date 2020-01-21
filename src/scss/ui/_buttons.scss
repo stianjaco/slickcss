@@ -20,9 +20,8 @@
 	border: none;
 	cursor: pointer;
 	text-align:center;
-	-ms-touch-action: manipulation;
-  	touch-action: manipulation;
-  	-webkit-filter: blur(0);
+	@include prefix(touch-action, manipulation);
+	@include prefix(filter, blur(0));
 	-webkit-touch-callout: none;
 	@include prefix(user-select, none);
 	@include prefix(box-sizing, border-box);
@@ -45,9 +44,6 @@
 	}
 	&:focus {
 		outline: none;
-	}
-	&:last-of-type { 
-		margin-right: 0; 
 	}
 }
 
@@ -365,6 +361,9 @@ input[type='reset'].#{$ui-class-prefix}-button {
         align-items: center;
 	}
 	
+}
+.#{$ui-class-prefix}-button:last-of-type {
+	margin-right: 0; 
 }
 
 .btn-wrapper {

@@ -1,0 +1,15 @@
+%ui-label {
+    display: inline-block;
+    padding: .2rem .5rem;
+    font-size: .65rem;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    @include prefix(border-radius, 3px);
+    color: findColorInvert($color-primary); 
+    background-color: $color-primary;
+}
+.ui-label {
+    @extend %ui-label;
+}

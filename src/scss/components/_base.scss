@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  @include font-size($font-size);
+  font-size: $font-size;
   color: $text-color;
 }
 body { 

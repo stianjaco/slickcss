@@ -3214,6 +3214,7 @@ template {
 
 .bg-primary {
   background-color: #3273dc !important;
+  color: #fff;
 }
 
 .text-primary {
@@ -3226,6 +3227,7 @@ template {
 
 .bg-secondary {
   background-color: #fa735d !important;
+  color: #fff;
 }
 
 .text-secondary {
@@ -3238,6 +3240,7 @@ template {
 
 .bg-danger {
   background-color: #e44433 !important;
+  color: #fff;
 }
 
 .text-danger {
@@ -3250,6 +3253,7 @@ template {
 
 .bg-warning {
   background-color: #f1bc0f !important;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .text-warning {
@@ -3262,6 +3266,7 @@ template {
 
 .bg-info {
   background-color: #45aaf2 !important;
+  color: #fff;
 }
 
 .text-info {
@@ -3274,6 +3279,7 @@ template {
 
 .bg-success {
   background-color: #2ecd6f !important;
+  color: #fff;
 }
 
 .text-success {
@@ -3286,6 +3292,7 @@ template {
 
 .bg-attention {
   background-color: #00d1b2 !important;
+  color: #fff;
 }
 
 .text-attention {
@@ -3298,6 +3305,7 @@ template {
 
 .bg-grey {
   background-color: #d6d6d6 !important;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .text-grey {
@@ -3310,6 +3318,7 @@ template {
 
 .bg-dark {
   background-color: #333 !important;
+  color: #fff;
 }
 
 .text-dark {
@@ -3322,6 +3331,7 @@ template {
 
 .bg-white {
   background-color: #fff !important;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .text-white {
@@ -3334,6 +3344,7 @@ template {
 
 .bg-black {
   background-color: #000 !important;
+  color: #fff;
 }
 
 .text-black {
@@ -3346,6 +3357,7 @@ template {
 
 .bg-red {
   background-color: #fb6d60 !important;
+  color: #fff;
 }
 
 .text-red {
@@ -3358,6 +3370,7 @@ template {
 
 .bg-blue {
   background-color: #2fa1ef !important;
+  color: #fff;
 }
 
 .text-blue {
@@ -3370,6 +3383,7 @@ template {
 
 .bg-green {
   background-color: #2ecd6f !important;
+  color: #fff;
 }
 
 .text-green {
@@ -3382,6 +3396,7 @@ template {
 
 .bg-yellow {
   background-color: #ffcd03 !important;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .text-yellow {

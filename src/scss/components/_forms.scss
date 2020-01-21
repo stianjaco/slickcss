@@ -1,48 +1,42 @@
+.input-label {
+    @include flexbox;
+    @include justify-content(center);
+    @include flex-direction(column);
+    padding-right: .8em;
+    width: 33%;
+    max-width: 245px;
+    min-width: 80px;
+    @include flex(0 1 auto);
+    height: 42px;
+    line-height: 1.2em;
+}
+.form-control {
+    @include flexbox;
+    @include flex(1 1 auto);
+    @include justify-content(flex-start);
+    @include align-items(center);
+    
+    &.fill {
+        position: relative;
+        @include flex-direction(column);
+        @include align-items(flex-start);
+
+        > input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]),
+        > textarea,
+        > select {
+            width: 100%;
+        }
+    }
+}
+
 .form-group {
     @include flexbox;
     @include justify-content(flex-start);   
     margin-bottom: .5rem;
 
-    > label, .input-label {
-        @include flexbox;
-        @include justify-content(center);
-        @include flex-direction(column);
-        padding-right: .8em;
-        width: 33%;
-        max-width: 245px;
-        min-width: 80px;
-        @include flex(0 1 auto);
-        height: 42px;
-        line-height: 1.2em;
-    }
-    .input-field {
-        @include flexbox;
-        @include flex(1 1 auto);
-        @include justify-content(center);
-        &.fill {
-            position: relative;
-            @include flex-direction(column);
-
-            input[type=text], 
-            input[type=password], 
-            input[type=email], 
-            input[type=url], 
-            input[type=date], 
-            input[type=month], 
-            input[type=time], 
-            input[type=datetime], 
-            input[type=datetime-local], 
-            input[type=week], 
-            input[type=number], 
-            input[type=search], 
-            input[type=tel], 
-            input[type=color],
-            textarea,
-            select {
-                width: 100%;
-            }
-        }
-    }
+    > label {
+        @extend .input-label;
+    }   
 
     .help-text {
         display: block;
@@ -58,6 +52,12 @@
             margin-bottom: .5rem;
             height: auto;
         }
+        .form-control {
+            @include flexbox;
+            @include flex(1 1 auto);
+            @include flex-direction(column);
+            @include justify-content(flex-start);
+        }
     }
     &.valign-top {
 		@include align-items(flex-start);
@@ -70,3 +70,65 @@
 	}
 }
 
+
+// .input-group > .form-control 
+// .input-group > .append 
+// .input-group > .prepend  
+
+.input-group {
+    position: relative;
+    width: 100%;
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include align-items(stretch);
+
+    .form-control {
+        position: relative;
+        @include flex(1 1 0%);
+        min-width: 0;
+        width: 100%;
+        margin: 0;
+
+        > input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]),
+        > textarea,
+        > select {
+            width: 100%;
+        }
+
+        &:not(:first-child) {
+            > input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]),
+            > textarea,
+            > select {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+        &:not(:last-child) {
+            > input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]),
+            > textarea,
+            > select {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+
+    }
+
+    .addon {
+        @include flexbox;
+        @include align-items(center);
+        padding: 0 8px;
+        line-height: 1;
+        cursor: pointer;
+        @include prefix(border-radius, 3px);
+
+        &:not(:first-child) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        &:not(:last-child) {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+}
