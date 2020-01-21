@@ -5182,7 +5182,7 @@ code[title] {
 }
 
 .ui-button:last-of-type {
-  margin-right: 0;
+  margin-right: 0 !important;
 }
 
 .btn-wrapper {

@@ -363,7 +363,7 @@ input[type='reset'].#{$ui-class-prefix}-button {
 	
 }
 .#{$ui-class-prefix}-button:last-of-type {
-	margin-right: 0; 
+	margin-right: 0 !important; 
 }
 
 .btn-wrapper {
