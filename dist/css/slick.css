@@ -5394,7 +5394,6 @@ code[title] {
 }
 .ui-form textarea {
   resize: vertical;
-  min-height: 150px !important;
 }
 .ui-form select {
   cursor: pointer;

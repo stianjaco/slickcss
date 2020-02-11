@@ -61,8 +61,6 @@ $input-padding-horizontal: 8px !default;
     textarea {
       @extend %ui-form-input; 
       resize: vertical;
-      min-height: 150px !important;
-
     }
 
     select {
