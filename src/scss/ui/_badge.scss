@@ -48,41 +48,43 @@
         @include prefix(border-radius,40px);
     }
     &.round {
-        width: 28px;
-        height: 28px;
-        line-height: 28px;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
         vertical-align: middle;
         text-align: center;
         border-radius: 50%;
         padding: 0 !important;
+        @include font-size(12px);
+        letter-spacing: -0.25px;
         &.size-xs {
-            height: 18px;
-            line-height: 18px;
-            width: 18px;
+            height: 16px;
+            line-height: 16px; 
+            width: 16px;
             @include font-size(8px);
         }
         &.size-sm {
-            height: 22px;
-            line-height: 22px;
-            width: 22px;
+            height: 18px;
+            line-height: 18px;
+            width: 18px;
             @include font-size(12px);
         }
         &.size-md {
-            height: 32px;
-            line-height: 32px;
-            width: 32px;
+            height: 28px;
+            line-height: 28px;
+            width: 28px;
             @include font-size(18px);
         }
         &.size-lg {
-            height: 46px;
-            line-height: 46px;
-            width: 46px;
+            height: 32px;
+            line-height: 32px;
+            width: 32px;
             @include font-size(22px);
         }
         &.size-xl {
-            height: 64px;
-            line-height: 64px;
-            width: 64px;
+            height: 48px;
+            line-height: 48px;
+            width: 48px;
             @include font-size(28px);
         }
 

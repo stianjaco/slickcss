@@ -345,7 +345,7 @@ html {
 
 body {
   font-size: 1rem;
-  line-height: 1.4em;
+  line-height: 1.5em;
   letter-spacing: 1px;
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   overflow-x: hidden;
@@ -3117,6 +3117,15 @@ img {
   height: 42px;
   line-height: 1.2em;
 }
+.input-label.size-xs, .form-group > label.size-xs {
+  color: #969696;
+  font-size: .65rem;
+  text-transform: uppercase;
+}
+.input-label.size-sm, .form-group > label.size-sm {
+  color: #969696;
+  font-size: .85rem;
+}
 
 .form-control {
   display: -webkit-box;
@@ -3174,12 +3183,14 @@ img {
   justify-content: flex-start;
   margin-bottom: .5rem;
 }
-.form-group .help-text {
-  display: block;
-  margin: .4rem 0;
-  line-height: 1;
-  font-size: 13px;
-  font-size: 0.8125rem;
+.form-group.inline {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: .5rem;
+  margin-bottom: 0;
 }
 .form-group.vertical {
   -webkit-box-direction: normal;
@@ -3192,6 +3203,7 @@ img {
 .form-group.vertical > label, .form-group.vertical .input-label, .form-group.vertical .form-group > label {
   margin-bottom: .5rem;
   height: auto;
+  width: 100%;
 }
 .form-group.vertical .form-control {
   display: -webkit-box;
@@ -3216,6 +3228,11 @@ img {
   -webkit-justify-content: flex-start;
   -moz-justify-content: flex-start;
   justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  align-items: flex-start;
 }
 .form-group.valign-top {
   -webkit-box-align: start;
@@ -3237,6 +3254,13 @@ img {
   -webkit-align-items: flex-end;
   -moz-align-items: flex-end;
   align-items: flex-end;
+}
+.form-group .help-text {
+  display: block;
+  margin: .4rem 0;
+  line-height: 1;
+  font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 .input-group {
@@ -5386,6 +5410,7 @@ code[title] {
   background-position: 99% center;
   background-clip: border-box;
   min-width: 63px;
+  padding: 6px 24px 6px 8px;
 }
 .ui-form select::-ms-expand {
   display: none;
@@ -5399,6 +5424,7 @@ code[title] {
 .ui-form select[multiple] {
   background: #fff;
   min-height: 112px;
+  padding: 4px;
 }
 .ui-form select[multiple] option {
   padding: 6px 8px;
@@ -7663,46 +7689,49 @@ ul.ui-pagination.yellow > li.current-page > a, ul.ui-pagination.yellow > li a:ac
   border-radius: 40px;
 }
 .round.ui-badge {
-  width: 28px;
-  height: 28px;
-  line-height: 28px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
   vertical-align: middle;
   text-align: center;
   border-radius: 50%;
   padding: 0 !important;
+  font-size: 12px;
+  font-size: 0.75rem;
+  letter-spacing: -0.25px;
 }
 .round.size-xs.ui-badge {
-  height: 18px;
-  line-height: 18px;
-  width: 18px;
+  height: 16px;
+  line-height: 16px;
+  width: 16px;
   font-size: 8px;
   font-size: 0.5rem;
 }
 .round.size-sm.ui-badge {
-  height: 22px;
-  line-height: 22px;
-  width: 22px;
+  height: 18px;
+  line-height: 18px;
+  width: 18px;
   font-size: 12px;
   font-size: 0.75rem;
 }
 .round.size-md.ui-badge {
-  height: 32px;
-  line-height: 32px;
-  width: 32px;
+  height: 28px;
+  line-height: 28px;
+  width: 28px;
   font-size: 18px;
   font-size: 1.125rem;
 }
 .round.size-lg.ui-badge {
-  height: 46px;
-  line-height: 46px;
-  width: 46px;
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
   font-size: 22px;
   font-size: 1.375rem;
 }
 .round.size-xl.ui-badge {
-  height: 64px;
-  line-height: 64px;
-  width: 64px;
+  height: 48px;
+  line-height: 48px;
+  width: 48px;
   font-size: 28px;
   font-size: 1.75rem;
 }
@@ -8636,9 +8665,8 @@ ul.ui-breadcrumbs li:not(:last-child):after {
 
 .ui-label {
   display: inline-block;
-  padding: .2rem .5rem;
-  font-size: .65rem;
-  text-transform: uppercase;
+  padding: .3em .6em;
+  font-size: inherit;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -8649,6 +8677,31 @@ ul.ui-breadcrumbs li:not(:last-child):after {
   border-radius: 3px;
   color: #fff;
   background-color: #3273dc;
+}
+
+.ui-label.size-xs {
+  font-size: 10px;
+  font-size: 0.625rem;
+  padding: .2em .8em;
+}
+.ui-label.size-sm {
+  font-size: 12px;
+  font-size: 0.75rem;
+  padding: .2em .8em;
+}
+.ui-label.size-md {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+.ui-label.size-lg {
+  font-size: 22px;
+  font-size: 1.375rem;
+  padding: .4em .8em;
+}
+.ui-label.size-xl {
+  font-size: 28px;
+  font-size: 1.75rem;
+  padding: .4em .8em;
 }
 
 .ui-card {

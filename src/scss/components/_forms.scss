@@ -9,6 +9,16 @@
     @include flex(0 1 auto);
     height: 42px;
     line-height: 1.2em;
+
+    &.size-xs {
+        color: darken($color-grey, 25%);
+        font-size: .65rem;
+        text-transform: uppercase;
+    }
+    &.size-sm {
+        color: darken($color-grey, 25%);
+        font-size: .85rem;
+    }
 }
 .form-control {
     @include flexbox;
@@ -34,29 +44,29 @@
     @include justify-content(flex-start);   
     margin-bottom: .5rem;
 
-    > label {
-        @extend .input-label;
-    }   
-
-    .help-text {
-        display: block;
-        margin: .4rem 0;
-        line-height: 1;
-        @include font-size(13px);
+    &.inline {
+        @include inline-flex;
+        margin-right: .5rem;
+        margin-bottom: 0;
     }
+
+    
 
     // Vertical group
     &.vertical {
         @include flex-direction(column);
+        
         > label, .input-label {
             margin-bottom: .5rem;
             height: auto;
+            width:100%;
         }
         .form-control {
             @include flexbox;
             @include flex(1 1 auto);
             @include flex-direction(column);
             @include justify-content(flex-start);
+            @include align-items(flex-start);
         }
     }
     &.valign-top {
@@ -67,7 +77,18 @@
 	}
 	&.valign-bottom {
 		@include align-items(flex-end);
-	}
+    }
+    
+    > label {
+        @extend .input-label;
+    }   
+
+    .help-text {
+        display: block;
+        margin: .4rem 0;
+        line-height: 1;
+        @include font-size(13px);
+    }
 }
 
 

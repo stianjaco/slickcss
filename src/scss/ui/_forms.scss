@@ -1,10 +1,12 @@
 $colorDarker: darken($color-primary,5%);
+$input-padding-vertical: 6px !default;
+$input-padding-horizontal: 8px !default;
 
 %ui-form-input {
   border: 1px solid $color-grey;
   background-color: #fff;
   color: #000;
-  padding: 6px 8px;
+  padding: $input-padding-vertical $input-padding-horizontal;
   margin: 0;
   line-height: 1; 
   max-width: 100%;
@@ -73,11 +75,11 @@ $colorDarker: darken($color-primary,5%);
       background-position: 99% center;
       background-clip: border-box;
       min-width: 63px;
-
+      padding: $input-padding-vertical $input-padding-horizontal*3 $input-padding-vertical $input-padding-horizontal;
       &::-ms-expand {
         display: none;
       }
-
+      
       option:not([disabled]) {
           color: #000;
       }
@@ -89,9 +91,9 @@ $colorDarker: darken($color-primary,5%);
       &[multiple] {
         background: #fff;
         min-height: 112px;
-
+        padding: 4px;
         option {
-          padding: 6px 8px;
+          padding: $input-padding-vertical $input-padding-horizontal;
           line-height: 1; 
           margin-bottom: 1px;
           @include prefix(border-radius, 3px);
