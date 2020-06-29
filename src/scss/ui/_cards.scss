@@ -9,7 +9,8 @@
     word-wrap: break-word;
     overflow: hidden;
     border: 1px solid rgba(0, 0, 0, 0.125);
-    @include prefix(border-radius, 4px);
+    
+    background-color: #fff;
     
     > *:not(:first-child):not(:last-child) {
         @include flex-grow(1);
@@ -18,8 +19,8 @@
         @include flex-shrink(0);
     }
     
-    .card-header, .card-footer, .card-body {
-        background-color: #fff;
+    .card-header, .card-footer, .card-body, .card-contents {
+        
         padding: 10px 15px;
     }
     .card-header {
@@ -30,6 +31,18 @@
     }
     .card-footer {
         border-top: 1px solid rgba(0, 0, 0, 0.125);
+    }
+
+    &.borderless {
+        border: 0;
+
+        .card-header, .card-footer {
+            border: 0;
+        }
+    }
+
+    &.rounded {
+        @include prefix(border-radius, 4px);
     }
 }
 

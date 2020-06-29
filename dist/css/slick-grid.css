@@ -3592,6 +3592,18 @@ h6 {
   font-size: 2.875rem;
 }
 
+.text-size-md {
+  font-size: 1.2rem;
+}
+
+.text-size-sm {
+  font-size: .8rem;
+}
+
+.text-size-xs {
+  font-size: .6rem;
+}
+
 .text-align-right {
   text-align: right;
 }

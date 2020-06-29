@@ -1,3 +1,14 @@
+/*
+
+<form-group>
+    <label>
+    <form-control>
+        <element>
+        <helptext>
+    
+
+*/
+
 .input-label {
     @include flexbox;
     @include justify-content(center);
@@ -25,6 +36,15 @@
     @include flex(1 1 auto);
     @include justify-content(flex-start);
     @include align-items(center);
+
+    
+
+    .help-text {
+        margin: 0 0 0 .6rem; 
+        display: inline-block;
+        line-height: 1;
+        @include font-size(13px);
+    }
     
     &.fill {
         position: relative;
@@ -33,10 +53,22 @@
 
         > input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]),
         > textarea,
-        > select {
+        > select,
+        > .input-group {
             width: 100%;
         }
+
+        .help-text {
+            display: block;
+            margin: .4rem 0;
+            
+        }
+       
     }
+
+    
+
+    
 }
 
 .form-group {
@@ -83,63 +115,53 @@
         @extend .input-label;
     }   
 
-    .help-text {
-        display: block;
-        margin: .4rem 0;
-        line-height: 1;
-        @include font-size(13px);
-    }
+    
 }
 
-
-// .input-group > .form-control 
-// .input-group > .append 
-// .input-group > .prepend  
+label > span:not(:first-child) {
+    margin-left: .3rem;
+}
+// INPUT GROUP
 
 .input-group {
     position: relative;
-    width: 100%;
-    @include flexbox;
+    //width: 100%;
+    @include flexbox; 
     @include flex-wrap(wrap);
     @include align-items(stretch);
+    height: 42px;
 
-    .form-control {
+    > input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]),
+    > textarea,
+    > select {
         position: relative;
         @include flex(1 1 0%);
         min-width: 0;
         width: 100%;
         margin: 0;
+        height: auto;
+        min-height: 100%;
+        
+    }
 
-        > input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]),
-        > textarea,
-        > select {
-            width: 100%;
-        }
-
-        &:not(:first-child) {
-            > input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]),
-            > textarea,
-            > select {
-                border-top-left-radius: 0;
-                border-bottom-left-radius: 0;
-            }
-        }
-        &:not(:last-child) {
-            > input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]),
-            > textarea,
-            > select {
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
-            }
-        }
-
+    > input[type="checkbox"], 
+    > input[type="radio"], 
+    > label, 
+    > span {
+        @include align-self(center);
+        margin-right: .4rem;
+    }
+    > label {
+        margin-right: .6rem;
     }
 
     .addon {
         @include flexbox;
         @include align-items(center);
+        @include align-self(stretch);
         padding: 0 8px;
         line-height: 1;
+        margin: 0 !important;
         cursor: pointer;
         @include prefix(border-radius, 3px);
 
@@ -152,4 +174,23 @@
             border-bottom-right-radius: 0;
         }
     }
+
+    
+    > input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]),
+    > textarea,
+    > select {
+        &:not(:first-child) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+    
+    > input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]),
+    > textarea,
+    > select {
+        &:not(:last-child) {
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+        }
+    }    
 }

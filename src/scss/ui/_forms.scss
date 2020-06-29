@@ -55,8 +55,8 @@ $input-padding-horizontal: 8px !default;
     input[type=color],
     select {
         @extend %ui-form-input;      
-        min-height: 42px;
-        height: 42px;
+        min-height: $form-elements-height;
+        height: $form-elements-height;
     }
     textarea {
       @extend %ui-form-input; 

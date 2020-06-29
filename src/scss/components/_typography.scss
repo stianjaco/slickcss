@@ -43,6 +43,10 @@ h6 {
 	@include font-size(46px);
 }
 
+.text-size-md { font-size: 1.2rem; }
+.text-size-sm { font-size: .8rem; }
+.text-size-xs { font-size: .6rem; }
+
 .text-align-right {
 	text-align: right; 
 }
@@ -202,3 +206,5 @@ pre code {
 code[title] {
 	cursor: help;
 }
+
+
