@@ -1,0 +1,73 @@
+
+
+// APP-LAYOUT 
+.app-container {
+
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	height: 100vh;
+
+	@include flexbox;
+	@include flex-direction(column);
+	
+	color: #f6f6f6;
+	background-color: #121212;
+
+	.app-header,.app-contents, .app-footer {
+		padding: 15px;
+	}
+
+	.app-header {
+		background-color: #222327;
+  		@include flexbox;
+  		@include justify-content(space-between);
+  		@include align-items(center);
+ 		min-height: 65px;
+	}
+
+	.app-contents {
+		overflow-y: auto;
+		@include flex(1);
+
+		&.center-on-screen {
+			@include flexbox;
+  			@include align-items(center);
+		}
+
+	}
+
+	.app-footer {
+		background-color: #222327;
+	}
+
+
+	// ELEMENTS WITHING APP
+
+
+	.list-layout {
+		padding-left: 20px;
+		list-style-type: none;
+		font-size: 20px;
+		width: 100%;
+
+		li {
+			@include flexbox;
+			@include align-items(center);
+			margin-bottom: 25px;
+
+			span, a {
+				display: block;
+			}
+		}
+
+		&.align-center li {
+			text-align: center;
+		}
+	}
+
+
+
+
+
+}

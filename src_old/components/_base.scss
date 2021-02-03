@@ -1,0 +1,72 @@
+html {
+  box-sizing: border-box;
+  font-size: $font-size;
+  color: $text-color;
+}
+body { 
+	font-size: 1rem;
+	line-height: 1.5em;
+	letter-spacing: 1px; 
+  font-family: $font-primary;
+  overflow-x: hidden;
+}
+html,body {
+	height: 100%;
+	min-height:100%;
+	position: relative;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a { 
+	color: inherit; 
+	text-decoration: underline; 
+	@include transition(color .1s ease, border .1s ease, font-weight .1s ease, background .1s ease);
+	&:link { color: $link-color-normal; }
+	&:visited { color: $link-color-visited; }
+}
+a:hover {
+	color: $link-color-hover;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,th {
+  border: none;
+  padding: 4px 8px;
+  text-align: left;
+}
+th {
+  vertical-align: top;
+}
+td:first-child,
+th:first-child {
+  padding-left: 0;
+}
+td:last-child,
+th:last-child {
+  padding-right: 0;
+}
+caption {
+  font-size: 1.42857143em;
+  font-style: inherit;
+  font-weight: 500;
+  letter-spacing: -0.008em;
+  line-height: 1.2;
+  margin-top: 28px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+p,li {
+  &:first-of-type { margin-top: 0; }
+  &:last-of-type { margin-bottom: 0; }
+}
+img {
+vertical-align: middle;
+max-width: 100%;
+border-style: none;
+}

@@ -7,16 +7,16 @@ module.exports = function( grunt ) {
 		sass: {
 			dist: {
 				files: {
-					'dist/css/slick-grid.css' : 'src/scss/slick-grid.scss',
-					'dist/css/slick.css' : 'src/scss/slick.scss'
+					'dist/css/slick-grid.css' : 'src/slick-grid.scss',
+					'dist/css/slick.css' : 'src/slick.scss'
 				},
 				options: {
 					loadPath: [
-			          'src/scss/'
+			          'src/'
 			        ],
 					trace: true,
 					style: 'expanded',
-					cacheLocation: 'src/.sass-cache'
+					//cacheLocation: '.sass-cache' // Not working? 
 				} 
 			}
 		},
@@ -32,71 +32,11 @@ module.exports = function( grunt ) {
 				}]
 			}
 		},
-
-		browserify: {
-			dist: {
-				options:{
-					transform: [['babelify', { presets: "es2015" }]],
-	                browserifyOptions: {
-	                    debug: true
-	                }
-				},
-				files: {
-					//"dist/js/dropdownmenu.js": "src/js/dropdownmenu.js",
-					"dist/js/slickmasonry.js": "src/js/slickmasonry.js",
-					//"dist/js/tabs.js": "src/js/tabs.js",
-				},
-			},
-			ddmenu: {
-				options:{
-					transform: [['babelify', { presets: "es2015" }]],
-	                browserifyOptions: {
-						debug: true,
-						standalone: 'slickDropDown'
-	                }
-				},
-				src: ['src/js/dropdownmenu.js'],
-				dest: 'dist/js/dropdownmenu.js'
-			}/*,
-			tabs: {
-				options:{
-					transform: [['babelify', { presets: "es2015" }]],
-	                browserifyOptions: {
-						debug: true,
-						standalone: 'slickTabs'
-	                }
-				},
-				src: ['src/js/tabs.js'],
-				dest: 'dist/js/tabs.js'
-			}*/
-		},
-		// Minify and compress
-		uglify: {
-			options: {
-				manage: false
-			},
-			targets: {
-				files: [
-					{
-						'dist/js/dropdownmenu.min.js' : ['dist/js/dropdownmenu.js'],
-						'dist/js/slickmasonry.min.js' : ['dist/js/slickmasonry.js']
-					}
-				]
-			}
-		},
-		// Clean out the directory
-		clean: {
-			es6Build: ["src/tmp/"],
-		},
-
+		
 		watch: {
 			sass: {
-				files: ['src/scss/**/*.scss'],
+				files: ['src/**/*.scss'],
 				tasks: ['sass','cssmin']
-			},
-			js: {
-				files: ['src/js/**/*.js'],
-				tasks: [/*'jshint',*/'browserify','uglify'],
 			}
 		},
 	}); 
@@ -104,13 +44,8 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-
-	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-browserify');
-	grunt.loadNpmTasks('grunt-contrib-uglify'); 
-	grunt.loadNpmTasks('grunt-contrib-clean');
-
+	
 	grunt.registerTask('default', ['watch']);
-	grunt.registerTask('build', ['sass','cssmin',/*'jshint',*/'browserify','uglify']);
+	grunt.registerTask('build', ['sass','cssmin']);
 
 };

@@ -1,0 +1,477 @@
+%ui-button {
+	position:relative;
+	white-space: nowrap;
+	vertical-align: middle;
+	*vertical-align: auto;
+	zoom: 1;
+	*display: inline;
+	padding: $btn-padding;
+	text-decoration: none;
+	font-weight: normal;
+	margin: 0 4px 0 0;
+	font-family: $btn-font;
+	@include font-size($btn-base-size);
+	min-height: $form-elements-height;
+	line-height: 1;
+	letter-spacing: $btn-letter-spacing;
+	color: $btn-normal-color;
+	background-color: $btn-normal-bg;
+	@include prefix(backface-visibility, hidden);
+	@include transition(background 0.2s ease-out, color 0.2s ease-out, border 0.2s ease-out, box-shadow 0.16s ease); 
+	border: none;
+	cursor: pointer;
+	text-align:center;
+	@include prefix(touch-action, manipulation);
+	@include prefix(filter, blur(0));
+	-webkit-touch-callout: none;
+	@include prefix(user-select, none);
+	@include prefix(box-sizing, border-box);
+
+	@include inline-flex;
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
+	@include align-items(center);
+
+	&:hover {
+		background-color: $btn-normal-hover-bg;
+		color: $btn-normal-hover-color;
+		text-decoration: none !important;
+	}
+	&:active {
+		//text-shadow: 1px 1px 0 rgba(0,0,0,.1);
+		@include prefix(transform, scale(.98));
+		outline: none;
+		text-decoration: none;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+.#{$ui-class-prefix}-button-group {
+	@include flexbox;
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
+	@include align-items(center);
+}
+
+.#{$ui-class-prefix}-button, 
+a.#{$ui-class-prefix}-button, 
+a.#{$ui-class-prefix}-button:link, 
+a.#{$ui-class-prefix}-button:visited,
+button.#{$ui-class-prefix}-button, 
+input[type='button'].#{$ui-class-prefix}-button,
+input[type='submit'].#{$ui-class-prefix}-button,
+input[type='reset'].#{$ui-class-prefix}-button {
+
+	@extend %ui-button;
+	
+
+	.#{$ui-class-prefix}-button-group & {
+		margin-right: 0;
+		@include prefix(border-radius, 0);
+
+		&:active {
+			box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+			@include prefix(transform, scale(1));
+		}
+
+		&:last-child {
+			@include prefix(border-top-right-radius, 3px);
+			@include prefix(border-bottom-right-radius, 3px);
+		}
+		&:first-child {
+			@include prefix(border-top-left-radius, 3px);
+			@include prefix(border-bottom-left-radius, 3px);
+		}
+	}
+
+	
+	&.with-icon {
+		i, .fa-wrapper {
+			color: inherit;
+			font-size: 1em;
+		}
+		&-right {
+			i, .fa-wrapper {
+				margin-left: .2em;
+			}
+		}
+		&-left {
+			i, .fa-wrapper {
+				margin-right: .2em;
+			}
+		}
+	}
+
+	&.icon-pos-right, &.icon-right {
+		> i, > svg, > .fa-wrapper, > .icon {
+			margin-left: .2em;
+		}
+	}
+	&.icon-pos-left, &.icon-left {
+		> i, > svg, > .fa-wrapper, > .icon {
+			margin-right: .2em;
+		}
+	}
+
+	> i, > svg, > .fa-wrapper, > .icon {
+		color: inherit;
+		font-size: 1.25em;
+	}
+
+	// BUTTON SIZES 
+	&.size-xs {
+		padding: .5em 1em;
+		@include font-size($btn-base-size/1.6);
+	}
+	&.size-sm {
+		@include font-size($btn-base-size/1.3);
+	}
+	&.size-md {
+		@include font-size($btn-base-size*1.4);
+	}
+	&.size-lg {
+		@include font-size($btn-base-size*1.8);
+	}
+	&.size-xl {
+		@include font-size($btn-base-size*2.3);
+	}
+	&.is-full {
+		padding-left: 0; 
+		padding-right: 0; 
+		width:100%;
+
+		&:active {
+    		@include prefix(transform, scale(.998));
+  		}
+	}
+	&.is-half { 
+		padding-right: 0; 
+		padding-left: 0; 
+		width:50%; 
+
+		&:active {
+    		@include prefix(transform, scale(.995));
+  		}
+	}
+	&.is-narrow { 
+		padding-left: .8em; 
+		padding-right: .8em;
+	}
+	&.is-wide { 
+		padding-left: 3em; 
+		padding-right: 3em;
+	}
+	&.is-wider { 
+		padding-left: 5em; 
+		padding-right: 5em;
+	}
+
+	// BUTTON STYLES 
+	&.rounded {
+		@include prefix(border-radius, 4px);
+		&.size-xs {  @include prefix(border-radius, 3px); }
+	}
+	&.pill {
+		@include prefix(border-radius, 2em);
+	}
+	&.ghost {
+		background-color: transparent;
+		color: $btn-normal-bg;
+		//border: 1px solid $btn-normal-bg;
+		//box-shadow: none;
+		border: none;
+		box-shadow: inset 0 0 0 1px $btn-normal-bg;
+
+		&:active {
+			text-shadow: none;
+		}
+		&:hover {
+			background-color: $btn-normal-bg;
+			color:$btn-normal-color;
+		}
+		&-inverted {
+			background-color: $btn-normal-bg;
+			color: $btn-normal-color;
+			//border: 1px solid transparent;
+
+			&:active {
+				text-shadow: none;
+			}
+
+			&:hover {
+				background-color: transparent;
+				color: $btn-normal-bg;
+				//border: 1px solid $btn-normal-bg;
+				box-shadow: inset 0 0 0 1px $btn-normal-bg;
+			}
+		}
+	}
+
+	&.silent {
+		background-color: transparent;
+		color: #000;
+		@include transition( background .2s ease); 
+		box-shadow: none !important;
+		border: none !important;
+	}
+
+	&.circle {
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+		width: 100%;
+		height: 0;
+		padding-bottom: 100%;
+		overflow: hidden;
+		text-align: center;
+		@include prefix(border-radius, 50%);
+
+		> em, > i { 
+			font-style: normal; 
+			display: inline-block;
+			width: 100%;
+			padding-top: 50%;
+			padding-bottom: 50%;
+			text-align: center;
+			text-decoration: none;
+			line-height: 2em;
+			margin-top: -1em;
+		}
+		
+		&.icon-pos-right {
+			> i, > svg, > .fa-wrapper i {
+				margin-left: 0;
+			}
+		}
+
+		&.icon-pos-left {
+			> i, > svg, > .fa-wrapper i {
+				margin-right: 0;
+			}
+		}
+	}
+	&.material {
+		box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 2px rgba(0,0,0,.2);
+		overflow:hidden; 
+
+	  	&:hover {
+			box-shadow: 0 0 4px rgba(0,0,0,.12), 1px 3px 4px rgba(0,0,0,.2);
+	  	}
+
+	  	&:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: block;
+			width: 0;
+			padding-top: 0;
+			background-color: rgba(236, 240, 241, .3);
+			@include prefix(border-radius, 100%);
+			@include prefix(transform, translate(-50%, -50%));
+		}
+
+		&:active:before {
+			width: 120%;
+			padding-top: 120%;
+			@include transition(width .2s ease-out, padding-top .2s ease-out); 
+		}
+	}
+	
+
+
+
+	@each $colorName, $colorValue in $color-list {
+
+		$colorInverted: findColorInvert($colorValue);
+		$colorLighter: lighten($colorValue,5%);
+		$colorDarker: darken($colorValue,5%);
+
+		&.#{""+$colorName+""} {
+
+			background-color: $colorValue;
+			color: $colorInverted;
+
+			&:hover {
+				background-color: $colorLighter;
+				color: $colorInverted;
+			}
+			&:active {
+				box-shadow: 0 0 0 2px rgba($colorDarker, 0.2)!important;
+			}
+
+			&.silent {
+				background-color: transparent;
+				border-color: transparent;
+				color: $colorValue;
+				&:hover {
+					background-color: lighten($colorValue, 40%);
+					color: $colorValue;
+				}
+			}
+
+			&.ghost {
+				background-color: transparent;
+				//border-color: $colorValue;
+				border: none;
+				box-shadow: inset 0 0 0 1px $colorValue;
+				color: $colorValue;
+
+				&:hover {
+					background-color: $colorValue;
+					color: $colorInverted;
+				}
+
+				&:active {
+					box-shadow: none;
+					border: none;
+				}
+
+				&-inverted {
+					background-color: $colorValue;
+					color: $colorInverted;
+					box-shadow: none;
+					border: none;
+
+					&:hover {
+						background-color: transparent;
+						color: $colorValue;
+						//border-color: $colorValue;
+						box-shadow: inset 0 0 0 1px $colorValue;
+					}
+				}
+			}
+		}
+
+	}
+
+	&.disabled,&:disabled,&[disabled] {
+		background-color: $btn-disabled-bg;
+		color: $btn-disabled-color;
+		text-shadow: 1px 1px 0 rgba(255,255,255,.5);
+		cursor: not-allowed;
+		pointer-events: none;
+		
+		&:active {
+			text-shadow: 1px 1px 0 rgba(255,255,255,.5);
+			@include prefix(transform, scale(1));
+		}
+
+		&.ghost {
+			border-color: $btn-disabled-border-color;
+
+			&:hover {
+				background-color: $btn-disabled-bg;
+				color: $btn-disabled-color;
+			}
+		}
+	}
+
+	.inner-button {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+    	-ms-flex-align: center;
+        align-items: center;
+	}
+	
+}
+.#{$ui-class-prefix}-button:last-of-type {
+	margin-right: 0 !important; 
+}
+
+.btn-wrapper {
+	white-space: nowrap;
+	display: -moz-inline-stack;
+	display: inline-block;
+	&:after { 
+		content: ""; 
+		display: table; 
+		clear: both; 
+	}
+}
+
+// Switch buttons 
+.ui-switch {
+	@include inline-flex;
+	min-height: $form-elements-height;
+	border-radius: 3px;
+	border: 1px solid $color-grey;
+
+	> button {
+		border: 0;
+		background: #fff;
+		border-right: 1px solid $color-grey;
+		@include flexbox;
+		@include align-content(center);
+		padding: 0 .8rem;
+		cursor: pointer;
+
+		&:first-child {
+			border-radius: 3px 0 0 3px;
+		}
+		&:last-child {
+			border-radius: 0 3px 3px 0;
+			border-right: 0;
+		}
+
+		&:hover,
+		&:active,
+		&.is-active {
+			background-color: #f2f2f2;
+		}
+		&:focus {
+			outline: none;
+		}
+	}	
+}
+
+.ui-icon-button {
+	border: none;
+	background-color: transparent;
+	min-height: 42px;
+	min-width: 42px;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+}
+
+.ui-floating-action {
+	position: fixed;
+	right: 25px;
+	bottom: 25px;
+	z-index: 999;
+}
+.ui-action-button {
+	border: none;
+	width: 56px;
+	height: 56px;
+	line-height: 56px;
+	padding: 0;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	border-radius: 50% 50%;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	text-align: center;
+	background-color: $color-primary;
+	color: findColorInvert($color-primary);
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+
+	> i {
+		line-height: 56px;
+		font-size: 32px;
+	}
+}

@@ -1,6 +1,7 @@
 node_modules/
 src/.sass-cache/
 examples/
+scrapped/
 
 # Dont track these files
 package-lock.json

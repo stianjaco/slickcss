@@ -1,0 +1,39 @@
+@function __columnSize($c) {
+  $o: 100/$columns;
+  $w: $o * $c;
+  @return percentage($w/100);
+}
+
+@mixin __loopColumns($vp) {
+
+  @if $vp != '' { $vp: -#{$vp}; } @else { $vp: ''; } 
+
+   
+  .first#{$vp} {
+  	@include order(-1);
+  }
+
+  .last#{$vp} {
+  	@include order(1); 
+  }
+
+  // Set column size and offset
+  @for $col from 1 through $columns {
+    .col#{$vp}-#{$col} {
+      -ms-flex-preferred-size: __columnSize($col);
+      flex-basis: __columnSize($col);
+      max-width: __columnSize($col);
+    }
+    @if( $col < 12 ) {
+      @if( $col == 1 ) {
+        .col#{$vp}-offset-0 {
+          margin-left: 0;
+        }
+      }
+      .col#{$vp}-offset-#{$col} {
+          margin-left: __columnSize($col);
+      }
+    }
+  }
+
+}

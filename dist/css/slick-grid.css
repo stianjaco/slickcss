@@ -187,9 +187,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -197,9 +197,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -208,9 +208,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -260,8 +260,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -271,8 +271,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -280,7 +280,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -290,7 +290,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -389,7 +389,7 @@ template {
   margin-right: 0;
   margin-left: 0;
 }
-.row.collapsed > [class*="col-"], .row.collapsed > .col, .row.gutter-collapsed > [class*="col-"], .row.gutter-collapsed > .col {
+.row.collapsed > [class*=col-], .row.collapsed > .col, .row.gutter-collapsed > [class*=col-], .row.gutter-collapsed > .col {
   padding-right: 0;
   padding-left: 0;
   padding-bottom: 0;
@@ -398,7 +398,7 @@ template {
   margin-right: -0.1rem;
   margin-left: -0.1rem;
 }
-.row.gutter-small > [class*="col-"], .row.gutter-small > .col {
+.row.gutter-small > [class*=col-], .row.gutter-small > .col {
   padding-right: 0.1rem;
   padding-left: 0.1rem;
   padding-bottom: 0.2rem;
@@ -407,7 +407,7 @@ template {
   margin-right: -0.3rem;
   margin-left: -0.3rem;
 }
-.row.gutter-normal > [class*="col-"], .row.gutter-normal > .col {
+.row.gutter-normal > [class*=col-], .row.gutter-normal > .col {
   padding-right: 0.3rem;
   padding-left: 0.3rem;
   padding-bottom: 0.45rem;
@@ -416,7 +416,7 @@ template {
   margin-right: -0.6rem;
   margin-left: -0.6rem;
 }
-.row.gutter-medium > [class*="col-"], .row.gutter-medium > .col {
+.row.gutter-medium > [class*=col-], .row.gutter-medium > .col {
   padding-right: 0.6rem;
   padding-left: 0.6rem;
   padding-bottom: 0.9rem;
@@ -425,7 +425,7 @@ template {
   margin-right: -1rem;
   margin-left: -1rem;
 }
-.row.gutter-large > [class*="col-"], .row.gutter-large > .col {
+.row.gutter-large > [class*=col-], .row.gutter-large > .col {
   padding-right: 1rem;
   padding-left: 1rem;
   padding-bottom: 1.5rem;
@@ -434,12 +434,12 @@ template {
   margin-right: -1.5rem;
   margin-left: -1.5rem;
 }
-.row.gutter-xlarge > [class*="col-"], .row.gutter-xlarge > .col {
+.row.gutter-xlarge > [class*=col-], .row.gutter-xlarge > .col {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   padding-bottom: 2.25rem;
 }
-.row.gutter-bottom-collapsed > [class*="col-"], .row.gutter-bottom-collapsed > .col {
+.row.gutter-bottom-collapsed > [class*=col-], .row.gutter-bottom-collapsed > .col {
   padding-bottom: 0 !important;
 }
 .row.columns {
@@ -526,7 +526,7 @@ template {
     margin-right: 0;
     margin-left: 0;
   }
-  .row.collapsed-xs > [class*="col-"], .row.collapsed-xs > .col, .row.gutter-collapsed-xs > [class*="col-"], .row.gutter-collapsed-xs > .col {
+  .row.collapsed-xs > [class*=col-], .row.collapsed-xs > .col, .row.gutter-collapsed-xs > [class*=col-], .row.gutter-collapsed-xs > .col {
     padding-right: 0;
     padding-left: 0;
     padding-bottom: 0;
@@ -535,7 +535,7 @@ template {
     margin-right: -0.1rem;
     margin-left: -0.1rem;
   }
-  .row.gutter-small-xs > [class*="col-"], .row.gutter-small-xs > .col {
+  .row.gutter-small-xs > [class*=col-], .row.gutter-small-xs > .col {
     padding-right: 0.1rem;
     padding-left: 0.1rem;
     padding-bottom: 0.2rem;
@@ -544,7 +544,7 @@ template {
     margin-right: -0.6rem;
     margin-left: -0.6rem;
   }
-  .row.gutter-medium-xs > [class*="col-"], .row.gutter-medium-xs > .col {
+  .row.gutter-medium-xs > [class*=col-], .row.gutter-medium-xs > .col {
     padding-right: 0.6rem;
     padding-left: 0.6rem;
     padding-bottom: 0.9rem;
@@ -553,7 +553,7 @@ template {
     margin-right: -1rem;
     margin-left: -1rem;
   }
-  .row.gutter-large-xs > [class*="col-"], .row.gutter-large-xs > .col {
+  .row.gutter-large-xs > [class*=col-], .row.gutter-large-xs > .col {
     padding-right: 1rem;
     padding-left: 1rem;
     padding-bottom: 1.5rem;
@@ -562,7 +562,7 @@ template {
     margin-right: -1.5rem;
     margin-left: -1.5rem;
   }
-  .row.gutter-xlarge-xs > [class*="col-"], .row.gutter-xlarge-xs > .col {
+  .row.gutter-xlarge-xs > [class*=col-], .row.gutter-xlarge-xs > .col {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     padding-bottom: 2.25rem;
@@ -652,7 +652,7 @@ template {
     margin-right: 0;
     margin-left: 0;
   }
-  .row.collapsed-sm > [class*="col-"], .row.collapsed-sm > .col, .row.gutter-collapsed-sm > [class*="col-"], .row.gutter-collapsed-sm > .col {
+  .row.collapsed-sm > [class*=col-], .row.collapsed-sm > .col, .row.gutter-collapsed-sm > [class*=col-], .row.gutter-collapsed-sm > .col {
     padding-right: 0;
     padding-left: 0;
     padding-bottom: 0;
@@ -661,7 +661,7 @@ template {
     margin-right: -0.1rem;
     margin-left: -0.1rem;
   }
-  .row.gutter-small-sm > [class*="col-"], .row.gutter-small-sm > .col {
+  .row.gutter-small-sm > [class*=col-], .row.gutter-small-sm > .col {
     padding-right: 0.1rem;
     padding-left: 0.1rem;
     padding-bottom: 0.2rem;
@@ -670,7 +670,7 @@ template {
     margin-right: -0.6rem;
     margin-left: -0.6rem;
   }
-  .row.gutter-medium-sm > [class*="col-"], .row.gutter-medium-sm > .col {
+  .row.gutter-medium-sm > [class*=col-], .row.gutter-medium-sm > .col {
     padding-right: 0.6rem;
     padding-left: 0.6rem;
     padding-bottom: 0.9rem;
@@ -679,7 +679,7 @@ template {
     margin-right: -1rem;
     margin-left: -1rem;
   }
-  .row.gutter-large-sm > [class*="col-"], .row.gutter-large-sm > .col {
+  .row.gutter-large-sm > [class*=col-], .row.gutter-large-sm > .col {
     padding-right: 1rem;
     padding-left: 1rem;
     padding-bottom: 1.5rem;
@@ -688,7 +688,7 @@ template {
     margin-right: -1.5rem;
     margin-left: -1.5rem;
   }
-  .row.gutter-xlarge-sm > [class*="col-"], .row.gutter-xlarge-sm > .col {
+  .row.gutter-xlarge-sm > [class*=col-], .row.gutter-xlarge-sm > .col {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     padding-bottom: 2.25rem;
@@ -778,7 +778,7 @@ template {
     margin-right: 0;
     margin-left: 0;
   }
-  .row.collapsed-ls > [class*="col-"], .row.collapsed-ls > .col, .row.gutter-collapsed-ls > [class*="col-"], .row.gutter-collapsed-ls > .col {
+  .row.collapsed-ls > [class*=col-], .row.collapsed-ls > .col, .row.gutter-collapsed-ls > [class*=col-], .row.gutter-collapsed-ls > .col {
     padding-right: 0;
     padding-left: 0;
     padding-bottom: 0;
@@ -787,7 +787,7 @@ template {
     margin-right: -0.1rem;
     margin-left: -0.1rem;
   }
-  .row.gutter-small-ls > [class*="col-"], .row.gutter-small-ls > .col {
+  .row.gutter-small-ls > [class*=col-], .row.gutter-small-ls > .col {
     padding-right: 0.1rem;
     padding-left: 0.1rem;
     padding-bottom: 0.2rem;
@@ -796,7 +796,7 @@ template {
     margin-right: -0.6rem;
     margin-left: -0.6rem;
   }
-  .row.gutter-medium-ls > [class*="col-"], .row.gutter-medium-ls > .col {
+  .row.gutter-medium-ls > [class*=col-], .row.gutter-medium-ls > .col {
     padding-right: 0.6rem;
     padding-left: 0.6rem;
     padding-bottom: 0.9rem;
@@ -805,7 +805,7 @@ template {
     margin-right: -1rem;
     margin-left: -1rem;
   }
-  .row.gutter-large-ls > [class*="col-"], .row.gutter-large-ls > .col {
+  .row.gutter-large-ls > [class*=col-], .row.gutter-large-ls > .col {
     padding-right: 1rem;
     padding-left: 1rem;
     padding-bottom: 1.5rem;
@@ -814,7 +814,7 @@ template {
     margin-right: -1.5rem;
     margin-left: -1.5rem;
   }
-  .row.gutter-xlarge-ls > [class*="col-"], .row.gutter-xlarge-ls > .col {
+  .row.gutter-xlarge-ls > [class*=col-], .row.gutter-xlarge-ls > .col {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     padding-bottom: 2.25rem;
@@ -904,7 +904,7 @@ template {
     margin-right: 0;
     margin-left: 0;
   }
-  .row.collapsed-md > [class*="col-"], .row.collapsed-md > .col, .row.gutter-collapsed-md > [class*="col-"], .row.gutter-collapsed-md > .col {
+  .row.collapsed-md > [class*=col-], .row.collapsed-md > .col, .row.gutter-collapsed-md > [class*=col-], .row.gutter-collapsed-md > .col {
     padding-right: 0;
     padding-left: 0;
     padding-bottom: 0;
@@ -913,7 +913,7 @@ template {
     margin-right: -0.1rem;
     margin-left: -0.1rem;
   }
-  .row.gutter-small-md > [class*="col-"], .row.gutter-small-md > .col {
+  .row.gutter-small-md > [class*=col-], .row.gutter-small-md > .col {
     padding-right: 0.1rem;
     padding-left: 0.1rem;
     padding-bottom: 0.2rem;
@@ -922,7 +922,7 @@ template {
     margin-right: -0.6rem;
     margin-left: -0.6rem;
   }
-  .row.gutter-medium-md > [class*="col-"], .row.gutter-medium-md > .col {
+  .row.gutter-medium-md > [class*=col-], .row.gutter-medium-md > .col {
     padding-right: 0.6rem;
     padding-left: 0.6rem;
     padding-bottom: 0.9rem;
@@ -931,7 +931,7 @@ template {
     margin-right: -1rem;
     margin-left: -1rem;
   }
-  .row.gutter-large-md > [class*="col-"], .row.gutter-large-md > .col {
+  .row.gutter-large-md > [class*=col-], .row.gutter-large-md > .col {
     padding-right: 1rem;
     padding-left: 1rem;
     padding-bottom: 1.5rem;
@@ -940,7 +940,7 @@ template {
     margin-right: -1.5rem;
     margin-left: -1.5rem;
   }
-  .row.gutter-xlarge-md > [class*="col-"], .row.gutter-xlarge-md > .col {
+  .row.gutter-xlarge-md > [class*=col-], .row.gutter-xlarge-md > .col {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     padding-bottom: 2.25rem;
@@ -1030,7 +1030,7 @@ template {
     margin-right: 0;
     margin-left: 0;
   }
-  .row.collapsed-lg > [class*="col-"], .row.collapsed-lg > .col, .row.gutter-collapsed-lg > [class*="col-"], .row.gutter-collapsed-lg > .col {
+  .row.collapsed-lg > [class*=col-], .row.collapsed-lg > .col, .row.gutter-collapsed-lg > [class*=col-], .row.gutter-collapsed-lg > .col {
     padding-right: 0;
     padding-left: 0;
     padding-bottom: 0;
@@ -1039,7 +1039,7 @@ template {
     margin-right: -0.1rem;
     margin-left: -0.1rem;
   }
-  .row.gutter-small-lg > [class*="col-"], .row.gutter-small-lg > .col {
+  .row.gutter-small-lg > [class*=col-], .row.gutter-small-lg > .col {
     padding-right: 0.1rem;
     padding-left: 0.1rem;
     padding-bottom: 0.2rem;
@@ -1048,7 +1048,7 @@ template {
     margin-right: -0.6rem;
     margin-left: -0.6rem;
   }
-  .row.gutter-medium-lg > [class*="col-"], .row.gutter-medium-lg > .col {
+  .row.gutter-medium-lg > [class*=col-], .row.gutter-medium-lg > .col {
     padding-right: 0.6rem;
     padding-left: 0.6rem;
     padding-bottom: 0.9rem;
@@ -1057,7 +1057,7 @@ template {
     margin-right: -1rem;
     margin-left: -1rem;
   }
-  .row.gutter-large-lg > [class*="col-"], .row.gutter-large-lg > .col {
+  .row.gutter-large-lg > [class*=col-], .row.gutter-large-lg > .col {
     padding-right: 1rem;
     padding-left: 1rem;
     padding-bottom: 1.5rem;
@@ -1066,7 +1066,7 @@ template {
     margin-right: -1.5rem;
     margin-left: -1.5rem;
   }
-  .row.gutter-xlarge-lg > [class*="col-"], .row.gutter-xlarge-lg > .col {
+  .row.gutter-xlarge-lg > [class*=col-], .row.gutter-xlarge-lg > .col {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     padding-bottom: 2.25rem;
@@ -1156,7 +1156,7 @@ template {
     margin-right: 0;
     margin-left: 0;
   }
-  .row.collapsed-xl > [class*="col-"], .row.collapsed-xl > .col, .row.gutter-collapsed-xl > [class*="col-"], .row.gutter-collapsed-xl > .col {
+  .row.collapsed-xl > [class*=col-], .row.collapsed-xl > .col, .row.gutter-collapsed-xl > [class*=col-], .row.gutter-collapsed-xl > .col {
     padding-right: 0;
     padding-left: 0;
     padding-bottom: 0;
@@ -1165,7 +1165,7 @@ template {
     margin-right: -0.1rem;
     margin-left: -0.1rem;
   }
-  .row.gutter-small-xl > [class*="col-"], .row.gutter-small-xl > .col {
+  .row.gutter-small-xl > [class*=col-], .row.gutter-small-xl > .col {
     padding-right: 0.1rem;
     padding-left: 0.1rem;
     padding-bottom: 0.2rem;
@@ -1174,7 +1174,7 @@ template {
     margin-right: -0.6rem;
     margin-left: -0.6rem;
   }
-  .row.gutter-medium-xl > [class*="col-"], .row.gutter-medium-xl > .col {
+  .row.gutter-medium-xl > [class*=col-], .row.gutter-medium-xl > .col {
     padding-right: 0.6rem;
     padding-left: 0.6rem;
     padding-bottom: 0.9rem;
@@ -1183,7 +1183,7 @@ template {
     margin-right: -1rem;
     margin-left: -1rem;
   }
-  .row.gutter-large-xl > [class*="col-"], .row.gutter-large-xl > .col {
+  .row.gutter-large-xl > [class*=col-], .row.gutter-large-xl > .col {
     padding-right: 1rem;
     padding-left: 1rem;
     padding-bottom: 1.5rem;
@@ -1192,7 +1192,7 @@ template {
     margin-right: -1.5rem;
     margin-left: -1.5rem;
   }
-  .row.gutter-xlarge-xl > [class*="col-"], .row.gutter-xlarge-xl > .col {
+  .row.gutter-xlarge-xl > [class*=col-], .row.gutter-xlarge-xl > .col {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     padding-bottom: 2.25rem;
@@ -1277,7 +1277,7 @@ template {
     justify-content: space-between;
   }
 }
-.row [class*="col-"], .row .col, .row .column {
+.row [class*=col-], .row .col, .row .column {
   position: relative;
   max-width: 100%;
   -webkit-box-sizing: border-box;
@@ -1293,14 +1293,14 @@ template {
   flex: 1 0 auto;
   padding: 0 0.3rem 0.3rem 0.3rem;
 }
-.animate .row [class*="col-"], .animate .row .col, .animate .row .column {
+.animate .row [class*=col-], .animate .row .col, .animate .row .column {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-.row [class*="col-"].small, .row .col.small, .row .column.small {
+.row [class*=col-].small, .row .col.small, .row .column.small {
   -webkit-box-flex: 0;
   -webkit-flex: 0 1 auto;
   -moz-box-flex: 0;
@@ -1308,38 +1308,38 @@ template {
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
 }
-.row [class*="col-"].valign-self-top, .row .col.valign-self-top, .row .column.valign-self-top {
+.row [class*=col-].valign-self-top, .row .col.valign-self-top, .row .column.valign-self-top {
   -webkit-align-self: flex-start;
   -moz-align-self: flex-start;
   -ms-flex-item-align: start;
   align-self: flex-start;
 }
-.row [class*="col-"].valign-self-center, .row .col.valign-self-center, .row .column.valign-self-center {
+.row [class*=col-].valign-self-center, .row .col.valign-self-center, .row .column.valign-self-center {
   -webkit-align-self: center;
   -moz-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
-.row [class*="col-"].valign-self-bottom, .row .col.valign-self-bottom, .row .column.valign-self-bottom {
+.row [class*=col-].valign-self-bottom, .row .col.valign-self-bottom, .row .column.valign-self-bottom {
   -webkit-align-self: flex-end;
   -moz-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
 }
 @media all and (max-width: 575px) {
-  .row [class*="col-"].valign-self-xs-top, .row .col.valign-self-xs-top, .row .column.valign-self-xs-top {
+  .row [class*=col-].valign-self-xs-top, .row .col.valign-self-xs-top, .row .column.valign-self-xs-top {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
-  .row [class*="col-"].valign-self-xs-center, .row .col.valign-self-xs-center, .row .column.valign-self-xs-center {
+  .row [class*=col-].valign-self-xs-center, .row .col.valign-self-xs-center, .row .column.valign-self-xs-center {
     -webkit-align-self: center;
     -moz-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
   }
-  .row [class*="col-"].valign-self-xs-bottom, .row .col.valign-self-xs-bottom, .row .column.valign-self-xs-bottom {
+  .row [class*=col-].valign-self-xs-bottom, .row .col.valign-self-xs-bottom, .row .column.valign-self-xs-bottom {
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-flex-item-align: end;
@@ -1347,19 +1347,19 @@ template {
   }
 }
 @media all and (max-width: 768px) {
-  .row [class*="col-"].valign-self-sm-top, .row .col.valign-self-sm-top, .row .column.valign-self-sm-top {
+  .row [class*=col-].valign-self-sm-top, .row .col.valign-self-sm-top, .row .column.valign-self-sm-top {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
-  .row [class*="col-"].valign-self-sm-center, .row .col.valign-self-sm-center, .row .column.valign-self-sm-center {
+  .row [class*=col-].valign-self-sm-center, .row .col.valign-self-sm-center, .row .column.valign-self-sm-center {
     -webkit-align-self: center;
     -moz-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
   }
-  .row [class*="col-"].valign-self-sm-bottom, .row .col.valign-self-sm-bottom, .row .column.valign-self-sm-bottom {
+  .row [class*=col-].valign-self-sm-bottom, .row .col.valign-self-sm-bottom, .row .column.valign-self-sm-bottom {
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-flex-item-align: end;
@@ -1367,19 +1367,19 @@ template {
   }
 }
 @media all and (max-width: 1024px) {
-  .row [class*="col-"].valign-self-ls-top, .row .col.valign-self-ls-top, .row .column.valign-self-ls-top {
+  .row [class*=col-].valign-self-ls-top, .row .col.valign-self-ls-top, .row .column.valign-self-ls-top {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
-  .row [class*="col-"].valign-self-ls-center, .row .col.valign-self-ls-center, .row .column.valign-self-ls-center {
+  .row [class*=col-].valign-self-ls-center, .row .col.valign-self-ls-center, .row .column.valign-self-ls-center {
     -webkit-align-self: center;
     -moz-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
   }
-  .row [class*="col-"].valign-self-ls-bottom, .row .col.valign-self-ls-bottom, .row .column.valign-self-ls-bottom {
+  .row [class*=col-].valign-self-ls-bottom, .row .col.valign-self-ls-bottom, .row .column.valign-self-ls-bottom {
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-flex-item-align: end;
@@ -1387,19 +1387,19 @@ template {
   }
 }
 @media all and (max-width: 1280px) {
-  .row [class*="col-"].valign-self-md-top, .row .col.valign-self-md-top, .row .column.valign-self-md-top {
+  .row [class*=col-].valign-self-md-top, .row .col.valign-self-md-top, .row .column.valign-self-md-top {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
-  .row [class*="col-"].valign-self-md-center, .row .col.valign-self-md-center, .row .column.valign-self-md-center {
+  .row [class*=col-].valign-self-md-center, .row .col.valign-self-md-center, .row .column.valign-self-md-center {
     -webkit-align-self: center;
     -moz-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
   }
-  .row [class*="col-"].valign-self-md-bottom, .row .col.valign-self-md-bottom, .row .column.valign-self-md-bottom {
+  .row [class*=col-].valign-self-md-bottom, .row .col.valign-self-md-bottom, .row .column.valign-self-md-bottom {
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-flex-item-align: end;
@@ -1407,19 +1407,19 @@ template {
   }
 }
 @media all and (max-width: 1440px) {
-  .row [class*="col-"].valign-self-lg-top, .row .col.valign-self-lg-top, .row .column.valign-self-lg-top {
+  .row [class*=col-].valign-self-lg-top, .row .col.valign-self-lg-top, .row .column.valign-self-lg-top {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
-  .row [class*="col-"].valign-self-lg-center, .row .col.valign-self-lg-center, .row .column.valign-self-lg-center {
+  .row [class*=col-].valign-self-lg-center, .row .col.valign-self-lg-center, .row .column.valign-self-lg-center {
     -webkit-align-self: center;
     -moz-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
   }
-  .row [class*="col-"].valign-self-lg-bottom, .row .col.valign-self-lg-bottom, .row .column.valign-self-lg-bottom {
+  .row [class*=col-].valign-self-lg-bottom, .row .col.valign-self-lg-bottom, .row .column.valign-self-lg-bottom {
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-flex-item-align: end;
@@ -1427,19 +1427,19 @@ template {
   }
 }
 @media all and (min-width: 1440px) {
-  .row [class*="col-"].valign-self-xl-top, .row .col.valign-self-xl-top, .row .column.valign-self-xl-top {
+  .row [class*=col-].valign-self-xl-top, .row .col.valign-self-xl-top, .row .column.valign-self-xl-top {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
-  .row [class*="col-"].valign-self-xl-center, .row .col.valign-self-xl-center, .row .column.valign-self-xl-center {
+  .row [class*=col-].valign-self-xl-center, .row .col.valign-self-xl-center, .row .column.valign-self-xl-center {
     -webkit-align-self: center;
     -moz-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
   }
-  .row [class*="col-"].valign-self-xl-bottom, .row .col.valign-self-xl-bottom, .row .column.valign-self-xl-bottom {
+  .row [class*=col-].valign-self-xl-bottom, .row .col.valign-self-xl-bottom, .row .column.valign-self-xl-bottom {
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-flex-item-align: end;
@@ -2273,55 +2273,55 @@ template {
   -ms-flex-wrap: none;
   flex-wrap: nowrap;
 }
-.flex.align-between, .flex[align~="between"] {
+.flex.align-between, .flex[align~=between] {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   justify-content: space-between;
 }
-.flex.align-around, .flex[align~="around"] {
+.flex.align-around, .flex[align~=around] {
   -ms-flex-pack: distribute;
   -webkit-justify-content: space-around;
   -moz-justify-content: space-around;
   justify-content: space-around;
 }
-.flex.align-right, .flex[align~="right"] {
+.flex.align-right, .flex[align~=right] {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   -webkit-justify-content: flex-end;
   -moz-justify-content: flex-end;
   justify-content: flex-end;
 }
-.flex.align-left, .flex[align~="left"] {
+.flex.align-left, .flex[align~=left] {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   -webkit-justify-content: flex-start;
   -moz-justify-content: flex-start;
   justify-content: flex-start;
 }
-.flex.align-center, .flex[align~="center"] {
+.flex.align-center, .flex[align~=center] {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   -moz-justify-content: center;
   justify-content: center;
 }
-.flex.valign-top, .flex[valign~="top"] {
+.flex.valign-top, .flex[valign~=top] {
   -webkit-box-align: start;
   -ms-flex-align: start;
   -webkit-align-items: flex-start;
   -moz-align-items: flex-start;
   align-items: flex-start;
 }
-.flex.valign-center, .flex[valign~="center"] {
+.flex.valign-center, .flex[valign~=center] {
   -webkit-box-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
   -moz-align-items: center;
   align-items: center;
 }
-.flex.valign-bottom, .flex[valign~="bottom"] {
+.flex.valign-bottom, .flex[valign~=bottom] {
   -webkit-box-align: end;
   -ms-flex-align: end;
   -webkit-align-items: flex-end;
@@ -2337,7 +2337,7 @@ template {
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
 }
-.flex.align-center > *, .flex[align~="center"] > * {
+.flex.align-center > *, .flex[align~=center] > * {
   -webkit-flex-basis: 25%;
   -moz-flex-basis: 25%;
   -ms-flex-preferred-size: 25%;
@@ -2356,32 +2356,38 @@ template {
   -ms-flex-negative: 1;
   flex-shrink: 1;
 }
-.flex > *[flex~="grow"] {
+.flex > .align-right {
+  margin-left: auto;
+}
+.flex > .align-left {
+  margin-right: auto;
+}
+.flex > *[flex~=grow] {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -moz-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
-.flex > *[flex~="shrink"] {
+.flex > *[flex~=shrink] {
   -webkit-flex-shrink: 1;
   -moz-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
 }
-.flex > *[valign~="top"] ~, .flex > *.valign-self-top {
+.flex > *[valign~=top] ~, .flex > *.valign-self-top {
   -webkit-align-self: flex-start;
   -moz-align-self: flex-start;
   -ms-flex-item-align: start;
   align-self: flex-start;
 }
-.flex > *[valign~="center"], .flex > *.valign-self-center {
+.flex > *[valign~=center], .flex > *.valign-self-center {
   -webkit-align-self: center;
   -moz-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
-.flex > *[valign~="bottom"], .flex > *.valign-self-bottom {
+.flex > *[valign~=bottom], .flex > *.valign-self-bottom {
   -webkit-align-self: flex-end;
   -moz-align-self: flex-end;
   -ms-flex-item-align: end;
@@ -2401,87 +2407,87 @@ template {
     -moz-justify-content: center;
     justify-content: center;
   }
-  .flex.align-between-xs, .flex[align~="between-xs"] {
+  .flex.align-between-xs, .flex[align~=between-xs] {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     -webkit-justify-content: space-between;
     -moz-justify-content: space-between;
     justify-content: space-between;
   }
-  .flex.align-around-xs, .flex[align~="around-xs"] {
+  .flex.align-around-xs, .flex[align~=around-xs] {
     -ms-flex-pack: distribute;
     -webkit-justify-content: space-around;
     -moz-justify-content: space-around;
     justify-content: space-around;
   }
-  .flex.align-right-xs, .flex[align~="right-xs"] {
+  .flex.align-right-xs, .flex[align~=right-xs] {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     -webkit-justify-content: flex-end;
     -moz-justify-content: flex-end;
     justify-content: flex-end;
   }
-  .flex.align-left-xs, .flex[align~="left-xs"] {
+  .flex.align-left-xs, .flex[align~=left-xs] {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     -webkit-justify-content: flex-start;
     -moz-justify-content: flex-start;
     justify-content: flex-start;
   }
-  .flex.align-center-xs, .flex[align~="center-xs"] {
+  .flex.align-center-xs, .flex[align~=center-xs] {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     -webkit-justify-content: center;
     -moz-justify-content: center;
     justify-content: center;
   }
-  .flex.valign-top-xs, .flex[valign~="top-xs"] {
+  .flex.valign-top-xs, .flex[valign~=top-xs] {
     -webkit-box-align: start;
     -ms-flex-align: start;
     -webkit-align-items: flex-start;
     -moz-align-items: flex-start;
     align-items: flex-start;
   }
-  .flex.valign-center-xs, .flex[valign~="center-xs"] {
+  .flex.valign-center-xs, .flex[valign~=center-xs] {
     -webkit-box-align: center;
     -ms-flex-align: center;
     -webkit-align-items: center;
     -moz-align-items: center;
     align-items: center;
   }
-  .flex.valign-bottom-xs, .flex[valign~="bottom-xs"] {
+  .flex.valign-bottom-xs, .flex[valign~=bottom-xs] {
     -webkit-box-align: end;
     -ms-flex-align: end;
     -webkit-align-items: flex-end;
     -moz-align-items: flex-end;
     align-items: flex-end;
   }
-  .flex > *[flex~="grow-xs"] {
+  .flex > *[flex~=grow-xs] {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -moz-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
   }
-  .flex > *[flex~="shrink-xs"] {
+  .flex > *[flex~=shrink-xs] {
     -webkit-flex-shrink: 1;
     -moz-flex-shrink: 1;
     -ms-flex-negative: 1;
     flex-shrink: 1;
   }
-  .flex > *[valign~="top-xs"], .flex > *.valign-xs-self-top {
+  .flex > *[valign~=top-xs], .flex > *.valign-xs-self-top {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
-  .flex > *[valign~="center-xs"], .flex > *.valign-xs-self-center {
+  .flex > *[valign~=center-xs], .flex > *.valign-xs-self-center {
     -webkit-align-self: center;
     -moz-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
   }
-  .flex > *[valign~="bottom-xs"], .flex > *.valign-xs-self-bottom {
+  .flex > *[valign~=bottom-xs], .flex > *.valign-xs-self-bottom {
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-flex-item-align: end;
@@ -2502,87 +2508,87 @@ template {
     -moz-justify-content: center;
     justify-content: center;
   }
-  .flex.align-between-sm, .flex[align~="between-sm"] {
+  .flex.align-between-sm, .flex[align~=between-sm] {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     -webkit-justify-content: space-between;
     -moz-justify-content: space-between;
     justify-content: space-between;
   }
-  .flex.align-around-sm, .flex[align~="around-sm"] {
+  .flex.align-around-sm, .flex[align~=around-sm] {
     -ms-flex-pack: distribute;
     -webkit-justify-content: space-around;
     -moz-justify-content: space-around;
     justify-content: space-around;
   }
-  .flex.align-right-sm, .flex[align~="right-sm"] {
+  .flex.align-right-sm, .flex[align~=right-sm] {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     -webkit-justify-content: flex-end;
     -moz-justify-content: flex-end;
     justify-content: flex-end;
   }
-  .flex.align-left-sm, .flex[align~="left-sm"] {
+  .flex.align-left-sm, .flex[align~=left-sm] {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     -webkit-justify-content: flex-start;
     -moz-justify-content: flex-start;
     justify-content: flex-start;
   }
-  .flex.align-center-sm, .flex[align~="center-sm"] {
+  .flex.align-center-sm, .flex[align~=center-sm] {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     -webkit-justify-content: center;
     -moz-justify-content: center;
     justify-content: center;
   }
-  .flex.valign-top-sm, .flex[valign~="top-sm"] {
+  .flex.valign-top-sm, .flex[valign~=top-sm] {
     -webkit-box-align: start;
     -ms-flex-align: start;
     -webkit-align-items: flex-start;
     -moz-align-items: flex-start;
     align-items: flex-start;
   }
-  .flex.valign-center-sm, .flex[valign~="center-sm"] {
+  .flex.valign-center-sm, .flex[valign~=center-sm] {
     -webkit-box-align: center;
     -ms-flex-align: center;
     -webkit-align-items: center;
     -moz-align-items: center;
     align-items: center;
   }
-  .flex.valign-bottom-sm, .flex[valign~="bottom-sm"] {
+  .flex.valign-bottom-sm, .flex[valign~=bottom-sm] {
     -webkit-box-align: end;
     -ms-flex-align: end;
     -webkit-align-items: flex-end;
     -moz-align-items: flex-end;
     align-items: flex-end;
   }
-  .flex > *[flex~="grow-sm"] {
+  .flex > *[flex~=grow-sm] {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -moz-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
   }
-  .flex > *[flex~="shrink-sm"] {
+  .flex > *[flex~=shrink-sm] {
     -webkit-flex-shrink: 1;
     -moz-flex-shrink: 1;
     -ms-flex-negative: 1;
     flex-shrink: 1;
   }
-  .flex > *[valign~="top-sm"], .flex > *.valign-sm-self-top {
+  .flex > *[valign~=top-sm], .flex > *.valign-sm-self-top {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
-  .flex > *[valign~="center-sm"], .flex > *.valign-sm-self-center {
+  .flex > *[valign~=center-sm], .flex > *.valign-sm-self-center {
     -webkit-align-self: center;
     -moz-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
   }
-  .flex > *[valign~="bottom-sm"], .flex > *.valign-sm-self-bottom {
+  .flex > *[valign~=bottom-sm], .flex > *.valign-sm-self-bottom {
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-flex-item-align: end;
@@ -2603,87 +2609,87 @@ template {
     -moz-justify-content: center;
     justify-content: center;
   }
-  .flex.align-between-ls, .flex[align~="between-ls"] {
+  .flex.align-between-ls, .flex[align~=between-ls] {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     -webkit-justify-content: space-between;
     -moz-justify-content: space-between;
     justify-content: space-between;
   }
-  .flex.align-around-ls, .flex[align~="around-ls"] {
+  .flex.align-around-ls, .flex[align~=around-ls] {
     -ms-flex-pack: distribute;
     -webkit-justify-content: space-around;
     -moz-justify-content: space-around;
     justify-content: space-around;
   }
-  .flex.align-right-ls, .flex[align~="right-ls"] {
+  .flex.align-right-ls, .flex[align~=right-ls] {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     -webkit-justify-content: flex-end;
     -moz-justify-content: flex-end;
     justify-content: flex-end;
   }
-  .flex.align-left-ls, .flex[align~="left-ls"] {
+  .flex.align-left-ls, .flex[align~=left-ls] {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     -webkit-justify-content: flex-start;
     -moz-justify-content: flex-start;
     justify-content: flex-start;
   }
-  .flex.align-center-ls, .flex[align~="center-ls"] {
+  .flex.align-center-ls, .flex[align~=center-ls] {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     -webkit-justify-content: center;
     -moz-justify-content: center;
     justify-content: center;
   }
-  .flex.valign-top-ls, .flex[valign~="top-ls"] {
+  .flex.valign-top-ls, .flex[valign~=top-ls] {
     -webkit-box-align: start;
     -ms-flex-align: start;
     -webkit-align-items: flex-start;
     -moz-align-items: flex-start;
     align-items: flex-start;
   }
-  .flex.valign-center-ls, .flex[valign~="center-ls"] {
+  .flex.valign-center-ls, .flex[valign~=center-ls] {
     -webkit-box-align: center;
     -ms-flex-align: center;
     -webkit-align-items: center;
     -moz-align-items: center;
     align-items: center;
   }
-  .flex.valign-bottom-ls, .flex[valign~="bottom-ls"] {
+  .flex.valign-bottom-ls, .flex[valign~=bottom-ls] {
     -webkit-box-align: end;
     -ms-flex-align: end;
     -webkit-align-items: flex-end;
     -moz-align-items: flex-end;
     align-items: flex-end;
   }
-  .flex > *[flex~="grow-ls"] {
+  .flex > *[flex~=grow-ls] {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -moz-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
   }
-  .flex > *[flex~="shrink-ls"] {
+  .flex > *[flex~=shrink-ls] {
     -webkit-flex-shrink: 1;
     -moz-flex-shrink: 1;
     -ms-flex-negative: 1;
     flex-shrink: 1;
   }
-  .flex > *[valign~="top-ls"], .flex > *.valign-ls-self-top {
+  .flex > *[valign~=top-ls], .flex > *.valign-ls-self-top {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
-  .flex > *[valign~="center-ls"], .flex > *.valign-ls-self-center {
+  .flex > *[valign~=center-ls], .flex > *.valign-ls-self-center {
     -webkit-align-self: center;
     -moz-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
   }
-  .flex > *[valign~="bottom-ls"], .flex > *.valign-ls-self-bottom {
+  .flex > *[valign~=bottom-ls], .flex > *.valign-ls-self-bottom {
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-flex-item-align: end;
@@ -2704,87 +2710,87 @@ template {
     -moz-justify-content: center;
     justify-content: center;
   }
-  .flex.align-between-md, .flex[align~="between-md"] {
+  .flex.align-between-md, .flex[align~=between-md] {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     -webkit-justify-content: space-between;
     -moz-justify-content: space-between;
     justify-content: space-between;
   }
-  .flex.align-around-md, .flex[align~="around-md"] {
+  .flex.align-around-md, .flex[align~=around-md] {
     -ms-flex-pack: distribute;
     -webkit-justify-content: space-around;
     -moz-justify-content: space-around;
     justify-content: space-around;
   }
-  .flex.align-right-md, .flex[align~="right-md"] {
+  .flex.align-right-md, .flex[align~=right-md] {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     -webkit-justify-content: flex-end;
     -moz-justify-content: flex-end;
     justify-content: flex-end;
   }
-  .flex.align-left-md, .flex[align~="left-md"] {
+  .flex.align-left-md, .flex[align~=left-md] {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     -webkit-justify-content: flex-start;
     -moz-justify-content: flex-start;
     justify-content: flex-start;
   }
-  .flex.align-center-md, .flex[align~="center-md"] {
+  .flex.align-center-md, .flex[align~=center-md] {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     -webkit-justify-content: center;
     -moz-justify-content: center;
     justify-content: center;
   }
-  .flex.valign-top-md, .flex[valign~="top-md"] {
+  .flex.valign-top-md, .flex[valign~=top-md] {
     -webkit-box-align: start;
     -ms-flex-align: start;
     -webkit-align-items: flex-start;
     -moz-align-items: flex-start;
     align-items: flex-start;
   }
-  .flex.valign-center-md, .flex[valign~="center-md"] {
+  .flex.valign-center-md, .flex[valign~=center-md] {
     -webkit-box-align: center;
     -ms-flex-align: center;
     -webkit-align-items: center;
     -moz-align-items: center;
     align-items: center;
   }
-  .flex.valign-bottom-md, .flex[valign~="bottom-md"] {
+  .flex.valign-bottom-md, .flex[valign~=bottom-md] {
     -webkit-box-align: end;
     -ms-flex-align: end;
     -webkit-align-items: flex-end;
     -moz-align-items: flex-end;
     align-items: flex-end;
   }
-  .flex > *[flex~="grow-md"] {
+  .flex > *[flex~=grow-md] {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -moz-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
   }
-  .flex > *[flex~="shrink-md"] {
+  .flex > *[flex~=shrink-md] {
     -webkit-flex-shrink: 1;
     -moz-flex-shrink: 1;
     -ms-flex-negative: 1;
     flex-shrink: 1;
   }
-  .flex > *[valign~="top-md"], .flex > *.valign-md-self-top {
+  .flex > *[valign~=top-md], .flex > *.valign-md-self-top {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
-  .flex > *[valign~="center-md"], .flex > *.valign-md-self-center {
+  .flex > *[valign~=center-md], .flex > *.valign-md-self-center {
     -webkit-align-self: center;
     -moz-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
   }
-  .flex > *[valign~="bottom-md"], .flex > *.valign-md-self-bottom {
+  .flex > *[valign~=bottom-md], .flex > *.valign-md-self-bottom {
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-flex-item-align: end;
@@ -2805,87 +2811,87 @@ template {
     -moz-justify-content: center;
     justify-content: center;
   }
-  .flex.align-between-lg, .flex[align~="between-lg"] {
+  .flex.align-between-lg, .flex[align~=between-lg] {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     -webkit-justify-content: space-between;
     -moz-justify-content: space-between;
     justify-content: space-between;
   }
-  .flex.align-around-lg, .flex[align~="around-lg"] {
+  .flex.align-around-lg, .flex[align~=around-lg] {
     -ms-flex-pack: distribute;
     -webkit-justify-content: space-around;
     -moz-justify-content: space-around;
     justify-content: space-around;
   }
-  .flex.align-right-lg, .flex[align~="right-lg"] {
+  .flex.align-right-lg, .flex[align~=right-lg] {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     -webkit-justify-content: flex-end;
     -moz-justify-content: flex-end;
     justify-content: flex-end;
   }
-  .flex.align-left-lg, .flex[align~="left-lg"] {
+  .flex.align-left-lg, .flex[align~=left-lg] {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     -webkit-justify-content: flex-start;
     -moz-justify-content: flex-start;
     justify-content: flex-start;
   }
-  .flex.align-center-lg, .flex[align~="center-lg"] {
+  .flex.align-center-lg, .flex[align~=center-lg] {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     -webkit-justify-content: center;
     -moz-justify-content: center;
     justify-content: center;
   }
-  .flex.valign-top-lg, .flex[valign~="top-lg"] {
+  .flex.valign-top-lg, .flex[valign~=top-lg] {
     -webkit-box-align: start;
     -ms-flex-align: start;
     -webkit-align-items: flex-start;
     -moz-align-items: flex-start;
     align-items: flex-start;
   }
-  .flex.valign-center-lg, .flex[valign~="center-lg"] {
+  .flex.valign-center-lg, .flex[valign~=center-lg] {
     -webkit-box-align: center;
     -ms-flex-align: center;
     -webkit-align-items: center;
     -moz-align-items: center;
     align-items: center;
   }
-  .flex.valign-bottom-lg, .flex[valign~="bottom-lg"] {
+  .flex.valign-bottom-lg, .flex[valign~=bottom-lg] {
     -webkit-box-align: end;
     -ms-flex-align: end;
     -webkit-align-items: flex-end;
     -moz-align-items: flex-end;
     align-items: flex-end;
   }
-  .flex > *[flex~="grow-lg"] {
+  .flex > *[flex~=grow-lg] {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -moz-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
   }
-  .flex > *[flex~="shrink-lg"] {
+  .flex > *[flex~=shrink-lg] {
     -webkit-flex-shrink: 1;
     -moz-flex-shrink: 1;
     -ms-flex-negative: 1;
     flex-shrink: 1;
   }
-  .flex > *[valign~="top-lg"], .flex > *.valign-lg-self-top {
+  .flex > *[valign~=top-lg], .flex > *.valign-lg-self-top {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
-  .flex > *[valign~="center-lg"], .flex > *.valign-lg-self-center {
+  .flex > *[valign~=center-lg], .flex > *.valign-lg-self-center {
     -webkit-align-self: center;
     -moz-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
   }
-  .flex > *[valign~="bottom-lg"], .flex > *.valign-lg-self-bottom {
+  .flex > *[valign~=bottom-lg], .flex > *.valign-lg-self-bottom {
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-flex-item-align: end;
@@ -2906,87 +2912,87 @@ template {
     -moz-justify-content: center;
     justify-content: center;
   }
-  .flex.align-between-xl, .flex[align~="between-xl"] {
+  .flex.align-between-xl, .flex[align~=between-xl] {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     -webkit-justify-content: space-between;
     -moz-justify-content: space-between;
     justify-content: space-between;
   }
-  .flex.align-around-xl, .flex[align~="around-xl"] {
+  .flex.align-around-xl, .flex[align~=around-xl] {
     -ms-flex-pack: distribute;
     -webkit-justify-content: space-around;
     -moz-justify-content: space-around;
     justify-content: space-around;
   }
-  .flex.align-right-xl, .flex[align~="right-xl"] {
+  .flex.align-right-xl, .flex[align~=right-xl] {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     -webkit-justify-content: flex-end;
     -moz-justify-content: flex-end;
     justify-content: flex-end;
   }
-  .flex.align-left-xl, .flex[align~="left-xl"] {
+  .flex.align-left-xl, .flex[align~=left-xl] {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     -webkit-justify-content: flex-start;
     -moz-justify-content: flex-start;
     justify-content: flex-start;
   }
-  .flex.align-center-xl, .flex[align~="center-xl"] {
+  .flex.align-center-xl, .flex[align~=center-xl] {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     -webkit-justify-content: center;
     -moz-justify-content: center;
     justify-content: center;
   }
-  .flex.valign-top-xl, .flex[valign~="top-xl"] {
+  .flex.valign-top-xl, .flex[valign~=top-xl] {
     -webkit-box-align: start;
     -ms-flex-align: start;
     -webkit-align-items: flex-start;
     -moz-align-items: flex-start;
     align-items: flex-start;
   }
-  .flex.valign-center-xl, .flex[valign~="center-xl"] {
+  .flex.valign-center-xl, .flex[valign~=center-xl] {
     -webkit-box-align: center;
     -ms-flex-align: center;
     -webkit-align-items: center;
     -moz-align-items: center;
     align-items: center;
   }
-  .flex.valign-bottom-xl, .flex[valign~="bottom-xl"] {
+  .flex.valign-bottom-xl, .flex[valign~=bottom-xl] {
     -webkit-box-align: end;
     -ms-flex-align: end;
     -webkit-align-items: flex-end;
     -moz-align-items: flex-end;
     align-items: flex-end;
   }
-  .flex > *[flex~="grow-xl"] {
+  .flex > *[flex~=grow-xl] {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -moz-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
   }
-  .flex > *[flex~="shrink-xl"] {
+  .flex > *[flex~=shrink-xl] {
     -webkit-flex-shrink: 1;
     -moz-flex-shrink: 1;
     -ms-flex-negative: 1;
     flex-shrink: 1;
   }
-  .flex > *[valign~="top-xl"], .flex > *.valign-xl-self-top {
+  .flex > *[valign~=top-xl], .flex > *.valign-xl-self-top {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
-  .flex > *[valign~="center-xl"], .flex > *.valign-xl-self-center {
+  .flex > *[valign~=center-xl], .flex > *.valign-xl-self-center {
     -webkit-align-self: center;
     -moz-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
   }
-  .flex > *[valign~="bottom-xl"], .flex > *.valign-xl-self-bottom {
+  .flex > *[valign~=bottom-xl], .flex > *.valign-xl-self-bottom {
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     -ms-flex-item-align: end;
@@ -3533,33 +3539,33 @@ img.outside-the-box {
 
 h1, h2, h3, h4, h5, h6,
 .header-1, .header-2, .header-3, .header-4, .header-5, .header-6 {
-  margin: .85em 0;
+  margin: 0.85em 0;
   line-height: 1.5rem;
 }
 
 h1, .header-1 {
-  font-size: 56px;
-  font-size: 3.5rem;
+  font-size: 41.6px;
+  font-size: 2.6rem;
 }
 
 h2, .header-2 {
-  font-size: 48px;
-  font-size: 3rem;
-}
-
-h3, .header-3 {
-  font-size: 40px;
-  font-size: 2.5rem;
-}
-
-h4, .header-4 {
   font-size: 32px;
   font-size: 2rem;
 }
 
+h3, .header-3 {
+  font-size: 27.2px;
+  font-size: 1.7rem;
+}
+
+h4, .header-4 {
+  font-size: 22.4px;
+  font-size: 1.4rem;
+}
+
 h5, .header-5 {
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 19.2px;
+  font-size: 1.2rem;
 }
 
 h6 {
@@ -3568,8 +3574,8 @@ h6 {
 
 .display-1, .display-2, .display-3, .display-4 {
   font-weight: normal;
-  margin: 0;
-  line-height: 1.3em;
+  margin: 0.85em 0;
+  line-height: 1.2em;
 }
 
 .display-1 {
@@ -3585,23 +3591,6 @@ h6 {
 .display-3 {
   font-size: 52px;
   font-size: 3.25rem;
-}
-
-.display-4 {
-  font-size: 46px;
-  font-size: 2.875rem;
-}
-
-.text-size-md {
-  font-size: 1.2rem;
-}
-
-.text-size-sm {
-  font-size: .8rem;
-}
-
-.text-size-xs {
-  font-size: .6rem;
 }
 
 .text-align-right {
@@ -3741,7 +3730,7 @@ ul.list-horizontal.left {
 ul.list-horizontal > li {
   display: block;
   flex: 0 1 auto;
-  margin-right: .5em;
+  margin-right: 0.5em;
 }
 ul.list-horizontal > li:last-child {
   margin-right: 0;

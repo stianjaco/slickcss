@@ -1,0 +1,290 @@
+.container {
+    width: 100%;
+    max-width: $container-width;
+    margin: 0 auto;
+    @include prefix(box-sizing, border-box);
+    @include breakpoint( $container-width+(16*4) ) {
+        padding-left: $container-padding;
+        padding-right: $container-padding;
+    }
+    @include breakpoint(sm) {
+        padding-left: $container-padding-sm;
+        padding-right: $container-padding-sm;
+    }
+    
+}
+
+.row {
+	@include flexbox;
+	@include flex(0 1 auto);
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
+	margin-right: -$grid-gutter;
+	margin-left: -$grid-gutter;
+
+    // Gutters
+    &.collapsed, &.gutter-collapsed {
+        margin-right:0;
+        margin-left:0;
+        & > [class*="col-"], & > .col {
+            padding-right: 0;
+            padding-left: 0;
+            padding-bottom: 0;
+        }
+    }
+    &.gutter-small {
+        margin-right: -$grid-gutter-sm;
+        margin-left: -$grid-gutter-sm;
+        & > [class*="col-"], & > .col {
+            padding-right: $grid-gutter-sm;
+            padding-left: $grid-gutter-sm;
+            padding-bottom: $grid-gutter-sm*2;
+        }
+    }
+    &.gutter-normal {
+        margin-right: -$grid-gutter;
+		margin-left: -$grid-gutter;
+        & > [class*="col-"], & > .col {
+            padding-right: $grid-gutter;
+            padding-left: $grid-gutter;
+            padding-bottom: $grid-gutter*1.5;
+        }
+    }
+    &.gutter-medium {
+        margin-right: -$grid-gutter-md;
+        margin-left: -$grid-gutter-md;
+        & > [class*="col-"], & > .col {
+            padding-right: $grid-gutter-md;
+            padding-left: $grid-gutter-md;
+            padding-bottom: $grid-gutter-md*1.5;
+        }
+    }
+    &.gutter-large {
+        margin-right: -$grid-gutter-lg;
+        margin-left: -$grid-gutter-lg;
+        & > [class*="col-"], & > .col {
+            padding-right: $grid-gutter-lg;
+            padding-left: $grid-gutter-lg;
+            padding-bottom: $grid-gutter-lg*1.5;
+        }
+    }
+    &.gutter-xlarge {
+        margin-right: -$grid-gutter-xl;
+        margin-left: -$grid-gutter-xl;
+        & > [class*="col-"], & > .col {
+            padding-right: $grid-gutter-xl;
+            padding-left: $grid-gutter-xl;
+            padding-bottom: $grid-gutter-xl*1.5;
+        }
+	}
+	
+	&.gutter-bottom-collapsed > [class*="col-"],
+	&.gutter-bottom-collapsed > .col {
+		padding-bottom: 0 !important;
+	}
+
+    // MODIFIERS
+    &.columns {
+		@include flex-direction(column);
+	}
+	
+	&.reverse {
+		@include flex-direction(row-reverse);
+		&.columns {
+			@include flex-direction(column-reverse);
+		}
+	}
+	
+    &.align-start {
+    	@include justify-content(flex-start);
+	}
+	
+    &.align-center {
+        @include justify-content(center);
+    }
+
+    &.align-end {
+    	@include justify-content(flex-end);
+    }
+
+    &.valign-top {
+        @include align-items(flex-start);
+    }
+
+    &.valign-center {
+        @include align-items(center);
+    }
+
+    &.valign-bottom {
+    	@include align-items(flex-end);
+    }
+
+    &.justify-around {
+ 		@include justify-content(space-around);
+    }
+
+    &.justify-between {
+       @include justify-content(space-between);
+    }
+
+    @each $bp in $breakpoints-prefix {
+		$curr: $bp;
+		
+		@include breakpoint_between($curr) {
+
+			// Gutters
+		    &.collapsed-#{$curr}, &.gutter-collapsed-#{$curr} {
+		        margin-right:0;
+		        margin-left:0;
+		        & > [class*="col-"], & > .col {
+		            padding-right: 0;
+		            padding-left: 0;
+		            padding-bottom: 0;
+		        }
+		    }
+		    &.gutter-small-#{$curr} {
+		        margin-right: -$grid-gutter-sm;
+		        margin-left: -$grid-gutter-sm;
+		        & > [class*="col-"], & > .col {
+		            padding-right: $grid-gutter-sm;
+		            padding-left: $grid-gutter-sm;
+		            padding-bottom: $grid-gutter-sm*2;
+		        }
+		    }
+		    &.gutter-medium-#{$curr} {
+		        margin-right: -$grid-gutter-md;
+		        margin-left: -$grid-gutter-md;
+		        & > [class*="col-"], & > .col {
+		            padding-right: $grid-gutter-md;
+		            padding-left: $grid-gutter-md;
+		            padding-bottom: $grid-gutter-md*1.5;
+		        }
+		    }
+		    &.gutter-large-#{$curr} {
+		        margin-right: -$grid-gutter-lg;
+		        margin-left: -$grid-gutter-lg;
+		        & > [class*="col-"], & > .col {
+		            padding-right: $grid-gutter-lg;
+		            padding-left: $grid-gutter-lg;
+		            padding-bottom: $grid-gutter-lg*1.5;
+		        }
+		    }
+		    &.gutter-xlarge-#{$curr} {
+		        margin-right: -$grid-gutter-xl;
+		        margin-left: -$grid-gutter-xl;
+		        & > [class*="col-"], & > .col {
+		            padding-right: $grid-gutter-xl;
+		            padding-left: $grid-gutter-xl;
+		            padding-bottom: $grid-gutter-xl*1.5;
+		        }
+		    }
+			&.columns-#{$curr} {
+				@include flex-direction(column);
+		    }
+			&.reverse-#{$curr} {
+                @include flex-direction(row-reverse);
+                &.columns-#{$curr} {
+					@include flex-direction(column-reverse);
+				}
+            }
+
+            &.align-start-#{$curr} {
+		    	@include justify-content(flex-start);
+		    }
+
+		    &.align-center-#{$curr} {
+		        @include justify-content(center);
+		    }
+
+		    &.align-end-#{$curr} {
+		    	@include justify-content(flex-end);
+		    }
+
+		    &.valign-top-#{$curr} {
+		        @include align-items(flex-start);
+		    }
+
+		    &.valign-center-#{$curr} {
+		        @include align-items(center);
+		    }
+
+		    &.valign-bottom-#{$curr} {
+		    	@include align-items(flex-end);
+		    }
+
+		    &.justify-around-#{$curr} {
+		 		@include justify-content(space-around);
+		    }
+
+		    &.justify-between-#{$curr} {
+		       @include justify-content(space-between);
+		    }
+		}
+		
+    }
+
+
+	// Base-styles for each column
+	%col-base-style {
+		position: relative;
+		max-width:100%;
+		@include prefix(box-sizing, border-box);
+		@include flex(1 0 auto);  
+		//@include transition(all 0.2s);
+		padding: 0 $grid-gutter $grid-gutter $grid-gutter;
+	}
+
+	[class*="col-"], .col, .column {
+		@extend %col-base-style;
+
+		.animate & {
+			@include transition(all 0.2s);
+		}
+
+		&.small {
+			@include flex(0 1 auto);  
+		}
+
+		&.valign-self-top {
+			@include align-self(flex-start);
+		}
+		&.valign-self-center {
+			@include align-self(center);
+		}
+		&.valign-self-bottom {
+			@include align-self(flex-end);
+		}
+
+		 @each $bp in $breakpoints-prefix {
+			$curr: $bp;
+		
+			@include breakpoint($curr) {
+
+			    &.valign-self-#{$curr}-top {
+			        @include align-self(flex-start);
+			    }
+			     &.valign-self-#{$curr}-center {
+			        @include align-self(center);
+			    }
+			     &.valign-self-#{$curr}-bottom {
+			        @include align-self(flex-end);
+			    }
+			}
+		}
+	}
+
+	// COLUMNS
+	@include __loopColumns(""); 
+
+	@each $bp in $breakpoints-prefix {
+		$curr: $bp;
+		
+		@include breakpoint_between($curr) {
+			@include __loopColumns($curr);
+		}
+		
+    }
+}
+
+
+
