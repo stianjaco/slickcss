@@ -3,24 +3,11 @@
 // Usage: 
 // <div class="dropdown">
 // <button class="dropdown-trigger">Open</button>
-// <ul class="dropdown-menu"> .. </ul>
+// <ul class="dropdown-menu"> ... </ul>
 // </div>
 // -------------------
 
-$dropdownconfig: (
-    'background': #fff,
-    'color': #000,
-    'hover': lighten($color-grey,10%),
-    'hover-color': #000,
-    'border-color': rgba(0,0,0,.05),
-    'border-radius': 3px,
-    'shadow': 0 6px 12px rgba(0,0,0,0.18),
-    'sub-shadow': 1px 6px 10px -6px rgba(0,0,0,0.18),
-    'divider': $color-grey,
-    'padding': 6px 14px,
-    'min-width': 156px 
 
-) !default;
 .dropdown { 
 
     display: inline-block;
@@ -28,10 +15,12 @@ $dropdownconfig: (
 
     &.menu-is-open .dropdown-menu { display: block; }
 
-    .dropdown-menu, .dropdown-menu ul {
+    .dropdown-menu, 
+    .dropdown-menu ul {
+
         list-style: none;
         margin: 0;
-        padding: 5px;
+        padding: 8px 0; // Settings?
         background-color: #fff;
         background-clip: padding-box;
         border: 1px solid map-get($dropdownconfig, border-color);
@@ -64,31 +53,31 @@ $dropdownconfig: (
             //white-space: nowrap;
             margin: 0;
             padding: 0;
-            line-height: 1.4rem;
+            line-height: 1.4em;
             width:100%;
             position: relative;
 
             &.divider {
                 height: 0;
-                margin: 0;
+                margin: 5px 0;
                 overflow: hidden;
                 border-top: 1px solid map-get($dropdownconfig, divider);
             }
 
             a {
                 @include flexbox;
-                @include justify-content(space-between);
+                //@include justify-content(space-between);
                 @include align-items(center);
-                padding: 6px 14px;
+                padding: 8px 28px;
                 background-color: transparent;
                 text-decoration: none; 
                 color: map-get($dropdownconfig, color);
 
                 &:hover, &:active, &:focus {
                     outline: none;
-                    background-color: map-get($dropdownconfig, hover);
+                    background-color: lighten(map-get($dropdownconfig, hover), 80%);
                     color: map-get($dropdownconfig, hover-color);
-                    @include prefix(border-radius, map-get($dropdownconfig, border-radius) )
+                    //@include prefix(border-radius, map-get($dropdownconfig, border-radius) )
                 }
             }
 
@@ -99,9 +88,11 @@ $dropdownconfig: (
                 display: inline-block;
                 width: 0;
                 height: 0;
-                margin-left: 10px;
+                margin: 0;
+                margin-right: -10px;
                 vertical-align: 4px;
                 content: " ";
+                margin-left: auto;
             }
 
             &.caret-right > a:after {
@@ -144,8 +135,8 @@ $dropdownconfig: (
 
             ul {
                 position: absolute;
-                left: 100%;
-                top: 0;
+                left: calc(100% - 1px);
+                top: -8px;
                 @include prefix(box-shadow, map-get($dropdownconfig, sub-shadow));
             }
         }
@@ -158,12 +149,12 @@ $dropdownconfig: (
     @each $colorName, $colorValue in $color-list {
 
         
-        $colorLighter: lighten($colorValue,5%);
+        $colorLighter: lighten($colorValue,42%);
         $colorInverted: findColorInvert($colorLighter);
 
         &.#{""+$colorName+""} .dropdown-menu li {
             a {
-                color: $colorValue;
+                //color: $colorValue;
                 &:hover, &:active, &:focus {
                     //background-color: rgba($colorValue,.8);
                     background-color: $colorLighter;

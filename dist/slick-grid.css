@@ -382,8 +382,8 @@ template {
   -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -0.3rem;
-  margin-left: -0.3rem;
+  margin-right: -0.4rem;
+  margin-left: -0.4rem;
 }
 .row.collapsed, .row.gutter-collapsed {
   margin-right: 0;
@@ -404,13 +404,13 @@ template {
   padding-bottom: 0.2rem;
 }
 .row.gutter-normal {
-  margin-right: -0.3rem;
-  margin-left: -0.3rem;
+  margin-right: -0.4rem;
+  margin-left: -0.4rem;
 }
 .row.gutter-normal > [class*=col-], .row.gutter-normal > .col {
-  padding-right: 0.3rem;
-  padding-left: 0.3rem;
-  padding-bottom: 0.45rem;
+  padding-right: 0.4rem;
+  padding-left: 0.4rem;
+  padding-bottom: 0.6rem;
 }
 .row.gutter-medium {
   margin-right: -0.6rem;
@@ -1291,7 +1291,7 @@ template {
   -moz-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
-  padding: 0 0.3rem 0.3rem 0.3rem;
+  padding: 0 0.4rem 0.4rem 0.4rem;
 }
 .animate .row [class*=col-], .animate .row .col, .animate .row .column {
   -webkit-transition: all 0.2s;

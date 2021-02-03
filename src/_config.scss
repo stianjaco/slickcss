@@ -88,6 +88,20 @@ $dropdown-menu: (
 	break: map-get($breakpoint-list, sm)
 );
 
+$dropdownconfig: (
+    'background': #fff,
+    'color': #000,
+    'hover': lighten($color-grey,10%),
+    'hover-color': #000,
+    'border-color': rgba(0,0,0,.05),
+    'border-radius': 3px,
+    'shadow': 0 6px 12px rgba(0,0,0,0.18),
+    'sub-shadow': 1px 6px 10px -6px rgba(0,0,0,0.18),
+    'divider': $color-grey,
+    'padding': 6px 14px,
+    'min-width': 174px 
+) !default;
+
 $header-color:  map-get($color-list, black) !default;
 $text-color: map-get($color-list, black) !default;
 
