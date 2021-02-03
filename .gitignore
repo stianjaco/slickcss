@@ -1,6 +1,7 @@
 node_modules/
 src/.sass-cache/
 examples/
+src_old/
 scrapped/
 
 # Dont track these files

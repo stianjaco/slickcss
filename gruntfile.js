@@ -7,8 +7,8 @@ module.exports = function( grunt ) {
 		sass: {
 			dist: {
 				files: {
-					'dist/css/slick-grid.css' : 'src/slick-grid.scss',
-					'dist/css/slick.css' : 'src/slick.scss'
+					'dist/slick-grid.css' : 'src/slick-grid.scss',
+					'dist/slick.css' : 'src/slick.scss'
 				},
 				options: {
 					loadPath: [
@@ -25,9 +25,9 @@ module.exports = function( grunt ) {
 			target: {
 				files:[{
 					expand: true,
-					cwd: 'dist/css',
+					cwd: 'dist',
 					src: ['*.css', '!*.min.css'],
-					dest: 'dist/css',
+					dest: 'dist',
 					ext: '.min.css'
 				}]
 			}
