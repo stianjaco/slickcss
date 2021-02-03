@@ -1,5 +1,4 @@
 # SlickCSS
-Version 1
 
 **Simple and flexible css-framework for rapid prototyping and weblayouts**
 Created by: [Dropcode](https://www.dropcode.no/)
