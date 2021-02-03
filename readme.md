@@ -3,22 +3,24 @@
 **Simple and flexible css-framework for rapid prototyping and weblayouts**
 Created by: [Dropcode](https://www.dropcode.no/)
 
-## Configure
-Open the *src/scss/config/* folder. 
+## Usage
 
-`_colors.scss` Controls all the defaults colors used.
-`_grid.scss` Controls the container size, number of columns and gutters.
-`_typography.scss` Controls default fonts, font-size etc.
-`_ui.scss` Controls UI-elements like buttons, forms etc.
-`_breakpoints.scss` Controls breakpoint widths and prefixes
+If you want to use the pre-build verison, simple include the stylesheet.
+There are two options, either the full version with ui-elements, or the 
+stripped down version with just layout options (grids, flexbox and typography)
+    <!-- Full version -->
+    <link rel="stylesheet" type="text/css" href="./dist/slick.mincss" />
+    <!-- No ui -->
+    <link rel="stylesheet" type="text/css" href="./dist/slick-grid.min.css" />
+
+
+
+## Configure
+Open the *src/_config.scss* file 
 
 ## Build
 
     npm install
     nmp run build
 
-## Usage
 
-Include the css
-
-    <link rel="stylesheet" type="text/css" href="./dist/css/slick.css" />
