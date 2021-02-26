@@ -3936,7 +3936,7 @@ img.outside-the-box {
 h1, h2, h3, h4, h5, h6,
 .header-1, .header-2, .header-3, .header-4, .header-5, .header-6 {
   margin: 0.85em 0;
-  line-height: 1.5rem;
+  line-height: 1.25em;
 }
 
 h1, .header-1 {
@@ -10668,7 +10668,8 @@ ul.ui-breadcrumbs li:not(:last-child):after {
 .ui-card.no-stretch {
   min-height: auto;
 }
-.ui-card > *:not(:first-child):not(:last-child) {
+.ui-card > *:not(:first-child):not(:last-child),
+.ui-card > :only-child {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -moz-flex-grow: 1;
